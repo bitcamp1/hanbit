@@ -29,7 +29,7 @@ class YouPanel extends JPanel {
 			case KeyEvent.VK_UP:	img_y -= 10;	 break;
 			case KeyEvent.VK_DOWN:	img_y += 10;	break;
 			case KeyEvent.VK_LEFT:	img_x -= 10; if( img_x<=-30){ img_x=350;}	break;
-			case KeyEvent.VK_RIGHT:	img_x += 10;	break;
+			case KeyEvent.VK_RIGHT:	img_x += 10; if( img_x>=360){ img_x=-10;}	break;
 			}
 			repaint();
 		}
