@@ -3,11 +3,12 @@ package net.hb.model;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Vector;
 
 public class SortUtil {
-	List<Integer> list = new ArrayList<Integer>();
+	Vector<Integer> vec = new Vector<Integer>();
 	
-	public List<Integer> getDescSort(int[] arr) {
+	public Vector<Integer> getDescSort(int[] arr) {
 		int temp=0;
 		for(int i=0;i<arr.length;i++){
 			for(int j=i;j<arr.length;j++){
@@ -19,14 +20,14 @@ public class SortUtil {
 			}
 		}
 		for(int k:arr){
-			list.add(k);
+			vec.add(k);
 		}
-		return list;
+		return vec;
 	}
 
 
 	
-	public List<Integer> getAscSort(int[] arr){
+	public Vector<Integer> getAscSort(int[] arr){
 	/*public void setAscSort(int[] arr){
 		for(int i=0;i<arr.length-1;i++){
 			for(int j=0;j<arr.length;j++){
@@ -42,9 +43,9 @@ public class SortUtil {
 	*/
 		Arrays.sort(arr);
 		for(int k : arr){
-			list.add(k);
+			vec.add(k);
 		}
-		return list;
+		return vec;
 		
 	}
 }
