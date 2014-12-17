@@ -3,7 +3,7 @@ package net.hb.controller;
 import java.util.List;
 import java.util.Scanner;
 
-import net.hb.controller.MainBlood;
+import net.hb.controller.Blood;
 import net.hb.stone.KaupIndex;
 import net.hb.stone.Toy;
 import net.hb.stone.ToyMachine;
@@ -11,9 +11,9 @@ import net.hb.stone.ToySpec;
 import net.hb.stone.ToySpec.ToyType;
 import net.hb.stone.ToySpec.ToyUser;
 
-public class MainBlood {
+public class Blood {
 	public static void main(String[] args) {
-		MainBlood m = new MainBlood();
+		Blood m = new Blood();
 		// m.getKaupIndex();
 		m.catchToy();
 	}

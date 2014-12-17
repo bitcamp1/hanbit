@@ -1,4 +1,4 @@
-package net.hb.model;
+package net.hb.controller;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -35,5 +35,9 @@ public class ChatClient extends JFrame implements ActionListener{
 				}
 			}
 			
-		}}
+		}
+	}
+	public static void main(String[] args) {
+		new ChatClient();
+	}
 }

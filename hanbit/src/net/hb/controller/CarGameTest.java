@@ -1,4 +1,4 @@
-package net.hb.model;
+package net.hb.controller;
 
 import java.awt.*;
 import java.awt.event.*;
@@ -15,7 +15,7 @@ import javax.swing.*;
 			
 			public  YouPanel( ){
 				try {
-					img = ImageIO.read(new File("C:/Mtest/img/kuma.gif"));
+					img = ImageIO.read(new File("img\\kuma.gif"));
 					this.setBackground(Color.green) ;
 				} catch (IOException e) {
 					System.out.println("IOException.....");
@@ -56,6 +56,10 @@ import javax.swing.*;
 			setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 			add(new YouPanel());
 			setVisible(true);
+		}
+		public static void main(String[] args) {
+			new CarGameTest();
+			
 		}
 	
 			

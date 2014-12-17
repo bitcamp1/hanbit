@@ -1,4 +1,4 @@
-package net.hb.model;
+package net.hb.controller;
 
 import java.awt.BorderLayout;
 import java.awt.HeadlessException;
@@ -110,6 +110,9 @@ public class ChatServer extends JFrame implements ActionListener{
 	private static void handleError(String str){
 		System.out.println(str);
 		System.exit(1);
+	}
+	public static void main(String[] args) {
+		new ChatServer();
 	}
 
 }

@@ -14,9 +14,9 @@ import net.hb.stone.SutdaCard;
 import net.hb.stone.TwoMultiOr3multi;
 import net.hb.stone.UpperCase;
 
-public class MainStone {
+public class Stone {
 	public static void main(String[] args) {
-		MainStone m = new MainStone();
+		Stone m = new Stone();
 	//	m.showSutdaCard();
 	//	m.until5_Gugudan();
 	//	m.showFruit();

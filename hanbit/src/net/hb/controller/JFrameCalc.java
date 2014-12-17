@@ -1,4 +1,4 @@
-package net.hb.model;
+package net.hb.controller;
 
 import java.awt.BorderLayout;
 import java.awt.Font;
@@ -127,6 +127,9 @@ public class JFrameCalc extends JFrame{
 					
 		}
 
+	}
+	public static void main(String[] args) {
+		new JFrameCalc();
 	}
 
 }
