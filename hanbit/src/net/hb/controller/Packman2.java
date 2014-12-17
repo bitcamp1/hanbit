@@ -12,8 +12,9 @@ import java.awt.event.WindowEvent;
 import java.io.File;
 
 
-public class Packman extends Frame implements KeyListener, Runnable {
+public class Packman2 extends Frame implements KeyListener, Runnable {
 	
+	private static final long serialVersionUID = 1L;
 	Image image;
 	Image wall;
 	int x,y,mx,my,sel;
@@ -37,8 +38,12 @@ public class Packman extends Frame implements KeyListener, Runnable {
 };
 			
 
-	public Packman(){
+	public Packman2(){
 		super("팩맨 게임");
+		init();
+		
+	}
+	public void init(){
 		x=400; y=425; mx=0; my=0; sel=0;
 		
 		setBackground(Color.black);
@@ -56,7 +61,6 @@ public class Packman extends Frame implements KeyListener, Runnable {
 		});
 		setBounds(20,20,800,825);
 		setVisible(true);
-		
 	}
 	
 	public void paint(Graphics g){
@@ -68,37 +72,10 @@ public class Packman extends Frame implements KeyListener, Runnable {
 		}
 		g.drawImage(image, x, y, x+50, y+50, sel*50, 0, sel*50+50, 50, this);
 	}
-	
-	
-	public static void main(String[] args) {
-		new Packman();
-	}
 
-	public void keyTyped(KeyEvent e) {}
-	public void keyReleased(KeyEvent e) {}
-	public void keyPressed(KeyEvent e) {
-		if(e.getKeyCode()==e.VK_LEFT){
-			mx=-10;
-			my=0;
-			sel = 0;
-		}else if(e.getKeyCode()==e.VK_RIGHT){
-			mx=10;
-			my=0;
-			sel = 6;
-		}else if(e.getKeyCode()==e.VK_UP){
-			mx=0;
-			my=-10;
-			sel = 2;
-		}else if(e.getKeyCode()==e.VK_DOWN){
-			mx=0;
-			my=10;
-			sel = 4;
-		}else if(e.getKeyCode()==e.VK_ESCAPE){
-			System.exit(1);
-		}
-	}
-	
+	@Override
 	public void run() {
+
 		while(true){
 			x+=mx;
 			y+=my;
@@ -140,8 +117,47 @@ public class Packman extends Frame implements KeyListener, Runnable {
 				repaint();
 			}catch(Exception e){}
 		}
+	
+		
+	}
+	@Override
+	public void keyTyped(KeyEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void keyPressed(KeyEvent e) {
+		if(e.getKeyCode()==e.VK_LEFT){
+			mx=-10;
+			my=0;
+			sel = 0;
+		}else if(e.getKeyCode()==e.VK_RIGHT){
+			mx=10;
+			my=0;
+			sel = 6;
+		}else if(e.getKeyCode()==e.VK_UP){
+			mx=0;
+			my=-10;
+			sel = 2;
+		}else if(e.getKeyCode()==e.VK_DOWN){
+			mx=0;
+			my=10;
+			sel = 4;
+		}else if(e.getKeyCode()==e.VK_ESCAPE){
+			System.exit(1);
+		}
+		
+	}
+	@Override
+	public void keyReleased(KeyEvent e) {
+		// TODO Auto-generated method stub
+		
 	}
 
+	
+	public static void main(String[] args) {
+		new Packman2();
+	}
 
 }
 

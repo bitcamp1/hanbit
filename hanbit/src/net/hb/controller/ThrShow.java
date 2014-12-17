@@ -45,7 +45,8 @@ public class ThrShow implements Runnable{
 			File txt = new File("c:"+File.separator+"myFolder"+File.separator+"gugudan.txt");
 			PrintWriter pw = new PrintWriter(txt);
 			for(int i=0;i<10;i++){
-				pw.print(dan+"*"+i+"="+(dan*i));
+			//  pw.print(dan+"*"+i+"="+(dan*i));
+				pw.printf("%d * %d = %d\t",dan ,i ,dan*i);
 				pw.println("");
 				if(i==5)break;
 			}
