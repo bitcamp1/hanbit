@@ -10,6 +10,7 @@ import java.awt.event.KeyListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
+
 public class Packman extends Frame implements KeyListener, Runnable {
 	
 	Image image;
@@ -36,13 +37,13 @@ public class Packman extends Frame implements KeyListener, Runnable {
 			
 
 	public Packman(){
-		super("��ο� �׽�Ʈ");
+		super("팩맨 게임");
 		x=400; y=425; mx=0; my=0; sel=0;
 		
 		setBackground(Color.black);
 		
-		wall = Toolkit.getDefaultToolkit().getImage("c:/wall.png");
-		image = Toolkit.getDefaultToolkit().getImage("c:/packman.png");
+		wall = Toolkit.getDefaultToolkit().getImage("img\\wall.png");
+		image = Toolkit.getDefaultToolkit().getImage("img\\packman.png");
 		Thread t = new Thread(this);
 		t.start();
 		
