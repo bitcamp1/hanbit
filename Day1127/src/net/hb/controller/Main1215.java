@@ -1,7 +1,6 @@
 package net.hb.controller;
 
 import net.hb.model.CarGameTest;
-import net.hb.model.Exec_02_sub;
 import net.hb.model.Note;
 import net.hb.model.WindowEventEx;
 
@@ -28,8 +27,6 @@ public class Main1215 {
 		new CarGameTest();
 	}
 	
-	public void getGabbGame(){
-		Exec_02_sub ex = new Exec_02_sub("ROCK SCISSORS PAPER GAME");
-	}
+	
 
 }

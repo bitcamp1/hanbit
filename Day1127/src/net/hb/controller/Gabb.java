@@ -1,29 +1,43 @@
-package net.hb.model;
+package net.hb.controller;
 
-import java.awt.*;
-import java.awt.event.*;
+import java.awt.BorderLayout;
+import java.awt.Dimension;
+import java.awt.Graphics;
+import java.awt.GridLayout;
+import java.awt.Image;
+import java.awt.Label;
+import java.awt.Panel;
+import java.awt.Toolkit;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
 
 @SuppressWarnings("serial")
-public class Exec_02_sub extends Frame implements ActionListener{
+	class GabbGame extends JFrame implements ActionListener{
 	private BorderLayout bl = new BorderLayout();
-	private Button jbt1 = new Button("ROCK");
-	private Button jbt2 = new Button("SCISSORS");
-	private Button jbt3 = new Button("PAPER");
-	private Button jbt4 = new Button("MATCH");
-	private Button jbt5 = new Button("AGAIN");
-	private Button jbt6 = new Button("CLOSE");
-	Image img = Toolkit.getDefaultToolkit().getImage("C:\\Mtest\\img\\fastrcp.gif");
+	private JButton jbt1 = new JButton("바위");
+	private JButton jbt2 = new JButton("SCISSORS");
+	private JButton jbt3 = new JButton("PAPER");
+	private JButton jbt4 = new JButton("MATCH");
+	private JButton jbt5 = new JButton("AGAIN");
+	private JButton jbt6 = new JButton("CLOSE");
+//	Image img = Toolkit.getDefaultToolkit().getImage("C:\\Mtest\\my3\\workspace\\img\\fastrcp.gif");
+	Image img = Toolkit.getDefaultToolkit().getImage("img\\fastrcp.gif");
 	
 	private int[] result = new int[3];
-	private Label lb = new Label("Please Press ths Keys" );
-	private Panel jp1 = new Panel();
-	private Panel jp2 = new Panel();
+	private JLabel lb = new JLabel("키를 눌러주세요" );
+	private JPanel jp1 = new JPanel();
+	private JPanel jp2 = new JPanel();
 	//private Panel jp3 = new Panel();
 	
 	private GridLayout gl1 = new GridLayout(6,1,10,10);
 	
-	public Exec_02_sub(String title) {
-		super(title);
+	public GabbGame(String title) {
+		super("가위바위보");
 		
 		this.init();
 		this.start();
@@ -66,9 +80,13 @@ public class Exec_02_sub extends Frame implements ActionListener{
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		int x = (int)(Math.random()*3)+1;
-		if (x == 1) img = Toolkit.getDefaultToolkit().getImage("C:\\Mtest\\img\\r.jpg");
-		else if (x == 2) img = Toolkit.getDefaultToolkit().getImage("C:\\Mtest\\img\\c.jpg");
-		else img = Toolkit.getDefaultToolkit().getImage("C:\\Mtest\\img\\p.jpg");
+		if (x == 1) img = Toolkit.getDefaultToolkit().getImage("img\\r.jpg");
+		
+		//C:\\Mtest\\my3\\workspace\\img\\r.jpg
+		
+		//C:\\Mtest\\img\\r.jpg
+		else if (x == 2) img = Toolkit.getDefaultToolkit().getImage("img\\c.jpg");
+		else img = Toolkit.getDefaultToolkit().getImage("img\\p.jpg");
 		repaint();
 
 		if(e.getSource() == jbt1) {
@@ -118,7 +136,7 @@ public class Exec_02_sub extends Frame implements ActionListener{
 								"Tie : " + result[1] + "Loose : " + result[2]);
 
 		}else if (e.getSource() == jbt5) {
-			img = Toolkit.getDefaultToolkit().getImage("C:\\Mtest\\img\\fastrcp.gif");
+			img = Toolkit.getDefaultToolkit().getImage("img\\fastrcp.gif");
 			lb.setText("Please Press ths Keys");
 			repaint();
 		}else if (e.getSource() == jbt6) {
@@ -126,5 +144,10 @@ public class Exec_02_sub extends Frame implements ActionListener{
 		}
 	}
 
+}
+public class Gabb {
+	public static void main(String[] ar) {
+		GabbGame ex = new GabbGame("가위 바위 보 게임");
+	}
 }
 
