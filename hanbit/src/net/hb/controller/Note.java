@@ -3,23 +3,25 @@ package net.hb.controller;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.FlowLayout;
+import java.awt.MenuItem;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.TextEvent;
-import java.awt.event.TextListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+import java.awt.event.WindowListener;
+import java.io.File;
 
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
-import javax.swing.border.Border;
 
 
 public class Note extends JFrame{
@@ -29,69 +31,155 @@ public class Note extends JFrame{
 	private JMenuBar menubar;
 	private JTextField tf;
 	private JPanel pan_center,pan_south;
-	private JMenu menu_file,menu_edit,menu_form,menu_help;
+	private JMenu menu_file,menu_edit,menu_form,menu_help,menu_view;
 	private JButton btn_send, btn_exit;
 	private JLabel lbl_info;
+	private ImageIcon icon_a, icon_b;
+	private JMenuItem m_copy, m_paste, m_cut, m_version, 
+						m_exit, m_open, m_save, m_new, m_file, m_edit, m_help;
+
 	
 	public Note(){
 		super("제목없음 - NoName");
 		init();
-		
 	}
 	
 	void init(){
-		tf_init();
-		menu_init();
-		lbl_init();
-		btn_init();
+		setTextArea();
+		setTextFields();
+		setLabels();
+		setIcons();
+		setButtons();
+		setPanes();
 		
-		frame_init();
-		ta_init();
-		pan_init();
-		setVisible(true);
+		setMenu();
+		setMbar();
+		setFrame();
 	}
-	void frame_init(){
-		setBackground(Color.yellow);
-		setBounds(1000,30,400,450);
-		addWindowListener(new WindowClosing());  
-	}
-	
-	void menu_init(){
+	void setMbar() {
 		menubar = new JMenuBar();
-		menu_file = new JMenu("파일");
-		menu_edit = new JMenu("편집");
-		menu_form = new JMenu("서식");
-		menu_help = new JMenu("도움");
-		menu_file.addActionListener(new MenuActionListener());
-		menu_edit.addActionListener(new MenuActionListener());
-		menu_form.addActionListener(new MenuActionListener());
-		menu_help.addActionListener(new MenuActionListener());
 		menubar.add(menu_file);
 		menubar.add(menu_edit);
 		menubar.add(menu_form);
+		menubar.add(menu_view);
 		menubar.add(menu_help);
-		setJMenuBar(menubar);
+		
 	}
-	void lbl_init(){
+
+	void setFrame(){
+		setJMenuBar(menubar);
+		setBackground(Color.yellow);
+		setBounds(1000,30,400,450);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setResizable(false);
+		setVisible(true);
+		
+	}
+	
+	void setMenu(){
+		menu_file = new JMenu("파일(F)");
+		menu_edit = new JMenu("편집(E)");
+		menu_form = new JMenu("서식(O)");
+		menu_view = new JMenu("보기(V)");
+		menu_help = new JMenu("도움말(H)");
+		setMenuItems();
+	
+		
+	}
+	void setLabels(){
 		lbl_info = new JLabel("입 력 :");
 	}
 	
-	void btn_init(){
-		btn_send = new JButton("전 송");
-		btn_exit = new JButton("종 료");
-		btn_send.addActionListener(new ButtonActionListener());
-		btn_exit.addActionListener(new ButtonActionListener());
+	void setButtons(){
+		btn_send = new JButton(icon_a); // "전 송"
+		btn_exit = new JButton(icon_b);// "종 료"
+		btn_send.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				message();
+			}
+		});
+		btn_exit.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				exit();
+			}
+		});
+		
 	}
-	void tf_init(){
+	void setMenuItems(){
+		m_copy=new JMenuItem("복 사");
+		m_paste=new JMenuItem("붙여넣기");
+		m_cut=new JMenuItem("잘라내기");
+		m_version=new JMenuItem("버 전"); 
+		m_exit=new JMenuItem("닫 기");
+		m_open=new JMenuItem("열 기");
+		m_save=new JMenuItem("저 장");
+		m_new=new JMenuItem("새파일");
+		m_file=new JMenuItem("파 일");
+		m_edit=new JMenuItem("편 집");
+		m_help=new JMenuItem("도움말");
+		
+		menu_file.add(m_new);
+		menu_file.addSeparator();
+		menu_file.add(m_save);
+		menu_file.add(m_open);
+		menu_file.add(m_exit);
+		
+		menu_edit.add(m_copy);
+		menu_edit.add(m_cut);
+		menu_edit.add(m_paste);
+		
+		menu_help.add(m_version);
+		
+		m_new.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				fileNew();
+				
+			}
+		});
+		m_save.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				fileSave();
+				
+			}
+
+			
+		});
+		m_open.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				fileOpen();
+				
+			}
+
+			
+		});
+		m_exit.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				System.exit(0);
+				
+			}
+		});
+	}
+	void setTextFields(){
 		tf = new JTextField(15);
 		
 	}
-	void ta_init(){
+	
+	void setTextArea(){
 		ta = new JTextArea();
 		ta.setBackground(Color.yellow);
 		ta.setEnabled(true);
 	}
-	void pan_init(){
+	void setPanes(){
 		pan_center = new JPanel();
 		pan_center.setLayout(new BorderLayout());
 		pan_center.add("Center",ta);
@@ -105,46 +193,36 @@ public class Note extends JFrame{
 		add("South",pan_south);
 		
 	}
-	
-	
+	void setIcons(){
+		icon_a=new ImageIcon("img"+File.separator+"icon_a.gif");
+		icon_b=new ImageIcon("img"+File.separator+"icon_b.gif");
+	}
+	private void exit() {
+		System.exit(0);
+		
+	}
+	void send() {
+		// TODO Auto-generated method stub
+		
+	}
 	public void message(){
-		String data = tf.getText();
-		ta.append(data+"\n");
+		
+		ta.append(tf.getText()+"\n");
 		tf.setText("");
 		tf.requestFocus();
 	}
-	class WindowClosing extends WindowAdapter{
-
-		@Override
-		public void windowClosing(WindowEvent we) {
-			System.exit(0);
-		}
+	void fileNew(){
+		setTitle("NoName");
+		tf.setText("");
+		ta.setText("");
+		tf.requestFocus();
+	}
+	void fileSave() {
+		// TODO Auto-generated method stub
 		
 	}
-	class ButtonActionListener implements ActionListener{
-		
-		@Override
-		public void actionPerformed(ActionEvent e) {
-			Object btn = e.getSource();
-			if(btn==btn_send)message();
-			else if(btn==btn_exit)System.exit(0);
-			else JOptionPane.showMessageDialog(null, "선택값이 범위에 없는 오류입니다.");
-		}
-		
-		
-	}
-	class MenuActionListener implements ActionListener{
-
-		@Override
-		public void actionPerformed(ActionEvent e) {
-			Object menu = e.getSource();
-			if(menu==menu_file)ta.setText("jjjjjjj");
-			else if(menu==menu_edit);
-			else if(menu==menu_form);
-			else if(menu==menu_help);
-			else ;
-			
-		}
+	void fileOpen() {
+		// TODO Auto-generated method stub
 		
 	}
 	public static void main(String[] args) {
