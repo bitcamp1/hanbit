@@ -2,14 +2,16 @@ package net.hb.controller;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
+import java.awt.FileDialog;
 import java.awt.FlowLayout;
-import java.awt.MenuItem;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
-import java.awt.event.WindowListener;
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileReader;
+import java.io.PrintWriter;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -51,22 +53,13 @@ public class Note extends JFrame{
 		setIcons();
 		setButtons();
 		setPanes();
-		
-		setMenu();
-		setMbar();
-		setFrame();
-	}
-	void setMbar() {
-		menubar = new JMenuBar();
-		menubar.add(menu_file);
-		menubar.add(menu_edit);
-		menubar.add(menu_form);
-		menubar.add(menu_view);
-		menubar.add(menu_help);
-		
+		setMenus();
+		setLayout();
 	}
 
-	void setFrame(){
+
+	void setLayout(){
+		
 		setJMenuBar(menubar);
 		setBackground(Color.yellow);
 		setBounds(1000,30,400,450);
@@ -76,12 +69,18 @@ public class Note extends JFrame{
 		
 	}
 	
-	void setMenu(){
+	void setMenus(){
 		menu_file = new JMenu("파일(F)");
 		menu_edit = new JMenu("편집(E)");
 		menu_form = new JMenu("서식(O)");
 		menu_view = new JMenu("보기(V)");
 		menu_help = new JMenu("도움말(H)");
+		menubar = new JMenuBar();
+		menubar.add(menu_file);
+		menubar.add(menu_edit);
+		menubar.add(menu_form);
+		menubar.add(menu_view);
+		menubar.add(menu_help);
 		setMenuItems();
 	
 		
@@ -177,7 +176,7 @@ public class Note extends JFrame{
 	void setTextArea(){
 		ta = new JTextArea();
 		ta.setBackground(Color.yellow);
-		ta.setEnabled(true);
+		ta.setEnabled(false);
 	}
 	void setPanes(){
 		pan_center = new JPanel();
@@ -205,7 +204,7 @@ public class Note extends JFrame{
 		// TODO Auto-generated method stub
 		
 	}
-	public void message(){
+	void message(){
 		
 		ta.append(tf.getText()+"\n");
 		tf.setText("");
@@ -218,15 +217,66 @@ public class Note extends JFrame{
 		tf.requestFocus();
 	}
 	void fileSave() {
-		// TODO Auto-generated method stub
+		FileDialog fd = new FileDialog(this, "저장", FileDialog.SAVE);
+		fd.setVisible(true);
+		String dir = fd.getDirectory();
+		String file = fd.getFile();
+		if(dir==null||file==null)return;
+		File newFile = new File(dir+file);
+		
+		try{
+			PrintWriter pw = new PrintWriter(newFile);
+			JOptionPane.showConfirmDialog(
+					null, 
+					"저장되었습니다.\r\n",
+					"저장",
+					JOptionPane.PLAIN_MESSAGE
+					);
+			pw.println(ta.getText());
+			setTitle(dir+file);
+			pw.close();
+			
+			
+		}catch(Exception ex){
+			ta.append("저장에 실패했습니다.");
+		}
 		
 	}
 	void fileOpen() {
-		// TODO Auto-generated method stub
-		
+		FileDialog fd = new FileDialog(this, "열기", FileDialog.LOAD);
+		fd.setVisible(true);
+		String dir = fd.getDirectory();
+		String file = fd.getFile();
+		if(dir==null||file==null) return;
+		try{
+			FileReader fr = new FileReader(dir+file);
+			BufferedReader br = new BufferedReader(fr);
+			String page="";
+			String data="";
+			while(true){
+				data=br.readLine();
+				if(data==null)break;
+				ta.append(data+"\n");
+			}
+			setTitle(dir+file);
+			
+		}catch(Exception ex){
+			ta.append("파일열기를 실패했습니다.");
+		}
 	}
 	public static void main(String[] args) {
 		new Note();
+	}
+	class WindowEventHandler extends WindowAdapter{
+		@Override
+		public void windowClosing(WindowEvent e) {
+			System.exit(0);
+		}
+		@Override
+		public void windowOpened(WindowEvent e) {
+			// TODO Auto-generated method stub
+			super.windowOpened(e);
+		}
 	}
 
 	

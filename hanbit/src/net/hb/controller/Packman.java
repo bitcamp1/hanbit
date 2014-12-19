@@ -45,8 +45,9 @@ public class Packman extends Frame implements KeyListener, Runnable {
 		
 		wall = Toolkit.getDefaultToolkit().getImage("img"+File.separator+"wall.png");
 		image = Toolkit.getDefaultToolkit().getImage("img"+File.separator+"packman.png");
-		Thread t = new Thread(this);
-		t.start();
+//		Thread t = new Thread(this);
+//		t.start();  갑자기 주석처리 시켜버린다.
+		
 		
 		addKeyListener(this);
 		addWindowListener(new WindowAdapter(){
@@ -56,6 +57,8 @@ public class Packman extends Frame implements KeyListener, Runnable {
 		});
 		setBounds(20,20,800,825);
 		setVisible(true);
+		
+		run(); // 위  Thread 주석처리 후 무한루프 때문에 첨가
 		
 	}
 	
