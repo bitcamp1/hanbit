@@ -2,6 +2,7 @@ package net.hb.controller;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
+import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.Font;
 import java.awt.Graphics;
@@ -69,7 +70,7 @@ public class Note2 {
 	//	chat_frm.setVisible(true);
 	}
 	void initLogin(){
-	//	loginUI();
+//		loginUI();
 		login_frm.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		login_frm.setBounds(20,20,400,600);
 		login_frm.setVisible(true);
@@ -82,8 +83,18 @@ public class Note2 {
 		listUI();
 	}
 	void loginUI(Image img, LayoutManager layout){
-		
+
+		login_frm = new JFrame("로그인");
+		JPanel pnl = new JPanel();
+		img=null;
+		Dimension size = new Dimension(img.getWidth(null),img.getHeight(null));
+		pnl.setPreferredSize(size);
+		pnl.setMinimumSize(size);
+		pnl.setMaximumSize(size);
+		pnl.setSize(size);
+		pnl.setLayout(layout);
 	}
+	
 
 
 	private void listUI() {
@@ -232,6 +243,16 @@ public class Note2 {
 		}
 		
 		
+	}
+	class Login extends JPanel{
+		private Image img;
+		public Login(LayoutManager layout){
+			super(layout);
+		}
+		public Login(Image img, LayoutManager layout){
+			this(layout);
+			this.img = img;
+		}
 	}
 	class FontConfig extends KeyAdapter{
 		private int size;
