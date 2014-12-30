@@ -17,10 +17,10 @@ public class Main1205 {
 		// m.exeArr();
 		// m.exeStringBuffer();
 		// m.exeStringTokenizer();
-		// m.matchGame();
+		 m.matchGame();
 		// m.matchGame2();
 		
-		m.countHanbit();
+	//	m.countHanbit();
 	}
 	public void countHanbit(){
 		HanbitDayCounter hdc = new HanbitDayCounter();
