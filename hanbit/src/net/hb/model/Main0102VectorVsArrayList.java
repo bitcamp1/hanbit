@@ -2,7 +2,7 @@ package net.hb.model;
 
 import java.util.Scanner;
 
-public class VectorVsArrayListMain {
+public class Main0102VectorVsArrayList {
 	public static void main(String[] args) {
 		// SungImpl 클래스의 객체 생성
 		// SungImpl의 부모클래스인 Sung을 써서 업캐스팅 할수 있다.
