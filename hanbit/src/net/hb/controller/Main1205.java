@@ -12,7 +12,7 @@ public class Main1205 {
 	
 	public static void main(String[] args) {
 		Main1205 m = new Main1205();
-		// m.exeSSN();
+		 m.exeSSN();
 		// m.exeSplit();
 		// m.exeArr();
 		// m.exeStringBuffer();
