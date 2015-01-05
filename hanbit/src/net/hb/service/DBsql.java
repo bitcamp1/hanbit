@@ -1,6 +1,6 @@
 package net.hb.service;
 
-import net.hb.model.DBbean;
+import net.hb.lecture.DBbean;
 
 public class DBsql {
 
