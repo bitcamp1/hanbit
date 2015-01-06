@@ -1,4 +1,4 @@
-package net.hb.day18;
+package net.hb.lecture;
 
 import java.awt.*;
 import java.awt.event.*;
@@ -7,10 +7,10 @@ import javax.swing.*;
 class Dudu extends JFrame implements ActionListener, Runnable{
 	ImageIcon ii = new ImageIcon("dudu.jpg");
 	private JButton jbt[] = new JButton[12];
-	private JButton start = new JButton("½ÃÀÛ");
-	private JButton end = new JButton("Á¾·á");
-	private JLabel jlb = new JLabel("Á¡¼ö : 0");
-	private JLabel time_jlb = new JLabel("½Ã°£ => 0:10");
+	private JButton start = new JButton("ï¿½ï¿½ï¿½ï¿½");
+	private JButton end = new JButton("ï¿½ï¿½ï¿½ï¿½");
+	private JLabel jlb = new JLabel("ï¿½ï¿½ï¿½ï¿½ : 0");
+	private JLabel time_jlb = new JLabel("ï¿½Ã°ï¿½ => 0:10");
 	private BorderLayout bl = new BorderLayout(10,10);
 	private JPanel jp1 = new JPanel();
 	private GridLayout gl1 = new GridLayout(3,4);
@@ -26,8 +26,8 @@ class Dudu extends JFrame implements ActionListener, Runnable{
 		this.init();
 		this.start();
 		super.setSize(350,250);
-		jlb.setFont(new Font("±Ã¼­Ã¼", Font.BOLD ,14 ));
-		time_jlb.setFont(new Font("±Ã¼­Ã¼", Font.BOLD ,14 ));
+		jlb.setFont(new Font("ï¿½Ã¼ï¿½Ã¼", Font.BOLD ,14 ));
+		time_jlb.setFont(new Font("ï¿½Ã¼ï¿½Ã¼", Font.BOLD ,14 ));
 		
 		Dimension screen = Toolkit.getDefaultToolkit().getScreenSize();
 		int xpos = (int)(screen.getWidth()/2 - super.getWidth()/2);
@@ -66,8 +66,8 @@ class Dudu extends JFrame implements ActionListener, Runnable{
 
 	public void actionPerformed(ActionEvent e) {
 		if (e.getSource() == start){
-			time_jlb.setText("½Ã°£ => 0:10");
-			jlb.setText("Á¡¼ö : 0");
+			time_jlb.setText("ï¿½Ã°ï¿½ => 0:10");
+			jlb.setText("ï¿½ï¿½ï¿½ï¿½ : 0");
 			count=-1;
 			Thread th = new Thread(this);
 			th.start();
@@ -103,11 +103,11 @@ class Dudu extends JFrame implements ActionListener, Runnable{
 			}catch(InterruptedException e){}
 			time--;
 			if (time == 0) {
-				time_jlb.setText("°ÔÀÓÀÌ ³¡³µ½À´Ï´Ù.");
+				time_jlb.setText("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.");
 				off_button();
 				break;
 			}
-			time_jlb.setText("½Ã°£ => 0:0"+time);
+			time_jlb.setText("ï¿½Ã°ï¿½ => 0:0"+time);
 		}
 	} //end
 
@@ -117,13 +117,13 @@ class Dudu extends JFrame implements ActionListener, Runnable{
 		jbt[randomsu].setIcon(null);
 		randomsu = (int)(Math.random() * 12);
 		jbt[randomsu].setIcon(ii);
-		jlb.setText("Á¡¼ö : " + count);
+		jlb.setText("ï¿½ï¿½ï¿½ï¿½ : " + count);
 		
 	}
 } //end
 
 public class DuduTest {
 	public static void main(String[] ar) {
-		Dudu  ob = new Dudu("µÎ´õÁö°ÔÀÓ");
+		Dudu  ob = new Dudu("ï¿½Î´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
 	}
 } //class end

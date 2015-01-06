@@ -1,37 +1,83 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-     
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<%@ page import="java.util.*"   %>
+<%@ page import="java.sql.*"   %>
+<%!
+	Connection cn;
+	Statement st; 
+	PreparedStatement pst;
+	CallableStatement cst;
+	ResultSet rs;
+	int g_sabun, tot=27, g_pay;
+	String g_name, g_ttl, sql, url, uid, pass;
+%>
 <!doctype html>
-<html lang="en">
+<html lang="ko">
 <head>
 	<meta charset="UTF-8" />
-	<title>[guestDeleteSave.jsp]</title>
-	<style type="text/css">
-		input,b{font-size: 20pt;font-weight: bold;}
+	<title>[guestSave.jsp] </title>
+		<style type="text/css">
+	   input,b{ font-size:20pt; font-weight:bold; }
 	</style>
+	
 </head>
-<%!
-	String data2, data3;
-	int data1, data4;
-
-%>
 <body>
+ <font size=7 color=blue>[guestDeleteSave.jsp] </font><p>
+ <%
+ url = "jdbc:oracle:thin:@localhost:1521:XE";
+ uid = "system";
+ pass = "oracle";
+ 
+ int data = Integer.parseInt(request.getParameter("sabun"));
+ System.out.println("³Ñ¾î¿Â °ª"+data);
+ sql = "delete from guest where sabun="+data;
 
-	<font size="7" color="blue">[guestDeleteSave.jsp]</font><p></p>
-	<%
-	
-		String data = request.getParameter("sabun");
-		out.println("<font size7> ì‚­ì œí•  ì‚¬ë²ˆ"+"</font><br>");
-	%>
-	<h1>
-		<a href="guest.jsp">ìž…ë ¥</a>&nbsp;
-		<a href="guestDelete.jsp">ì‚­ì œ</a>&nbsp;
-		<a href="guestList.jsp">ì¶œë ¥</a>&nbsp;
-	</h1>
-	<p><br /><br /><br /><br /><br />
+ 
+try{
+	Class.forName("oracle.jdbc.driver.OracleDriver");
+	cn = DriverManager.getConnection(url,uid,pass);
+	st = cn.createStatement();
+	st.executeUpdate(sql);
+	// insert , delete where, update set where Àº executeUpdate()  Ã³¸®
+	// select Àº executeQuery()
+	System.out.println("guestDeleteSave.jsp ÀúÀå ¼º°ø");
+	response.sendRedirect("guestList.jsp");
 	
 	
+}catch(Exception e){
+	System.out.println("»èÁ¦½ÇÆÐ: "+e.toString());
+	response.sendRedirect("guestList.jsp");
+}finally{
+	try{
+		if(pst!=null)pst.close();
+		if(cn!=null)pst.close();	
+	}catch(Exception e){
+		System.out.println(e.toString());
+	}
 	
 	
+}
+ 
+ %>
+<font size=7>
+	³Ñ¾î¿Â»ç¹ø:  <br>
+	³Ñ¾î¿ÂÀÌ¸§:  <br>
+	³Ñ¾î¿ÂÁ¦¸ñ:  <br>
+	³Ñ¾î¿Â±Þ¿©:  <br>
+</font>
+
+ <h1>
+ 	<a href="guest.jsp">µ¥ÀÌÅ¸ÀÔ·Â</a> &nbsp;
+ 	<a href="guestDelete.jsp">µ¥ÀÌÅ¸»èÁ¦</a> &nbsp;
+ 	<a href="guestList.jsp">µ¥ÀÌÅ¸Ãâ·Â</a> 
+ </h1>
+ <p><br><br><br><br>
+ <p><br><br><br><br>
 </body>
 </html>
+
+
+
+
+
+
