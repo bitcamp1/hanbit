@@ -91,4 +91,7 @@ public class Lotto2 {
 		
 		return (int) Math.ceil(money/1000);
 	}
+	public static void main(String[] args) {
+		new Lotto2();
+	}
 }

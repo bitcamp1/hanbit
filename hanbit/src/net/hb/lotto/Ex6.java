@@ -4,8 +4,11 @@ import java.awt.Canvas;
 import java.awt.Graphics;
 import java.awt.Image;
 import java.awt.Toolkit;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class Ex6 extends Canvas {
+	private static final long serialVersionUID = 1L;
 	// 이미지를 캔버스에 넣기
 	Image image0, image1, image2, image3, image4, image5;
 	Toolkit toolkit;
@@ -76,4 +79,5 @@ public class Ex6 extends Canvas {
 		g.drawImage(image5, 650, 10, this);
 		
 	}
+
 }

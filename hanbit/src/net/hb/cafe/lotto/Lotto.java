@@ -17,7 +17,7 @@ public class Lotto {
 					break;
 				}
 			}
-			i++;
+		//	i++;
 		}
 	}
 	

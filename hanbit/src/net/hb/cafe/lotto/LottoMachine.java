@@ -64,7 +64,8 @@ public class LottoMachine extends JFrame implements ActionListener{
 		pan_nth.add(btn_cal);
 		add(pan_nth,BorderLayout.NORTH);
 		add(pan_sth,BorderLayout.SOUTH);
-		setBounds(300,400,900,300);
+		setBounds(300,400,1200,300);
+		setResizable(false);
 		setVisible(true);
 	}
 
