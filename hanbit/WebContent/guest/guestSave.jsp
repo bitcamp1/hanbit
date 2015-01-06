@@ -1,52 +1,63 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
-
 <%@ page import="java.util.*"   %>
 <%@ page import="java.sql.*"   %>
-<html>
-<head> <title> [guestSave.jsp] </title> 
-	<style type="text/css">
+<%!
+	Connection cn;
+	Statement st; 
+	PreparedStatement pst;
+	CallableStatement cst;
+	ResultSet rs;
+	int g_sabun, tot=27, g_pay;
+	String g_name, g_ttl, sql, url, uid, pass;
+%>
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8" />
+	<title>[guestSave.jsp] </title>
+		<style type="text/css">
 	   input,b{ font-size:20pt; font-weight:bold; }
 	</style>
+	
 </head>
-<%!
-	private Connection cn;
-	private Statement st; 
-	private PreparedStatement pst;
-	private CallableStatement cst;
-	private ResultSet rs;
-	private String sql;
-	private int g_sabun, tot=27;
-	private String g_name, g_ttl;
-%>
-
 <body>
  <font size=7 color=blue>[guestSave.jsp-단독실행X] </font><p>
  <%
- try{
-	 Class.forName("oracle.jdbc.driver.OracleDriver");
-	 String url = "jdbc:oracle:thin:@127.0.0.1:1521:XE";
-	 String uid = "system";
-	 String pass = "oracle";
-	 cn = DriverManager.getConnection(url,uid,pass);
-	 
-	 st = cn.createStatement();
-	 rs = st.executeQuery(sql);
-	 while(rs.next()){
-		 out.println("<tr>");
-		 out.println("<td>"+rs.getString("name")+"</td>"); 
-		 out.println();
-		 out.println();
-		 out.println();
-		 out.println();
-		 out.println();
-		 out.println("</tr>");
-	 }
-	 out.println("<h1>DB연결 성공</h1><br>");
- }catch(Exception e){
-	 out.println("<h1>DB연결 실패</h1><br>");
-	 e.printStackTrace();
- }
+ sql = "insert into guest values(?,?,?,sysdate,?)";
+ g_name = request.getParameter("name");
+ g_ttl = request.getParameter("title");
+ g_sabun = Integer.parseInt(request.getParameter("sabun"));
+ g_pay = Integer.parseInt(request.getParameter("pay"));
+ url = "jdbc:oracle:thin:@localhost:1521:XE";
+ uid = "system";
+ pass = "oracle";
+ 
+try{
+	Class.forName("oracle.jdbc.driver.OracleDriver");
+	cn = DriverManager.getConnection(url,uid,pass);
+	pst = cn.prepareStatement(sql);
+	pst.setInt(1, g_sabun);
+	pst.setString(2, g_name);
+	pst.setString(3, g_ttl);
+	pst.setInt(4, g_pay);
+	pst.executeUpdate();
+	response.sendRedirect("guestList.jsp");
+	
+	
+}catch(Exception e){
+	System.out.println("저장실패: "+e.toString());
+	response.sendRedirect("guest.jsp");
+}finally{
+	try{
+		if(pst!=null)pst.close();
+		if(cn!=null)pst.close();	
+	}catch(Exception e){
+		System.out.println(e.toString());
+	}
+	
+	
+}
  
  %>
 <font size=7>
