@@ -2,30 +2,40 @@
     pageEncoding="UTF-8"%>
     <%@ page import = "java.util.*" %>
     <%@ page import = "java.sql.* "%>
-<!doctype html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8" />
-	<title>guestList.jsp</title>
-	<style type="text/css">
-	table { background:white; text-align:center; width: 800px;border-collapse:collapse;class='center'}
-	tr td{border:1px solid black}
-    .bg_yellow{background:yellow;}
-		a{text-decoration: none; font-weight: bold; color: black;}
-		a:hover{text-decoration: underline;color: blue;}
-		.center{margin: 0 auto;width:1000px;}
-
-	</style>
-</head>
-<%!
-	private Connection cn;
+ <%!
+	private Connection cn ;
 	private Statement st; 
 	private PreparedStatement pst;
 	private CallableStatement cst;
 	private ResultSet rs;
 	private String sql;
 	private int g_sabun, tot, g_pay;
-	private String g_name, g_ttl;
+	private String g_name, g_ttl, url;
+%>
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>guestList.jsp</title>
+	<style type="text/css">
+		table { background:white; text-align:center; width: 800px;border-collapse:collapse;class='center'}
+		th{background-color: yellow;border:1px solid black;}
+		tr td{border:1px solid black}
+	    .bg_yellow{background:yellow;}
+		a{text-decoration: none; font-weight: bold; color: black;}
+		a:hover{text-decoration: underline;color: blue;}
+		.center{margin: 0 auto;width:1000px;}
+
+	</style>
+</head>
+<%
+	try{
+		Class.forName("oracle.jdbc.driver.OracleDriver");
+		url = "jdbc:oracle:thin:@127.0.0.1:1521:XE";
+		cn = DriverManager.getConnection(url,"system","oracle");
+	}catch(Exception e){
+		e.printStackTrace();
+	}
 %>
 <body>
 <div >
@@ -48,33 +58,25 @@
 		<td colspan="5"> <font size="6"> 레코드 갯수 : <%=tot %></font>&nbsp;&nbsp;&nbsp;&nbsp;</td>
 	</tr>
 	<tr bgcolor="yellow" height="50" align="center">
-		<td class='bg_yellow'>사번</td>
-		<td class='bg_yellow'>이름</td>
-		<td class='bg_yellow'>제목</td>
-		<td class='bg_yellow'>날짜</td>
-		<td class='bg_yellow'>급여</td>
+		<th>사번</th>
+		<th>이름</th>
+		<th>제목</th>
+		<th>날짜</th>
+		<th>급여</th>
 	</tr>
 
-<%
-	try{
-		Class.forName("oracle.jdbc.driver.OracleDriver");
-		String url = "jdbc:oracle:thin:@127.0.0.1:1521:XE";
-		cn = DriverManager.getConnection(url,"system","oracle");
-	}
-	catch(Exception e){
-			e.printStackTrace();
-		}
-try{
-	
-		sql = "select * from guest";
-		st = cn.createStatement();
-		rs = st.executeQuery(sql);
-		while(rs.next()==true){
-			g_sabun = rs.getInt("sabun");
-			g_name = rs.getString("name");
-			g_ttl = rs.getString("title");
-			g_pay = rs.getInt("pay"); 
-%>
+	<%
+		try{
+			
+			sql = "select * from guest order by sabun asc";
+			st = cn.createStatement();
+			rs = st.executeQuery(sql);
+			while(rs.next()==true){
+				g_sabun = rs.getInt("sabun");
+				g_name = rs.getString("name");
+				g_ttl = rs.getString("title");
+				g_pay = rs.getInt("pay"); 
+	%>
 			<tr
 				onmousemove="this.style.backgroundColor='#00FFFF' "
 				onmouseout="this.style.backgroundColor='' "
@@ -87,21 +89,14 @@ try{
 				 <td><%= g_pay%></td>
 				 
 			 </tr>
-<%
+	<%
 		}
-	}catch(Exception e){
-		
-	}
- %>
+		}catch(Exception e){
+			
+		}
+	 %>
  </table>
  <p>
- <h1>
- 	<a href="guest.jsp">데이타입력</a> &nbsp;
- 	<a href="guestDelete.jsp">데이타삭제</a> &nbsp;
- 	<a href="guestList.jsp">데이타출력</a> 
- </h1>
- <p><br><br><br><br>
- <p><br><br><br><br>
  </div>
 </body>
 </html>

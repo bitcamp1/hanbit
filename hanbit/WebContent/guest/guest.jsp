@@ -55,15 +55,15 @@
 		<b>이름:</b> <input type=text name="name"> <br>
 		<b>제목:</b> <input type=text name="title" value="snow"> <br>   
 		<b>급여:</b> <input type=text name="pay" value="71"> <p>
-		<input type="button" onClick="nullCheck( )"  value="데이타저장"> &nbsp;
-		<input type="reset"  value="입력취소">
+		<input type="button" onClick="nullCheck( )"  value="저장"> &nbsp;
+		<input type="reset"  value="취소">
 	</form>
  <p>
  
  <h1>
- 	<a href="guest.jsp">데이타입력</a> &nbsp;
- 	<a href="guestDelete.jsp">데이타삭제</a> &nbsp;
- 	<a href="guestList.jsp">데이타출력</a> 
+ 	<a href="guest.jsp">[입력]</a> &nbsp;
+ 	<a href="guestDelete.jsp">[삭제]</a> &nbsp;
+ 	<a href="guestList.jsp">[목록]</a> 
  </h1>
  <p><br><br><br><br>
 </body>

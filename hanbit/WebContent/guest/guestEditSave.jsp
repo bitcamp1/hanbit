@@ -16,7 +16,7 @@
 <head>
 	<meta charset="UTF-8" />
 	<title>[guestSave.jsp] </title>
-		<style type="text/css">
+	<style type="text/css">
 	   input,b{ font-size:20pt; font-weight:bold; }
 	</style>
 	
@@ -25,32 +25,34 @@
 	try{
 		Class.forName("oracle.jdbc.driver.OracleDriver");
 		String url = "jdbc:oracle:thin:@localhost:1521:XE";
-		cn = DriverManager.getConnection(url,"system","oracle");
+		cn = DriverManager.getConnection(url, "system","oracle");
 	}catch(Exception e){
 		e.printStackTrace();
 	}
 %>
 <body>
- <font size=7 color=blue>[guestSave.jsp-단독실행X] </font><p>
+ <font size=7 color=blue>수정실행</font><p>
  <%
-		 String sql = "insert into guest values(?,?,?,sysdate,?)";
+ 		 
 		 g_name = request.getParameter("name");
 		 g_ttl = request.getParameter("title");
+		 g_pay = Integer.parseInt(request.getParameter("pay"));	
 		 g_sabun = Integer.parseInt(request.getParameter("sabun"));
-		 g_pay = Integer.parseInt(request.getParameter("pay"));
+		 
+ 		String sql = "update guest set name=?, title=?, nalja=sysdate, pay=? where sabun=?";
+ 		
 		
 		try{
-			
 			pst = cn.prepareStatement(sql);
-			pst.setInt(1, g_sabun);
-			pst.setString(2, g_name);
-			pst.setString(3, g_ttl);
-			pst.setInt(4, g_pay);
+			pst.setString(1, g_name);
+			pst.setString(2, g_ttl);
+			pst.setInt(3, g_pay);
+			pst.setInt(4, g_sabun);
 			pst.executeUpdate();
 			response.sendRedirect("guestList.jsp");
 		}catch(Exception e){
-			System.out.println("저장실패: "+e.toString());
-			response.sendRedirect("guest.jsp");
+			System.out.println("수정실패: "+e.toString());
+			response.sendRedirect("guestList.jsp");
 		}finally{
 			try{
 				if(pst!=null)pst.close();
@@ -59,15 +61,7 @@
 				System.out.println(e.toString());
 			}
 		}
- 
  %>
-	 <h1>
-	 	<a href="guest.jsp">[입력]</a> &nbsp;
-	 	<a href="guestDelete.jsp">[삭제]</a> &nbsp;
-	 	<a href="guestList.jsp">[목록]</a> 
-	 </h1>
-	 <p><br><br><br><br>
-	 <p><br><br><br><br>
 	</body>
 </html>
 

@@ -9,7 +9,7 @@
 	CallableStatement cst;
 	ResultSet rs;
 	int g_sabun, tot=27, g_pay;
-	String g_name, g_ttl, sql, url, uid, pass;
+	String g_name, g_ttl;
 %>
 <!doctype html>
 <html lang="ko">
@@ -21,58 +21,42 @@
 	</style>
 	
 </head>
+	<%
+		try{
+			Class.forName("oracle.jdbc.driver.OracleDriver");
+			String url = "jdbc:oracle:thin:@localhost:1521:XE";
+			cn = DriverManager.getConnection(url, "system", "oracle");
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+	%>
 <body>
- <font size=7 color=blue>[guestDeleteSave.jsp] </font><p>
- <%
- url = "jdbc:oracle:thin:@localhost:1521:XE";
- uid = "system";
- pass = "oracle";
- 
- int data = Integer.parseInt(request.getParameter("sabun"));
- System.out.println("넘어온 값"+data);
- sql = "delete from guest where sabun="+data;
-
- 
-try{
-	Class.forName("oracle.jdbc.driver.OracleDriver");
-	cn = DriverManager.getConnection(url,uid,pass);
-	st = cn.createStatement();
-	st.executeUpdate(sql);
-	// insert , delete where, update set where 은 executeUpdate()  처리
-	// select 은 executeQuery()
-	System.out.println("guestDeleteSave.jsp 저장 성공");
-	response.sendRedirect("guestList.jsp");
-	
-	
-}catch(Exception e){
-	System.out.println("삭제실패: "+e.toString());
-	response.sendRedirect("guestList.jsp");
-}finally{
-	try{
-		if(pst!=null)pst.close();
-		if(cn!=null)pst.close();	
-	}catch(Exception e){
-		System.out.println(e.toString());
-	}
-	
-	
-}
- 
- %>
-<font size=7>
-	넘어온사번:  <br>
-	넘어온이름:  <br>
-	넘어온제목:  <br>
-	넘어온급여:  <br>
-</font>
-
- <h1>
- 	<a href="guest.jsp">데이타입력</a> &nbsp;
- 	<a href="guestDelete.jsp">데이타삭제</a> &nbsp;
- 	<a href="guestList.jsp">데이타출력</a> 
- </h1>
- <p><br><br><br><br>
- <p><br><br><br><br>
+	 <font size=7 color=blue>[guestDeleteSave.jsp] </font><p>
+	 <%
+		try{
+			int data = Integer.parseInt(request.getParameter("sabun"));
+			String sql = "delete from guest where sabun="+data;
+			st = cn.createStatement();
+			st.executeUpdate(sql);
+			response.sendRedirect("guestList.jsp");
+		}catch(Exception e){
+			System.out.println("삭제실패: "+e.toString());
+			response.sendRedirect("guestList.jsp");
+		}finally{
+			try{
+				if(pst!=null)pst.close();
+				if(cn!=null)pst.close();	
+			}catch(Exception e){
+				System.out.println(e.toString());
+			}
+		}
+		 
+	 %>
+	 <h1>
+	 	<a href="guestList.jsp">[목록]</a> 
+	 </h1>
+	 <p><br><br><br><br>
+	 <p><br><br><br><br>
 </body>
 </html>
 

@@ -18,13 +18,16 @@
 	
 	
 	<%
-		String data=request.getParameter("idx");
-		out.println("<h1>넘어온 값"+data+"</h1>");
+		String sabun=request.getParameter("sabun");
+		String name=request.getParameter("name");
+		String title=request.getParameter("title");
+		String pay=request.getParameter("pay");
+		out.println("<h1>넘어온 사번"+sabun+"</h1>");
+		out.println("<h1>넘어온 이름"+name+"</h1>");
+		out.println("<h1>넘어온 페이"+pay+"</h1>");
 	%>
 	
 	<a href="aaa.jsp">[aaa.jsp]</a> &nbsp;
-	<a href="guest.jsp">[guest 입력]</a> &nbsp;
-	<a href="uestList.jsp">[guest 출력]</a> &nbsp;
 	<br />
 </body>
 </html>
