@@ -3,6 +3,9 @@ import java.util.InputMismatchException;
 import java.util.NoSuchElementException;
 import java.util.Scanner;
 
+import net.hb.match.game.MatchGame;
+import net.hb.match.game.MatchGame2;
+
 public class Main1205 {
 	
 	public static void main(String[] args) {

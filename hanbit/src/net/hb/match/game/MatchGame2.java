@@ -1,4 +1,4 @@
-package net.hb.lecture;
+package net.hb.match.game;
 
 public class MatchGame2 {
 	int player, com, count;

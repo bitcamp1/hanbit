@@ -5,6 +5,9 @@ import java.util.List;
 import java.util.Scanner;
 import java.util.StringTokenizer;
 
+import net.hb.rps.game.RockPaperScissors;
+import net.hb.service.RPSgame;
+
 import com.sun.org.apache.xerces.internal.impl.dv.ValidatedInfo;
 
 public class Main1208 {

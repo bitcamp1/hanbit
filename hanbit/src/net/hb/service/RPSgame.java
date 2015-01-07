@@ -1,4 +1,4 @@
-package net.hb.lecture;
+package net.hb.service;
 
 
 public class RPSgame {

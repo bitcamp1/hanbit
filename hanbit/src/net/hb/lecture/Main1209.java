@@ -6,6 +6,9 @@ import java.util.Iterator;
 import java.util.Scanner;
 import java.util.Vector;
 
+import net.hb.lotto.my.Lotto;
+import net.hb.lotto.my.Lotto2;
+
 
 
 

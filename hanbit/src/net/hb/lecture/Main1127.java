@@ -4,6 +4,8 @@ import java.util.InputMismatchException;
 import java.util.NoSuchElementException;
 import java.util.Scanner;
 
+import net.hb.gugudan.Gugudan;
+
 public class Main1127 {
 	public static void main(String[] args) {
 		Main1127 m = new Main1127();

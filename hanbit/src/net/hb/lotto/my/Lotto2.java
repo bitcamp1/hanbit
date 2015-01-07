@@ -1,10 +1,12 @@
-package net.hb.lecture;
+package net.hb.lotto.my;
 
+import java.util.Vector;
 
-public class Lotto {
+public class Lotto2 {
 	private int money;
 	int[][] lottos;
 	int[][] arr;
+	Vector<String> vc = new Vector<String>();
 	
 	public void inputMoney(int money) {
 		this.money = money;
@@ -55,7 +57,7 @@ public class Lotto {
 			}
 		}
 	}
-	public void printLottos() {
+	/*public void printLottos() {
 		
 		for(int i=0;i<lottos.length;i++){
 			sort(lottos[i]);
@@ -65,7 +67,21 @@ public class Lotto {
 			System.out.println();
 		}
 		
+	}*/
+	
+	public Vector<String> getLottos() {
+		
+		for(int i=0;i<lottos.length;i++){
+			sort(lottos[i]);
+			for(int j=0;j<lottos[i].length;j++){
+				vc.add(String.valueOf(lottos[i][j]));
+			}
+			//System.out.println();
+		}
+		return vc;
+		
 	}
+	
 	public int getCount(int money) {
 		
 		if(money < 1000 ){
@@ -75,5 +91,7 @@ public class Lotto {
 		
 		return (int) Math.ceil(money/1000);
 	}
-	
+	public static void main(String[] args) {
+		new Lotto2();
+	}
 }

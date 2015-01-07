@@ -2,6 +2,8 @@ package net.hb.lecture;
 
 import java.util.Scanner;
 
+import net.hb.gugudan.Gugudan;
+
 public class Main1201 {
 	public static void main(String[] args) {
 		Main1201 m = new Main1201();

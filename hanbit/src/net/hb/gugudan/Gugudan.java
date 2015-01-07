@@ -1,4 +1,4 @@
-package net.hb.lecture;
+package net.hb.gugudan;
 
 import java.util.InputMismatchException;
 

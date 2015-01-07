@@ -1,4 +1,4 @@
-package net.hb.lecture;
+package net.hb.rps.game;
 
 
 public class RockPaperScissors {
