@@ -27,6 +27,7 @@
 		.center{margin: 0 auto;width:1000px;}
 
 	</style>
+
 </head>
 <%
 	try{
@@ -40,6 +41,9 @@
 <body>
 <div >
 <font size="7" color="blue">guestList.jsp</font>
+
+ 	<a href="guest.jsp">[등록]</a> 
+ 
 <%
 	try{
 		sql = "select count(*) as cnt from guest";
@@ -95,7 +99,10 @@
 			
 		}
 	 %>
+	
  </table>
+ 
+ <p><br><br><br><br>
  <p>
  </div>
 </body>

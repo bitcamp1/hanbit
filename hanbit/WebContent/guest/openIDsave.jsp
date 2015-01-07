@@ -15,7 +15,7 @@
 <html lang="ko">
 <head>
 	<meta charset="UTF-8" />
-	<title>[guestSave.jsp] </title>
+	<title>[openIDsave.jsp] </title>
 		<style type="text/css">
 	   input,b{ font-size:20pt; font-weight:bold; }
 	</style>
@@ -31,12 +31,8 @@
 	}
 %>
 <body>
- <font size=7 color=blue>[guestSave.jsp-단독실행X] </font><p>
  <%
-		 g_name = request.getParameter("name");
-		 g_ttl = request.getParameter("title");
-		 g_sabun = Integer.parseInt(request.getParameter("sabun"));
-		 g_pay = Integer.parseInt(request.getParameter("pay"));		
+		 String userid = request.getParameter("userid");
 		 String sql_cnt = "select count(*) as cnt from guest where sabun="+g_sabun;
 		 st = cn.createStatement();
 		 rs = st.executeQuery(sql_cnt);
@@ -49,7 +45,6 @@
 		%>
 			 <script>
 			 	alert("<%=g_sabun%>사번이 이미 등록되었습니다.");
-			 	location.href =" guest.jsp";
 			 	
 			 </script>
 			 
@@ -58,11 +53,8 @@
 		 %>
 		 
 		  <script>
-			 	alert("<%=g_sabun%>은 등록이 가능합니다.");
-			 	
-			 	
+			 	alert("<%=g_sabun%>은 사용 가능합니다.");
 			 </script>
-		 
 		 <%
  		 String sql = "insert into guest values(?,?,?,sysdate,?)";
 		 
@@ -90,13 +82,6 @@
 		}
 		 }// else end
  %>
-	 <h1>
-	 	<a href="guest.jsp">[입력]</a> &nbsp;
-	 	<a href="guestDelete.jsp">[삭제]</a> &nbsp;
-	 	<a href="guestList.jsp">[목록]</a> 
-	 </h1>
-	 <p><br><br><br><br>
-	 <p><br><br><br><br>
 	</body>
 </html>
 

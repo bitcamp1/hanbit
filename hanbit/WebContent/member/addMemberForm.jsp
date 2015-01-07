@@ -1,42 +1,55 @@
-<%@page import="java.sql.ResultSet"%>
-<%@page import="java.beans.Statement"%>
-<%@page import="java.sql.Connection"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    <%!
-    	Connection cn = null;
-    	Statement st = null;
-    	ResultSet rs = null;
-    	String url = "jdbc:oracle:thin:@localhost:1521:XE";
-    	String uid = "system";
-    	String pass = "oracle";
-    	String sql = "select * from member";
-    %>
 <!doctype html>
-<html lang="en">
+<html lang="ko">
 <head>
 	<meta charset="UTF-8" />
-	<title>allMember</title>
+	<title>[addMemberForm]</title>
+	<%@include file="css.jsp" %>
+	<script>
+		function move(){
+			addMember.submit();
+		}
+	</script>
 </head>
 <body>
-	<table>
+	<form name='addMember' action="addMember.jsp">
+	<table style='width:600px'>
+		
+		
 		<tr>
-			<th>이름</th>
-			<th>아이디</th>
-			<th>암호</th>
-			<th>이메일</th>
-			<th>전화번호</th>
-			<th>권한(1:관리자,2:일반회원)</th>
-			<td></td>
+			<td style='width:200px' class='yellow'>이름</td>
+			<td><input type="text" name="name" size="20"></td>
 		</tr>
-		<%
-			try{
-				Class.forName("oracle.jdbc.driver.OracleDriver");
-				
-			}catch(Exception e){
-				e.printStackTrace();
-			}
-		%>
+		<tr>
+			<td class='yellow'>아이디</td>
+			<td><input type="text" name="userid" size="20"></td>
+		</tr>	
+		<tr>
+			<td class='yellow'>비밀번호</td>
+			<td><input type="text" name="pwd" size="20"></td>
+		</tr>
+		<tr>
+			<td class='yellow'>이메일</td>
+			<td><input type="text" name="email" size="20"></td>
+		</tr>
+		<tr>
+			<td class='yellow'>전화번호</td>
+			<td><input type="text" name="phone" size="11"></td>
+		</tr>
+		<tr>
+			<td class='yellow'>등급</td>
+			<td>
+				<input type="radio" name="admin" value="1" checked="checked" />관리자
+				<input type="radio" name="admin" value="2" />일반회원
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2"><input type="submit" value="전송"/>&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="reset" value="취소"/></td>
+		</tr>
+		
 	</table>	
+	</form>
 </body>
 </html>

@@ -50,12 +50,7 @@
 					g_ttl = rs.getString("title");
 					g_pay = rs.getInt("pay"); 
 		%>
-					<tr bgcolor="yellow" height="50" align="center">
-						<td>사번</td>
-						<td>이름</td>
-						<td>제목</td>
-						<td>급여</td>
-					</tr>
+					
 					<tr align="center">
 						<td colspan="4">
 							<font size="7" color="blue" face="궁서체">
@@ -64,6 +59,12 @@
 								</b>
 							</font>
 						</td>
+					</tr>
+					<tr bgcolor="yellow" height="50" align="center">
+						<td>사번</td>
+						<td>이름</td>
+						<td>제목</td>
+						<td>급여</td>
 					</tr>
 					<tr>
 						 <td><%= g_sabun %></td>

@@ -8,54 +8,34 @@
 	</style>
 	
 	<script type="text/javascript">
-	   function nullCheck( ){
-		   var a = myform.sabun.value;
-		   var b = myform.name.value;
-		   if(a == ""){
-			   alert("사번이 공백입니다") ;
-			   myform.sabun.focus( );
-			   return;//아래문장 수행하지 않음 
-		   }else{
-			   myform.name.focus( );
-		   }
-		   
-		   //사번자릿수 4자리=> myform.sabun.value.length
-		   if(myform.sabun.value.length != 4 ){
-			   alert("사번자릿수가 틀렸습니다") ;
-			   myform.sabun.value = ""; //tf.setText("");
-			   myform.sabun.focus( );
-			   return ;
-		   }
-		   
-		   if(b==""){
-			  alert("이름이 공백입니다") ;
-			  myform.name.focus( );
-			  return;//아래문장 수행하지 않음 
-		   }else { myform.title.focus(); }
-		   
-		   document.myform.submit( ); //action속성연결 
-	   }//nullCheck end
-	   
-	   function message( ){
-		   myform.sabun.value = ""; //tf.setText("");
-		   myform.sabun.focus( );
-	   }//message end
-	   
+	  
 	   function  notice( ){
 		   window.open("popup.jsp", "title", "toobar=no, menubar=no, width=380, height=600, left=200, top=100 ") ;
-		   //open("1", "2", "~height=700,left=200,top=100") ;
-	   }//notice end
+	   }
+	   function  check( ){
+		   if(myform.sabun.value=""){
+			   alert("사번이 공백입니다.");
+			   myform.sabun.focus();
+				return;
+			   
+		   }
+		   
+		   var url = "openID.jsp"
+		   window.open(url, "title", "toobar=no, menubar=no, width=380, height=300, left=200, top=100 ") ;
+	   }
 	</script>
 </head>
-<body>
+<body > 
  <font size=7 color=blue>[guest.jsp] </font><p>
-	<form name="myform"  method="get" action="guestSave.jsp">
+	<form name="myform" action="guestSave.jsp">
 		<b>사번:</b> 
-		<input type=text name="sabun" onFocus="message()" value="사번 4자리 입력" > <br>
+		<input type=text name="sabun" size="10"> 
+		<input type="button" onClick="check()" value="중복체크" />
+		<br>
 		<b>이름:</b> <input type=text name="name"> <br>
 		<b>제목:</b> <input type=text name="title" value="snow"> <br>   
 		<b>급여:</b> <input type=text name="pay" value="71"> <p>
-		<input type="button" onClick="nullCheck( )"  value="저장"> &nbsp;
+		<input type="submit" value="저장"> &nbsp;
 		<input type="reset"  value="취소">
 	</form>
  <p>
