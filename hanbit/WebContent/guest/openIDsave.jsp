@@ -32,8 +32,9 @@
 %>
 <body>
  <%
-		 String userid = request.getParameter("userid");
-		 String sql_cnt = "select count(*) as cnt from guest where sabun="+g_sabun;
+		 int data = Integer.parseInt(request.getParameter("userid"));
+ try{
+		 String sql_cnt = "select count(*) as cnt from guest where sabun="+data;
 		 st = cn.createStatement();
 		 rs = st.executeQuery(sql_cnt);
 		 tot = 0;
@@ -56,22 +57,11 @@
 			 	alert("<%=g_sabun%>은 사용 가능합니다.");
 			 </script>
 		 <%
- 		 String sql = "insert into guest values(?,?,?,sysdate,?)";
-		 
-		
-		try{
-			
-			pst = cn.prepareStatement(sql);
-			pst.setInt(1, g_sabun);
-			pst.setString(2, g_name);
-			pst.setString(3, g_ttl);
-			pst.setInt(4, g_pay);
-			pst.executeUpdate();
-			response.sendRedirect("guestList.jsp");
+		 }
 		 
 		}catch(Exception e){
 			System.out.println("저장실패: "+e.toString());
-			response.sendRedirect("guest.jsp");
+			response.sendRedirect("guestList.jsp");
 		}finally{
 			try{
 				if(pst!=null)pst.close();
