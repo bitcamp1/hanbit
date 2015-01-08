@@ -13,7 +13,7 @@
 		   window.open("popup.jsp", "title", "toobar=no, menubar=no, width=380, height=600, left=200, top=100 ") ;
 	   }
 	   function  check( ){
-		   if(myform.sabun.value=""){
+		   if(myform.sabun.value==""){
 			   alert("사번이 공백입니다.");
 			   myform.sabun.focus();
 				return;

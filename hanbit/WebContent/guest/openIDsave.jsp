@@ -33,7 +33,7 @@
 <body>
  <%
 		 String userid = request.getParameter("userid");
-		 String sql_cnt = "select count(*) as cnt from guest where sabun="+g_sabun;
+		 String sql_cnt = "select count(*) as cnt from guest where sabun="+userid;
 		 st = cn.createStatement();
 		 rs = st.executeQuery(sql_cnt);
 		 tot = 0;
@@ -45,7 +45,8 @@
 		%>
 			 <script>
 			 	alert("<%=g_sabun%>사번이 이미 등록되었습니다.");
-			 	
+			 	opener.myform.sabun.focus();
+			 	self.close();
 			 </script>
 			 
 			 <%
@@ -54,6 +55,7 @@
 		 
 		  <script>
 			 	alert("<%=g_sabun%>은 사용 가능합니다.");
+			 	self.close();
 			 </script>
 		 <%
  		 String sql = "insert into guest values(?,?,?,sysdate,?)";
