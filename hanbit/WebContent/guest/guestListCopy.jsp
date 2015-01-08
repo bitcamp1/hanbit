@@ -59,10 +59,9 @@
 %>
 <table  >
 	<tr align="right">
-		<td colspan="6"> <font size="6"> 레코드 갯수 : <%=tot %></font>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+		<td colspan="5"> <font size="6"> 레코드 갯수 : <%=tot %></font>&nbsp;&nbsp;&nbsp;&nbsp;</td>
 	</tr>
 	<tr bgcolor="yellow" height="50" align="center">
-		<th>글번호</th>
 		<th>사번</th>
 		<th>이름</th>
 		<th>제목</th>
@@ -73,7 +72,7 @@
 	<%
 		try{
 			
-			sql = "select rownum,sabun,name,title,nalja,pay from guest order by rownum desc";
+			sql = "select * from guest order by sabun asc";
 			st = cn.createStatement();
 			rs = st.executeQuery(sql);
 			while(rs.next()==true){
@@ -87,7 +86,6 @@
 				onmouseout="this.style.backgroundColor='' "
 			
 			>
-				 <td><%= rs.getInt("rownum") %></td>
 				 <td><%= g_sabun %></td>
 				 <td><%= g_name %></td>
 				 <td><a href="guestDetail.jsp?idx=<%=g_sabun %>"><%= g_ttl %></a></td>
@@ -101,16 +99,7 @@
 			
 		}
 	 %>
-	<tr align="center" >
-		<td colspan="6" style="font-size: 14pt;">
-			<a href="guestList.jsp?pageNum=1">[1]</a>
-			<a href="guestList.jsp?pageNum=2">[2]</a>
-			<a href="guestList.jsp?pageNum=3">[3]</a>
-			<a href="guestList.jsp?pageNum=4">[4]</a>
-			<a href="guestList.jsp?pageNum=5">[5]</a>
-			<a href="guestList.jsp?pageNum=6">[6]</a>
-		</td>
-	</tr>
+	
  </table>
  
  <p><br><br><br><br>
