@@ -10,7 +10,6 @@
 	</style>
 	<script type="text/javascript">
 		function send(){
-			console.log("uuu"+opener.myform.sabun.value);
 			subform.userid.value=opener.myform.sabun.value;
 			subform.userid.focus();
 		}
