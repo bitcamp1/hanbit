@@ -8,14 +8,16 @@
 	<style type="text/css">
 	input,b{font-size: 16px;font-weight: bold;}
 	</style>
-	<script>
+	<script type="text/javascript">
 		function send(){
-			subform.userid.value=openner.myform.sabun.value;
+			console.log("uuu"+opener.myform.sabun.value);
+			subform.userid.value=opener.myform.sabun.value;
 			subform.userid.focus();
 		}
 	</script>
 </head>
-<body bgcolor="pink" onLoad='send()'>
+<body bgcolor="pink" onload='send()'>
+ 
 		<form name="subform" action="openIDsave.jsp">
 			<b><font color="red">아이디</font> :</b>
 			<input type="text" name="userid" />
