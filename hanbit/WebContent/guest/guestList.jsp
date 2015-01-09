@@ -10,7 +10,7 @@
 	private ResultSet rs;
 	private String sql;
 	private int g_sabun, tot, g_pay, pageNum, pageSize, start, end, pageCnt, startPage;
-	private String g_name, g_ttl, url,  sVal, sKey, sQry;
+	private String g_name, g_ttl,  sVal, sKey;
 %>
 <!doctype html>
 <html lang="en">
@@ -32,7 +32,7 @@
 <%
 	try{
 		Class.forName("oracle.jdbc.driver.OracleDriver");
-		url = "jdbc:oracle:thin:@127.0.0.1:1521:XE";
+		String url = "jdbc:oracle:thin:@127.0.0.1:1521:XE";
 		cn = DriverManager.getConnection(url,"system","oracle");
 	}catch(Exception e){
 		e.printStackTrace();
@@ -154,7 +154,12 @@
 	 %>
 	<tr align="center" >
 		<td colspan="6" style="font-size: 14pt;">
+		
+		
 		<%
+		
+		
+		
 			for(int i=startPage;i<(startPage+pageSize);i++){
 				if(i==pageNum){
 					out.println("<font color=red>["+i+"]</font>");
