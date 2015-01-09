@@ -9,8 +9,8 @@
 	private CallableStatement cst;
 	private ResultSet rs;
 	private String sql;
-	private int g_sabun, tot, g_pay, pageNum, limit, pageSize, start, end, pageCnt, startPage;
-	private String g_name, g_ttl, url, pnum, sVal, sKey, sQry;
+	private int g_sabun, tot, g_pay, pageNum, pageSize, start, end, pageCnt, startPage;
+	private String g_name, g_ttl, url,  sVal, sKey, sQry;
 %>
 <!doctype html>
 <html lang="en">
@@ -45,12 +45,27 @@
  	<a href="guest.jsp">[등록]</a> 
  
 <%
+	
+	sKey = request.getParameter("keyField");
+	sVal = request.getParameter("keyword");
+	
 	try{
-		sql = "select count(*) as cnt from guest";
-		st = cn.createStatement();
-		rs = st.executeQuery(sql);	
-		if(rs.next()==true){
-			tot = rs.getInt("cnt");
+		
+			if(sVal==""||sVal==null){
+				
+				sql = "select count(*) as cnt from guest";
+				st = cn.createStatement();
+				rs = st.executeQuery(sql);	
+				if(rs.next()==true){
+					tot = rs.getInt("cnt");
+				}
+			}else{
+				sql = "select count(*) as cnt from guest where "+sKey+" like '%"+sVal+"%'";
+				st = cn.createStatement();
+				rs = st.executeQuery(sql);	
+				if(rs.next()==true){
+					tot = rs.getInt("cnt");
+			}
 		}
 	}catch(Exception e){
 		e.printStackTrace();
@@ -73,41 +88,44 @@
 	<%
 		try{
 			
-		//	sql = "select rownum,sabun,name,title,nalja,pay from guest order by rownum desc";
-			pnum = request.getParameter("pageNum");
+			String pnum = request.getParameter("pageNum");
 			if(pnum==""||pnum==null){
 				pnum = "1";
 			}
 			pageNum = Integer.parseInt(pnum);
-			limit = 10;
 			pageSize = 10;
-			start = (pageNum-1)*pageSize + 1;
-			end = pageNum*pageSize;
-			startPage = 1;
-			int tmp = 0;
 			if(tot%pageSize==0){
 				pageCnt = tot/pageSize;
 			}else{
 				pageCnt = (tot/pageSize)+1;
 			}
 			
-			sKey = request.getParameter("keyField");
-			sVal = request.getParameter("keyWord");
-			if(sKey==""||sKey==null||sVal==""||sVal==null){
-				sKey = " name ";
-				sVal = "";
+			start = (pageNum-1)*pageSize + 1;
+			end = pageNum*pageSize;
+			
+			if(sVal==""||sVal==null){
+				sql=" select seq, sabun, name, title, nalja, pay from ";
+				sql+= "(select rownum as seq, g.* from guest g order by seq asc)";
+				sql+= "where seq between '"+start+"' and '" +end+"' "; 
 			}else{
-				sQry = " where "+sKey.trim()+"'%"+sVal+"%'";
+				sql=" select * from ";
+				sql+= "(select rownum as seq, g.* from guest g ";
+				sql+= " where "+sKey.trim()+" like '%"+sVal+"%'";
+				sql+="order by seq desc) ";
+				sql+= "where seq between '"+start+"' and '" +end+"' "; 
 			}
-			sQry = " ";
 			
-			
-			sql=" select * from ";
-			sql+= "(select rownum as seq, sabun, name, title, nalja, pay from guest order by seq desc)";
-			sql+= "  where seq between '"+start+"' and '" +end+"' "; 
+		
+		
 			
 			st = cn.createStatement();
 			rs = st.executeQuery(sql);
+		
+	
+			
+			int tmp = (pageNum-1)%pageSize;
+			startPage = pageNum-tmp;
+			
 			while(rs.next()==true){
 				
 				g_sabun = rs.getInt("sabun");
@@ -136,17 +154,30 @@
 	 %>
 	<tr align="center" >
 		<td colspan="6" style="font-size: 14pt;">
-			<a href="guestList.jsp?pageNum=1">[1]</a>
-			<a href="guestList.jsp?pageNum=2">[2]</a>
-			<a href="guestList.jsp?pageNum=3">[3]</a>
-			<a href="guestList.jsp?pageNum=4">[4]</a>
-			<a href="guestList.jsp?pageNum=5">[5]</a>
-			<a href="guestList.jsp?pageNum=6">[6]</a>
+		<%
+			for(int i=startPage;i<(startPage+pageSize);i++){
+				if(i==pageNum){
+					out.println("<font color=red>["+i+"]</font>");
+				}else{
+					out.println("<a href=guestList.jsp?pageNum="+i+">["+i+"]</a>");
+				}
+				if(i>=pageCnt)break;
+			}
+		%>
 		</td>
 	</tr>
 	<tr align="center">
 		<form action="guestList.jsp">
-			
+			<td colspan="6">
+				검색 : &nbsp;
+				<select name="keyField">
+					<option value="name" selected="selected">이 름</option>
+					<option value="title">제 목</option>
+					<option value="content">내 용</option>
+				</select>
+				<input type="text" name="keyword" />
+				<input type="submit" value="검 색" />
+			</td>
 		</form>
 	</tr>
  </table>
