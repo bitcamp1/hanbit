@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <jsp:include page="common/header.jsp"></jsp:include>
 <!doctype html>
 <html lang="ko">
 <head>
@@ -16,9 +17,10 @@
 		<li>Home</li>
 		<li>Tutorials</li>
 		<li>Podcase</li>
+		<li>join</li>
 	</nav>
 	<section id='main'>
-		<article>
+		<article id='article'>
 			<header>
 				<hgroup>
 					<h1> HEADERS </h1>

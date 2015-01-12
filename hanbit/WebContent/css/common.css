@@ -5,8 +5,8 @@ header,section,footer,aside,nav,article,hgroup{display:block;}
 body{text-align: center;}
 #wrapper{border:1px solid black; width:1000px;margin:20px auto; text-align: left;}
 #header{background: yellow;border:1px solid white;padding:20px;}
-#main{width:70%;height:700px;border:1px solid red;float:right;}
+#main{width:75%;height:700px;border:1px solid red;float:right;}
 #menu{background: blue;color: white;width:100%;}
 #menu li{display: inline-block;list-style: none;padding:5px;font:bond 14px Tahoma;}
-#side{float:right; width:29%;height:700px;background: #66CCCC}
+#side{float:right; width:24%;height:700px;background: #66CCCC}
 #footer{clear:both;text-align: center;padding:20px;border-top:2px solid green;}
