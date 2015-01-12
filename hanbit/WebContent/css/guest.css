@@ -1,2 +1,7 @@
 @CHARSET "UTF-8";
 @import url(robin.css);
+#guest_wrap{width:100%;height:100%}
+#guest_tbl_wrap{width:480px;height:400px;}
+#guest_tbl input,b{ font-size:16pt; font-weight:bold; }
+#guest_tbl tr td {margin-top: 10px;border: 1px solid gray;}
+#guest_tbl {border-collapse: collapse;}

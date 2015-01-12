@@ -1,75 +1,68 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<!doctype html>
-<html lang="en">
-<head> <title> [guest.jsp] </title> 
-	<style type="text/css">
-	   input,b{ font-size:16pt; font-weight:bold; }
-	   .dv{margin-top: 10px};
-	</style>
-	<link rel="stylesheet" href="../css/robin.css" type="text/css" />
-	<script src="../js/robin2.js"></script>
-	<script src="../js/robin.js"></script>
-	<script type="text/javascript">
-	  
-	   function  notice( ){
-		   window.open("popup.jsp", "title", "toobar=no, menubar=no, width=380, height=600, left=200, top=100 ") ;
-	   }
-	   function  check( ){
-		    if(myform.sabun.value==""){
-			   alert("사번이 공백입니다.");
-			   myform.sabun.focus();
-			   return;
-		   }  
-		   var url = "openID.jsp"
-		   window.open(url, "title", "toobar=no, menubar=no, width=380, height=300, left=200, top=100 ") ;
-	   }
-	   function  zipCheck( ){
-		   var url = "zipCheck.jsp"
-		   window.open(url, "title", "toobar=no, menubar=no, width=500, height=300, left=200, top=100 ") ;
-	   }
-	</script>
-</head>
+<jsp:include page="../common/header.jsp"></jsp:include>
 <body > 
-<div style="width:100%;height:400px;" class="relative">
-	<div style="width:400px;height:400px;" class=" top center aqua_b">
+<div id='guest_wrap'>
+	<div id='guest_tbl_wrap' class=" top center aqua_b">
 		 
-			<form name="myform" action="guestSave.jsp" class="lf ">
-			<div class='lf'>
-				<font size=7 color=blue>[guest.jsp] </font><p>
-			</div>
-			<div>
-				<b>사번:</b>
-				<input type=text name="sabun" size="10">
-				<input type="button" onClick="check()" value="중복체크"/>
-			</div>
-			<div style="clear:both"></div>
-			<div>
-				<b>이름:</b>
-				<input type=text name="name"> <br>
-			</div>
-			<div>
-				<b class='carrot2'>제목:</b> 
-				<input type=text name="title" value="snow"/>
-			</div>
-			<div>
-				<b>급여:</b> 
-				<input type=text name="pay" value="71"/>
-			</div>	 
-			<div>
-				<b>우편:</b> 
-				<input type=text name="zipcode" size="10" /> 
-				<input type="button" onClick="zipCheck()" value="우편번호찾기"/> 
-			</div>
-			<div>
-				<b>주소:</b>
-				<input type=text name="address" size='20'> 
-			</div>	
-			<div>
-				<input type="submit" value="저장"/> &nbsp;
-				<input type="reset"  value="취소"/>
-			</div>
-			
+			<form name="myform" action="guestSave.jsp">
+			<table id='guest_tbl'>
+				<tr>
+					<td colspan="2"><font size=7 color=blue>[guest.jsp] </font><p></td>
+				</tr>
+				<tr >
+					<td style='width:30%;'><b>사번:</b></td>
+					<td >
+						<input type=text name="sabun" size="10" class="lf">
+						<input type="button" onClick="sabunCheck()" value="중복체크"/>
+					</td>
+				</tr>
+				<tr>
+					<td><b>이름:</b></td>
+					<td>
+						<input type=text name="name"> <br>
+					</td>
+				</tr>
+				<tr>
+					<td><b >제목:</b> </td>
+					<td>
+						<input type=text name="title" value="snow"/>
+					</td>
+				</tr>
+				<tr>
+					<td><b>급여:</b> </td>
+					<td>
+						<input type=text name="pay" value="71"/>
+					</td>
+				</tr>
+				<tr>
+					<td><b>우편:</b> </td>
+					<td>
+						<input type=text name="zipcode" size="10" /> 
+						<input type="button" onClick="zipCheck()" value="우편번호찾기"/> 
+					</td>
+				</tr>
+				<tr>
+					<td><b>주소:</b></td>
+					<td>
+						<input type=text name="address" size='20'> 
+					</td>
+				</tr>
+					<tr>
+					<td><b>좋아하는 계절:</b></td>
+					<td>
+						<%
+							String[] seasonArr = {"봄","여름","가을","겨울"};
+						%> 
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2">
+						<input type="submit" value="저장"/> &nbsp;
+						<input type="reset"  value="취소"/>
+					</td>
+				</tr>
+			</table>
 			</form>
 		 <p>
 		 <div class=>

@@ -1,3 +1,4 @@
+<%@page import="com.sun.xml.internal.txw2.Document"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     <%@ page import = "java.util.*" %>
@@ -72,7 +73,7 @@
 	}
 	
 %>
-<table  >
+<table id='guest_list_tbl' >
 	<tr align="right">
 		<td colspan="6"> <font size="6"> 레코드 갯수 : <%=tot %></font>&nbsp;&nbsp;&nbsp;&nbsp;</td>
 	</tr>
@@ -111,7 +112,7 @@
 				sql=" select * from ";
 				sql+= "(select rownum as seq, g.* from guest g ";
 				sql+= " where "+sKey.trim()+" like '%"+sVal+"%'";
-				sql+="order by seq desc) ";
+				sql+=" order by seq desc) ";
 				sql+= "where seq between '"+start+"' and '" +end+"' "; 
 			}
 			
@@ -157,17 +158,21 @@
 		
 		
 		<%
-		
-		
-		
-			for(int i=startPage;i<(startPage+pageSize);i++){
-				if(i==pageNum){
-					out.println("<font color=red>["+i+"]</font>");
-				}else{
-					out.println("<a href=guestList.jsp?pageNum="+i+">["+i+"]</a>");
-				}
-				if(i>=pageCnt)break;
+		if((startPage-pageSize)>0){
+			out.println("<a href=guestList.jsp?pageNum="+(startPage-pageSize)+">◀이전</a>");
+		}
+		for(int i=startPage;i<(startPage+pageSize);i++){
+			if(i==pageNum){
+				out.println("<font color=red>["+i+"]</font>");
+			}else{
+				out.println("<a href=guestList.jsp?pageNum="+i+">["+i+"]</a>");
 			}
+			if(i>=pageCnt)break;
+		}
+			
+		if((startPage+pageSize)<=pageCnt){
+			out.println("<a href=guestList.jsp?pageNum="+(startPage+pageSize)+">다음▶</a>");
+		}
 		%>
 		</td>
 	</tr>
@@ -180,7 +185,7 @@
 					<option value="title">제 목</option>
 					<option value="content">내 용</option>
 				</select>
-				<input type="text" name="keyword" />
+				<input type="text" name="keyword" value='' />
 				<input type="submit" value="검 색" />
 			</td>
 		</form>
