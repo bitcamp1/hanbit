@@ -31,17 +31,16 @@
 		}
 	%>
 <body>
-	 <font size=7 color=blue>[guestDeleteSave.jsp] </font><p>
 	 <%
 		try{
 			int data = Integer.parseInt(request.getParameter("sabun"));
 			String sql = "delete from guest where sabun="+data;
 			st = cn.createStatement();
 			st.executeUpdate(sql);
-			response.sendRedirect("guestList.jsp");
+			response.sendRedirect("template.jsp?guestList");
 		}catch(Exception e){
 			System.out.println("삭제실패: "+e.toString());
-			response.sendRedirect("guestList.jsp");
+			response.sendRedirect("template.jsp?guestList");
 		}finally{
 			try{
 				if(pst!=null)pst.close();

@@ -7,9 +7,6 @@
 		 
 			<form name="myform" action="guestSave.jsp">
 			<table id='guest_tbl'>
-				<tr>
-					<td colspan="2"><font size=7 color=blue>[guest.jsp] </font><p></td>
-				</tr>
 				<tr >
 					<td style='width:30%;'><b>사번:</b></td>
 					<td >

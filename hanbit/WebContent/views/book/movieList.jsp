@@ -11,6 +11,8 @@
 		table{border-collapse: collapse;border:1px solid black;}
 		table tr td{border:1px solid black;}
 	</style>
+	
+	
 </head>
 <body>
 	<%

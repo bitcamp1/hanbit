@@ -26,7 +26,6 @@
 		g_pay = request.getParameter("pay");
 	
 	%>
- <font size=7 color=blue>[guestEdit.jsp] </font><p>
 	<form name="myform"  method="get" action="guestEditSave.jsp">
 		<b>사번:</b> 
 		<input type=text name="sabun" onFocus="message()" value=<%=g_sabun %> readonly="readonly"> <br>
@@ -38,9 +37,6 @@
 	</form>
  <p>
  
- <h1>
- 	<a href="guestList.jsp">[목록]</a> 
- </h1>
  <p><br><br><br><br>
 </body>
 </html>

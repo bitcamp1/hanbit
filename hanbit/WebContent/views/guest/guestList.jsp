@@ -41,9 +41,8 @@
 %>
 <body>
 <div >
-<font size="7" color="blue">guestList.jsp</font>
 
- 	<a href="guest.jsp">[등록]</a> 
+ 	<a href="template.jsp?page=guest">[등록]</a> 
  
 <%
 	
@@ -142,7 +141,7 @@
 				 <td><%= rs.getInt("seq") %></td>
 				 <td><%= g_sabun %></td>
 				 <td><%= g_name %></td>
-				 <td><a href="guestDetail.jsp?idx=<%=g_sabun %>"><%= g_ttl %></a></td>
+				 <td><a href="template.jsp?page=guestDetail&idx=<%=g_sabun %>"><%= g_ttl %></a></td>
 				 <td><%= rs.getDate("nalja") %></td>
 				 <td><%= g_pay%></td>
 				 
@@ -159,25 +158,25 @@
 		
 		<%
 		if((startPage-pageSize)>0){
-			out.println("<a href=guestList.jsp?pageNum="+(startPage-pageSize)+">◀이전</a>");
+			out.println("<a href=template.jsp?page=guestList&pageNum="+(startPage-pageSize)+">◀이전</a>");
 		}
 		for(int i=startPage;i<(startPage+pageSize);i++){
 			if(i==pageNum){
 				out.println("<font color=red>["+i+"]</font>");
 			}else{
-				out.println("<a href=guestList.jsp?pageNum="+i+">["+i+"]</a>");
+				out.println("<a href=template.jsp?page=guestList&pageNum="+i+">["+i+"]</a>");
 			}
 			if(i>=pageCnt)break;
 		}
 			
 		if((startPage+pageSize)<=pageCnt){
-			out.println("<a href=guestList.jsp?pageNum="+(startPage+pageSize)+">다음▶</a>");
+			out.println("<a href=template.jsp?page=guestList&pageNum="+(startPage+pageSize)+">다음▶</a>");
 		}
 		%>
 		</td>
 	</tr>
 	<tr align="center">
-		<form action="guestList.jsp">
+		<form action="template.jsp?page=guestList" method="POST">
 			<td colspan="6">
 				검색 : &nbsp;
 				<select name="keyField">

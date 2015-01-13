@@ -49,10 +49,10 @@
 			pst.setInt(3, g_pay);
 			pst.setInt(4, g_sabun);
 			pst.executeUpdate();
-			response.sendRedirect("guestList.jsp");
+			response.sendRedirect("template.jsp?page=guestList");
 		}catch(Exception e){
 			System.out.println("수정실패: "+e.toString());
-			response.sendRedirect("guestList.jsp");
+			response.sendRedirect("template.jsp?page=guestList");
 		}finally{
 			try{
 				if(pst!=null)pst.close();

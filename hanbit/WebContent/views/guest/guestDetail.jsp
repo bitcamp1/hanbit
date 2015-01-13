@@ -35,7 +35,6 @@
 	}
 %>
 <body>
-		<font size="7" color="blue">guestDetail.jsp</font>
 		<table  cellpadding="0" cellspacing="1">
 		<%
 			try{
@@ -82,11 +81,11 @@
 		 </table>
 		 <p>
 		 <h1>
-		 	<a href="guestEdit.jsp?sabun=<%=g_sabun %>
+		 	<a href="template.jsp?page=guestEdit&sabun=<%=g_sabun %>
 		 		&name=<%=g_name%>
 		 		&title=<%=g_ttl%>
 		 		&pay=<%=g_pay %>">[수정]</a> &nbsp;
-		 	<a href="guestDelete.jsp?sabun=<%=g_sabun%>">[삭제]</a> &nbsp;
+		 	<a href="template.jsp?page=guestDelete&sabun=<%=g_sabun%>">[삭제]</a> &nbsp;
 		 	<a href="guestList.jsp">[목록]</a> 
 		 </h1>
 		 <p><br><br><br><br>
