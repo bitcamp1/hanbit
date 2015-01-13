@@ -34,15 +34,18 @@
 	<h1>Hello, World !!</h1>
 </div>
 	
-	
-<!-- 모달 -->
-<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-header">
-    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-    <h3 id="myModalLabel">모달 제목</h3>
-  </div>
   
-</div>
+  
+  <div class="container">
+      <h2>Labels</h2>
+      <p>The different .label classes insert a label within an element (will automatically fit the size of the element):</p>                  
+      <h1>Heading 1 <span class="label label-default">New</span></h1>
+      <h3>Heading 3 <span class="label label-default">New</span></h3>
+      <h5>Heading 5 <span class="label label-default">New</span></h5>                        
+      <p>Paragraph <span class="label label-default">New</span></p>                                    
+    </div>
+  
+  
 <div class="modal-body">
     <p>한 멋진 본문…</p>
   </div>

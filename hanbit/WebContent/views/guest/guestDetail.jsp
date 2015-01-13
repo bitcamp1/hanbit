@@ -86,7 +86,7 @@
 		 		&title=<%=g_ttl%>
 		 		&pay=<%=g_pay %>">[수정]</a> &nbsp;
 		 	<a href="template.jsp?page=guestDelete&sabun=<%=g_sabun%>">[삭제]</a> &nbsp;
-		 	<a href="guestList.jsp">[목록]</a> 
+		 	<a href="template.jsp?page=guestList">[목록]</a> 
 		 </h1>
 		 <p><br><br><br><br>
 		 <p><br><br><br><br>
