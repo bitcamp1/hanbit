@@ -1,0 +1,1021 @@
+@charset "utf-8";
+
+/* 팝업모듈가이드
+- 새로운 부분이 생겼을경우 해당 파트 밑에 채워 나가시면 됩니다.
+- (각 페이지별 고유스타일)을 제외한 부분은 절대 수정해선 안됩니다.
+- 설명레이어는 공통 스타일을 벗어난 스타일에 대해선 html에 인라인 스타일로 넣습니다. (각페이지별 고유 스타일없음)
+*/
+
+/*팝업모듈(.popup-module) 시작 */
+/*팝업 - 레이아웃 스타일*/
+.popup-module,.layer-module {position:relative; width:100%; border:2px solid #656565; color:#6a6a6a; background:#fff;}
+.popup-module img {vertical-align:top;} /* sub_add1 공통 팝업 닫기 위치 수정 */
+.popup-module p {margin:0; padding:0;}
+.popup-module .btn-put {margin:-20px 0 0 0; text-align:right; font-size:0; line-height:0;}
+.popup-module .btn-put img {margin-left:2px;}
+.popup-module .btn-put01 {margin:10px 0 0 0; text-align:right; font-size:0; line-height:0;}
+.popup-module .tit-h1 {padding:11px 0 8px 35px; font-size:12px; color:#fff; background:url("http://openimage.interpark.com/tourpark/tour/common/popup/bg_header.gif") no-repeat left top;}
+.popup-module .tit-h2,
+.popup-module .tit-h3 {margin-top:16px; padding-left:10px; font-size:11px; font-family:doutm; color:#676767; background:url("http://openimage.interpark.com/tourpark/tour/common/bul/bul_reser.gif") no-repeat left 3px; *background-position:0 3px;}
+.popup-module .tit-h3 span {display:inline-block; margin:1px 0 0 15px; font-size:11px; color:#969696; letter-spacing:-0.025em; font-weight:normal; vertical-align:top;}
+.popup-module .btn-close {position:absolute; top:9px; right:10px;} /* 공통 팝업 닫기 위치 변경 */
+.popup-module .pop-dBody {margin:0; padding:20px;}
+.popup-module .pop-dFoot {padding:6px 20px 5px 20px; font-size:11px; line-height:16px; border-top:1px solid #dbdbdb; background:#f0f0f0; *zoom:1;}
+
+/*팝업 - 하단 버튼스타일*/
+.popup-module .btn-block01 {margin:0; padding:0; padding-bottom:3px; text-align:center; font-size:0; line-height:0;}
+.popup-module .btn-block01.add01 {margin-left:-4px;}
+.popup-module .btn-block01.add01 a {margin-left:4px; font-size:0; line-height:0;}
+.popup-module .btn-block01 .btn-type01 {display:inline-block; margin-top:-30px; width:68px; height:31px; border:0; cursor:pointer; vertical-align:middle; background:url("http://openimage.interpark.com/tourpark/tour/common/button/btn_modify.gif") no-repeat 0 0;}
+
+/*팝업 - 스크롤*/
+.popup-module .scroll-cover {overflow:hidden; padding-right:5px;}
+.popup-module .scroll02{
+	overflow-y:scroll; overflow-x:hidden; margin-bottom:20px; padding-bottom:1px; zoom:1;
+	scrollbar-arrow-color:#6d6d6d;
+	scrollbar-face-color:#f3f3f3;
+	scrollbar-track-color:#f3f3f3;
+	scrollbar-3dlight-color:#e1e1e1;
+	scrollbar-highlight-color:#f3f3f3;
+	scrollbar-shadow-color:#c8c8c8;
+	scrollbar-darkshadow-color:#f3f3f3;
+	}
+.popup-module .scroll02 .tit-h2 {font-size:12px;} /* sub_add1 */
+.popup-module .scroll02 .tit-h2.first {margin-top:-5px;}
+.popup-module .scroll02.fixed01 {padding:10px 15px 0 0; height:185px;} /* 탑승객 정보 관리 */
+.popup-module .scroll02.fixed02 {padding:10px 15px 0 0; height:300px;} /* 항공 이용규정 */
+.popup-module .scroll02.fixed02 .depth {display:none;}
+.popup-module .scroll02.fixed02 .depth.on {display:block;}
+.popup-module .scroll02.fixed03 {height:600px;} /* 예약확인서 */
+.popup-module .scroll02.fixed03 .board-list01, 
+.popup-module .scroll02.fixed03 .data-table {border-top:2px solid #9f9f9f;}
+.popup-module .scroll02.fixed04 {height:480px;} /* 상품요금정보 */
+.popup-module .scroll02.fixed04 .h5-tit01 {margin-left:22px; zoom:1;}
+.popup-module .scroll02.fixed05 {height:505px;padding:0 5px 0 0;}/*도시검색*/
+.popup-module .scroll02.fixed06 {margin-bottom:0; height:95px;}/*도시검색*/
+.popup-module .pop-dBody .scroll-innerarea01 {width:700px;}
+
+/*팝업 -  문단 및 글자색 */
+input {color:#777;}
+em {font-style:normal;}
+.popup-module legend {visibility:hidden; overflow:hidden; height:0; width:0; position:absolute; line-height:0; font-size:0;}
+.popup-module .point01 {color:#d45252 !important;}
+.popup-module .point02 {color:#54aedc !important;}
+.popup-module .point03 {color:#eb5151 !important;}
+.popup-module .point04 {color:#f66800 !important;}
+.popup-module .txt {padding:0; margin:0;}
+.popup-module .para-01 {margin-left:1px; font-size:11px; color:#848484; letter-spacing:-0.1em;}
+.popup-module .para-01 strong {font-size:11px; color:#848484; letter-spacing:-0.05em;}
+.popup-module .para-01 .block {display:block; padding-bottom:2px; }
+.popup-module .para-02 {margin-left:1px; font-size:12px; color:#676767; line-height:18px; letter-spacing:-0.1em;}
+.popup-module .para-02 strong, .popup-module .para-02 span {font-size:12px; color:#676767; line-height:18px; letter-spacing:-0.12em;}
+.popup-module .para-03 {display:block; margin:0; padding:17px 0 16px 8px; font-size:11px; color:#848484; line-height:130%; letter-spacing:-0.03em;}
+.popup-module .para-03 .bul {position:absolute; margin-left:-8px;}
+.popup-module .para-03 strong, .popup-module .para-03 span {font-size:11px; color:#848484; letter-spacing:-0.05em;}
+.popup-module strong.point {color:#a5a5a5;}
+.popup-module strong.point2 {color:#6D8DA2 !important;}
+.popup-module .para-03.add {margin-left:0;}
+.popup-module .para-03.center {text-align:center;}
+.popup-module .para-02.center {text-align:center;}
+.popup-module .fs12 {font-size:12px;}
+
+/*팝업 -  팝업공통 테이블 1 font-size:11px */
+.popup-module .pop-table01 {width:100%; text-align:center; border-collapse:collapse; border-spacing:0; table-layout:fixed;}
+.popup-module .pop-table01 caption {display:none;} 
+.popup-module .pop-table01 th {padding:6px 15px 4px; font-size:11px; text-align:center; color:#6a6a6a; letter-spacing:-0.05em; line-height:20px; border:1px solid #e3e3e3; background:#f3f3f4;}
+.popup-module .pop-table01 td {overflow:hidden; padding:6px 15px 4px; font-size:11px; text-align:center; color:#6a6a6a; line-height:20px; border:1px solid #e3e3e3;}
+.popup-module .pop-table01 td.subject {text-align:left;}
+.popup-module .pop-table01 td.data {text-align:right;}
+.popup-module .pop-table01 th.type1 {background:#fff;}
+.popup-module .pop-table01 tfoot td {background:#f0f0f0;}
+.popup-module .pop-table01 .fs12 {font-size:12px;}
+.popup-module .data-table6 {margin-top:5px;}
+
+/* 팝업 th td 정렬 */
+.popup-module .pop-table01.add1 {margin-top:10px;}
+.popup-module .pop-table01.add1 th, .popup-module .pop-table01.add1 td {text-align:left;}
+
+/*팝업 - 팝업공통 테이블 2 (스크롤테이블)*/
+.popup-module .table-cover {overflow:hidden; width:auto; border:1px solid #7e8a97;}
+.popup-module .table-cover .data-table6 {width:457px; margin:-1px 0 0 -1px; padding:0; table-layout:fixed;}
+.popup-module .table-cover .data-table6 td {padding:6px 0 5px 0; border:1px solid #dbdbdb; border-left:0; border-right:0; border-collapse:collapse; background:url("http://openimage.interpark.com/tourpark/tour/common/board/td_line01.gif") repeat-y 0 top;}
+.popup-module .table-cover .data-table6 td.first {background:none;}
+.popup-module .table-cover .data-table6 td span {display:block; margin-left:13px;}
+.popup-module .table-cover .data-table6 tbody tr.check td {background:#f6f6f6 url("http://openimage.interpark.com/tourpark/tour/common/board/td_line01.gif") repeat-y 0 top;}
+.popup-module .table-cover .data-table6 tbody tr.check td.first {background:#f6f6f6 none;}
+.popup-module .table-cover .width-auto {width:auto;}
+
+/*팝업 - 그라데이션 box*/
+.popup-module .gd-box01 {margin:10px 0 15px 0; line-height:130%; background:url("http://openimage.interpark.com/tourpark/tour/common/popup/searchRB.gif") no-repeat right top;}
+.popup-module .gd-box01 .wrap {height:58px; background:url("http://openimage.interpark.com/tourpark/tour/common/popup/searchLB.gif") no-repeat left top;}
+.popup-module .gd-box02 {margin:0 0 10px 0; padding:1px; border:1px solid #cecece; background:#fff; zoom:1;}
+.popup-module .gd-box02 .wrap {overflow:hidden; min-height:35px; _height:35px; background:#fafafa url("http://openimage.interpark.com/tourpark/tour/common/popup/ui_box01.gif") repeat-x 0 bottom;}
+
+/*팝업 - 탭메뉴 */
+.popup-module .tab-menu {overflow:visible; _overflow:hidden; height:33px; _height:34px; margin-bottom:22px; border-bottom:2px solid #757575;}
+.popup-module .tab-menu li {position:relative; float:left; margin-right:-1px; letter-spacing:-1px; z-index:0;}
+.popup-module .tab-menu li a {display:block; width:110px;/*탭 설정시 변경 가능*/ height:13px; padding:11px 0 8px; font-size:12px; font-weight:bold; color:#6a6a6a; border:1px solid #c6c6c6;border-bottom:0;text-align:center;background:#f8f8f8;}
+.popup-module .tab-menu li a:hover {text-decoration:none;} 
+.popup-module .tab-menu li a em {color:#f66900; font-weight:normal;}
+.popup-module .tab-menu li a em strong {font-size:11px;color:#f66900;}
+.popup-module .tab-menu li.on {overflow:visible;position:relative;z-index:1; font-weight:bold;}
+.popup-module .tab-menu li.on a {padding:11px 0 9px; width:108px; color:#6a6a6a; border:2px solid #757575;border-bottom:0;background:#fff;}
+
+/*팝업 - 공통 불릿*/
+/* 불릿 1 (blue , red) */
+.popup-module .blue-dot {margin:10px 0 0 0; padding-left:8px; line-height:150%; letter-spacing:-1px; background:url("http://openimage.interpark.com/tourpark/tour/common/popup/dot_blue.gif") no-repeat left 3px;}
+.popup-module .red-dot {margin:10px 0 0 0; padding-left:8px; line-height:150%; letter-spacing:-1px; background:url("http://openimage.interpark.com/tourpark/tour/common/bul/bul_reser02.gif") no-repeat left 3px;}
+
+/* 불릿 2 (red list) */
+.popup-module .guide-list,.layer-module .guide-list {margin-top:3px; zoom:1;}
+.popup-module .guide-list li,.layer-module .guide-list li {margin-top:6px; padding-left:6px; font-size:11px; font-family:dotum; line-height:14px; letter-spacing:0; background:url("http://openimage.interpark.com/tourpark/tour/common/bul/bul_reser02.gif") no-repeat left 6px;}
+.popup-module .guide-list.add01 li,.layer-module .guide-list.add01 li {margin-top:12px;} /* li간격 넓은거*/
+.popup-module .guide-list li.none {padding-left:0; line-height:15px; background:none;} /* 블릿없는거 */
+.layer-module .guide-list li .tit-1 {display:block; padding-bottom:3px; font-size:11px; line-height:14px; color:#d45252;}
+.layer-module .guide-list.add02 li {padding-left:0; line-height:15px; background:none;} /* 블릿없는거 */
+
+/* 불릿 2 (blue list) */
+.popup-module .guide-list2 {margin-top:9px; zoom:1;}
+.popup-module .guide-list2 li {padding-left:6px; font-size:11px; font-family:dotum; line-height:14px; letter-spacing:0; background:url("http://openimage.interpark.com/tourpark/tour/common/popup/dot_blue.gif") no-repeat left 7px;}
+/* .popup-module .guide-list2.add01 li {margin-top:6px; background-position:left 5px;} li간격 넓은거*/
+.popup-module .guide-list2 li.none {padding-left:0; line-height:15px; background:none;} /* 블릿없는거 */
+
+/* 불릿 3 (gray list)*/
+.popup-module .lawList li {padding-bottom: 5px;padding-left: 9px;line-height: 150%;color: #888888; background: url("http://openimage.interpark.com/tourpark/tour/freeya/bul/bulDot02.gif") no-repeat scroll left 6px transparent;}
+
+/*설명레이어(.popup-module.mini) 시작 - 나머지는 popup-module과 공통을 씀*/
+/*설명레이어 미니- 레이아웃 스타일*/
+.layer-module {display:none; position:absolute; z-index:1000;} /* 기존 개발에 필요한 부분 */
+.popup-module.mini p,.layer-module .pop-dBody p {font-size:11px;}
+.popup-module.mini *,.layer-module .pop-dBody * {line-height:18px;}
+.popup-module.mini p .block {display:block; margin-top:3px; color:#afafaf; color:#949494;}
+.popup-module.mini .tit-h1,.layer-module .tit-h1 {padding:6px 0 6px 11px; font-size:11px; color:#fff; background:url("http://openimage.interpark.com/tourpark/tour/common/popup/bg_header2.gif") repeat scroll left top;}
+.popup-module.mini .pop-dBody,.layer-module .pop-dBody {margin:12px 0 14px; padding:0 13px; letter-spacing:-0.09em; /* line-height:150%;  background:#ccc; */}
+.layer-module .pop-dBody .tit-h2 {margin:0; padding:0; margin-top:13px; font-size:11px; line-height:14px; color:#d45252; zoom:1;}
+
+/*설명레이어 - 문단*/
+.popup-module.mini .guide-list li,
+.popup-module.mini .guide-list2 li {letter-spacing:-1px;}
+.popup-module.mini .guide-list2 .tit {display:block; margin-top:14px;}
+
+/* POPUP */
+/*도시검색팝업*/
+.popup-module .search-city02 {display:block; margin:10px 0 15px 0; background:url("http://openimage.interpark.com/tourpark/tour/common/popup/searchRB.gif") no-repeat right top;}
+.popup-module .search-city02 fieldset {height:40px; padding:18px 0 0 0; text-align:center; background:url("http://openimage.interpark.com/tourpark/tour/common/popup/searchLB.gif") no-repeat left top;}
+.popup-module .search-city02 label {position:relative; top:4px; margin:0 5px; vertical-align:top; font-weight:bold; font-size:11px;}
+.popup-module .search-city02 select {height:20px; vertical-align:top; font-size:11px; border:1px solid #d9d9d9;}
+.popup-module .search-city02 .input-txt1 {width:221px; height:18px; padding:0 5px; font-size:12px; vertical-align:top; border:1px solid #ddd; font-size:11px; font-family:'돋움'; line-height:18px; vertical-align:top;} /* sub_add1 해외항공 도시검색 팝업 인풋박스 추가 */
+.popup-module .search-city02 .input-txt2 {width:121px; height:18px; padding:0; vertical-align:top; border:1px solid #ddd; font-size:11px; line-height:18px;} /* sub_add1 해외항공 도시검색 팝업 인풋박스 추가 */
+.popup-module .search-name02 {text-align:right; margin-bottom:5px;}
+
+.popup-module .search-city03 {position:relative; display:block; padding:10px 15px 10px;border:1px solid #d0d0d0;}
+.popup-module .search-city03 input {height:14px; padding:1px; font-size:11px; color:#646464; vertical-align:top;}
+.popup-module .search-city03 .close {position:absolute; bottom:5px; right:10px;}
+/*
+.popup-module .auto-list {position:absolute; overflow:hidden; width:511px; top:34px; left:-1px; border:1px solid #8f8f8f; font-size:11px; background:#fff;}
+.popup-module .auto-list p.tit {position:relative; float:none; height:22px; margin:-1px 0 0 0; padding:13px 0 0px 10px;  font-size:11px !important; border-top:1px solid #ececec; letter-spacing:-1px; color:#999;}
+.popup-module .auto-list p.tit strong {font-size:12px; color:#515151;}
+.popup-module .auto-list ul {position:relative; padding:0 0 10px 0;}
+.popup-module .auto-list li {position:relative; width:100% !important; padding:0; margin:0 0 2px 0 !important;}
+.popup-module .auto-list li a {display:block; width:418px; padding:0 10px 0 17px; color:#676767; text-decoration:none !important; background:url("http://openimage.interpark.com/tourpark/tour/common/bul/bul_07.gif") no-repeat 10px 3px;}
+.popup-module #liHotelList li a {width:auto;}
+.popup-module .auto-list li a:hover, .popup-module .auto-list li a:focus{text-decoration:none; background-color:#dbedf8;}
+.popup-module .auto-list li em {position:absolute; top:2px; right:10px;letter-spacing:0;}
+.popup-module .auto-list .comment {display:block; margin:0;padding:8px 10px 5px; letter-spacing:-1px; color:#828282; background:#ececec;}
+*/
+
+.auto-list {overflow:hidden; position:absolute; width:511px; top:34px; left:-1px; font-size:11px; border:1px solid #8f8f8f; background:#fff; z-index:11;}
+.auto-list p.tit {position:relative; float:none; height:22px; margin:-1px 0 0 0; padding:13px 0 0px 10px;  font-size:11px !important; border-top:1px solid #ececec; letter-spacing:-1px; color:#999;}
+.auto-list p.tit strong {font-size:12px; color:#515151;}
+.auto-list ul {position:relative; padding:0 0 10px 0;}
+.auto-list li {position:relative; width:100% !important; padding:0; margin:0 0 2px 0 !important;}
+.auto-list li.on a {background:#dbedf8;}
+.auto-list li a {display:block; padding:0 70px 0 17px; color:#676767; text-decoration:none !important;}
+.auto-list li a:before {content:''; display:block; position:absolute; top:3px; left:10px; width:2px; height:2px; background:#555;}
+.auto-list li a:hover, .auto-list li a:focus {text-decoration:none; background-color:#dbedf8;}
+.auto-list li em {position:absolute; top:1px; right:10px; letter-spacing:0;}
+.auto-list .close {position:absolute; bottom:5px; right:5px; text-decoration:none !important; color:#000;}
+.auto-list .comment, .popup-module .auto-list .comment {display:block; margin:0; padding:8px 10px 5px; letter-spacing:-1px; color:#828282; background:#ececec;}
+
+.popup-module .main-city {overflow:hidden; width:350px; padding:0;}
+.popup-module .main-city li {display:inline; white-space:nowrap; margin-left:-1px;}
+.popup-module .main-city li a {display:inline-block; padding:1px 8px 1px 9px; color:#909090; font-size:11px; line-height:15px; font-family:dotum; letter-spacing:0; background:url("http://openimage.interpark.com/tourpark/tour/common/board/th_bar02.gif") no-repeat left 50%;}
+.popup-module .main-city li a:hover {text-decoration:underline;}
+
+/* 항공도시검색팝업 */
+.popup-module .search-city02.add01 {display:block; margin:10px 0 15px 0; background:url("http://openimage.interpark.com/tourpark/tour/common/popup/searchRB.gif") no-repeat right top;}
+.popup-module .search-city02 form  {height:40px; padding:0 0 18px 0; text-align:center; background:url("http://openimage.interpark.com/tourpark/tour/common/popup/searchLB.gif") no-repeat left top;}
+.popup-module .search-city02 .sub-search-box {height:40px; padding:18px 0 0 0; text-align:center; background:url("http://openimage.interpark.com/tourpark/tour/common/popup/searchLB.gif") no-repeat left top;}
+.popup-module .search-city02.add01 .text01 {width:221px; height:18px; padding:0 5px; font-size:12px; vertical-align:top; border:1px solid #ddd; font-size:11px; font-family:'돋움'; line-height:18px; vertical-align:top;} /* sub_add1 해외항공 도시검색 팝업 인풋박스 추가 */
+.popup-module .search-city02.add01 img {vertical-align:middle;}
+
+.popup-module .data-table6 {margin-bottom:2px;}
+.popup-module .data-table6 thead th {padding:10px 0 8px; font-size:11px; text-align:center; color:#555; border:1px solid #dbdbdb; background:#e9e9e9;}
+.popup-module .data-table6.add1 tbody td {padding-left:0; padding-right:0; text-align:center;}
+.popup-module .data-table6.type1 tbody td {text-align:left;}
+.popup-module .data-table6.type1 ul {overflow:hidden; margin-left:5px;} 
+.popup-module .data-table6.type1 li {float:left; width:115px; padding:1px 0;} 
+.popup-module .data-table6 tbody tr.check td {background:#f6f6f6;}
+.popup-module .data-table6 tbody tr.check td.first {background:#f6f6f6 none;}
+/* //항공도시검색팝업 */
+.popup-module .th-list01 {overflow:hidden; margin:0; padding:0; text-align:center; height:32px; background:#fff;}
+.popup-module .th-list01 li {float:left; margin:0; padding:0; font-weight:bold; font-family:dotum; font-size:11px; padding:6px 0 5px; line-height:20px; border-bottom:1px solid #dbdbdb; background:#e9e9e9;}
+.popup-module .th-list01 .col04 {width:136px; border-right:1px solid #dbdbdb;}
+.popup-module .th-list01 .col05 {width:228px; border-right:1px solid #dbdbdb;}
+.popup-module .th-list01 .col06 {width:92px;}
+
+/*호텔소개팝업*/
+.popup-module .name-title {position:relative; overflow:hidden; float:left; width:100%; padding:10px 0 9px 0;}
+.popup-module .name-title strong {display:inline;float:left;margin-left:20px;font-size:14px;letter-spacing:-1px;}
+.popup-module .name-title strong span {display:inline-block; margin-top:5px; font-weight:normal; font-size:12px; color:#6a6a6a;}
+.popup-module .name-title em {position:absolute; top:13px; right:15px; font-size:11px;}
+.popup-module .obj-content {position:relative; overflow:hidden; overflow-y:scroll; padding-right:5px; _padding-right:0; height:410px;}
+.popup-module .overflow {overflow:hidden;}
+.popup-module .info-tab {position:absolute; top:170px; left:-10px; width:auto; padding-top:6px; z-index:2; background:url("http://openimage.interpark.com/tourpark/tour/common/popup/tab_side_bg.gif") no-repeat left top;}
+.popup-module .info-tab li {float:left; clear:both; width:26px;}
+.popup-module .info-tab li img {display:block;}
+.popup-module .info-tab .btn {width:26px; z-index:0;}
+.popup-module .info-tab .layer {display:none;}
+.popup-module .info-tab .layer .input-text {font-size:11px;}
+.popup-module .info-tab li.on {width:586px;}
+.popup-module .info-tab li.on .layer {display:block; position:absolute; top:6px; left:0; width:531px; min-height:200px; _height:200px; padding:20px 35px 20px 20px; z-index:9; border:1px solid #4e4e4e; background:#fff;}
+.popup-module .info-tab li.on .btn {position:absolute; left:auto; right:-25px; top:6px;}
+.popup-module .info-tab li.on .layer-close {position:absolute; bottom:0; right:-1px; display:block; padding:6px; background:#555555;}
+.popup-module .photo-section {display:inline; float:left; width:242px; margin:0 8px 25px 11px;}
+.popup-module .photo-section .large img {width:242px;height:180px;}
+.popup-module .photo-list li {display:block;  float:left; height:41px; width:58px; margin:3px 2px 0 0;}
+.popup-module .photo-list li a {display:block; width:52px; height:35px;}
+.popup-module .photo-list li a:hover {display:block; overflow:hidden; border:3px solid #f30;}
+.popup-module .photo-list li img {width:58px; height:41px;}
+.popup-module .photo-list li a:hover img {margin:-3px 0 0 -3px;}
+.popup-module .info-list {float:left; width:418px; margin-bottom:25px;}
+.popup-module .info-list table {width:100%; line-height:20px;}
+.popup-module .info-list table td {letter-spacing:-0.06em;}
+.popup-module .info-list table td strong {font-size:11px; line-height:20px;}
+.popup-module .use-list {width:679px; height:49px; background:url("http://openimage.interpark.com/tourpark/tour/hotel_n/bg_hotel_use_info.gif") no-repeat 0 0; *zoom:1}
+.popup-module .use-list:after {content:""; clear:both; display:block;}
+.popup-module .use-list li {padding:20px 18px 9px 22px; float:left; background:url("http://openimage.interpark.com/tourpark/tour/hotel_n/bg_bar02.gif") no-repeat left 21px; font-size:11px;}
+.popup-module .use-list li a {padding:0; margin:0; display:inline-block; height:22px; font-size:11px; font-family:dotum; color:#7e7e7e; font-weight:bold}
+.popup-module .use-list li a:hover {padding:0; margin:0; display:inline-block; height:22px; background:url("http://openimage.interpark.com/tourpark/tour/common/bul/bul_use_info_on.gif") no-repeat 50% bottom; color:#d34141; font-weight:bold; font-family:dotum}
+.popup-module .use-list li.on {background:url("http://openimage.interpark.com/tourpark/tour/common/bul/bul_use_info_on.gif") no-repeat 50% bottom; color:#d34141; font-weight:bold; font-family:dotum}
+.popup-module .use-list li.on-right {background:url("http://openimage.interpark.com/tourpark/tour/hotel_n/bg_bar02.gif") no-repeat right 21px;}
+.popup-module .use-content {width:635px; padding:25px 22px 55px 22px;}
+.popup-module .use-content li {padding-top:23px;}
+.popup-module .use-content li.first {padding-top:0}
+.popup-module .use-content li .use-icon {padding-left:12px; background:url("http://openimage.interpark.com/tourpark/tour/common/bul/bul_use_info.gif") no-repeat left 6px; font-size:12px; font-family:dotum; color:#7e7e7e; line-height:18px; letter-spacing:-0.04em}
+.popup-module .use-content li .use-space  {padding-left:12px; padding-top:25px; color:#7e7e7e; line-height:18px; letter-spacing:-0.04em}
+.popup-module .use-content li .use-space strong {color:#535353; letter-spacing:-0.08em}
+.popup-module .use-content li .use-icon .point-color01 {color:#d34141; letter-spacing:-0.08em}
+.popup-module .use-content li .use-icon .point-color02 {color:#468797; letter-spacing:-0.08em}
+.popup-module .style-box .content2 .list li {float:left; width:169px; padding-left:18px;margin-bottom:10px; background:url("http://openimage.interpark.com/tourpark/tour/common/popup/bul_check.gif") no-repeat left top;}
+.popup-module .comment {clear:both; margin:0 0 0 17px; font-size:11px;}
+.popup-module .find-way {overflow:hidden; margin-top: 17px;width: 682px; background:url("http://openimage.interpark.com/tourpark/tour/hotel_n/bg_tab_content02.gif") no-repeat 0 0;}
+.popup-module .find-way-btm {width: 632px;overflow: auto;padding: 22px 30px 35px 20px;background:url("http://openimage.interpark.com/tourpark/tour/hotel_n/bg_tab_content_bt02.gif") no-repeat 0 bottom;}
+.popup-module .find-way-btm .h4-title02 {height: 25px; padding-left: 13px; color:#000; line-height: 20px; font-family: dotum;font-size: 14px; background: url("http://openimage.interpark.com/tourpark/tour/common/bul/bul_hotel_h4.gif") no-repeat scroll left 30% transparent;}
+.popup-module .find-way-btm .sub-tit {display:block; overflow:hidden; margin:20px 0 10px 0;}
+.popup-module .find-way-btm p span {font-size:11px; line-height:20px;}
+.popup-module .find-way p {line-height: 20px;font-size: 11px;font-family: dotum;color: #838383;}
+.popup-module .find-way table td {padding:8px;}
+.popup-module .find-way table td strong {font-size:11px; color:#858585;}
+.popup-module .find-way-btm1 {width: 682px;overflow: hidden;padding: 10px 0 10px 10px;background: url("http://openimage.interpark.com/tourpark/tour/hotel_n/bg_tab_content_bt.gif") no-repeat 0 bottom;}
+.popup-module .map-box .top {overflow:hidden; margin-top:34px; padding:10px 5px 8px; border-top:2px solid #757575;}
+.popup-module .map-box .top .map-tab {display:block; float:left; margin-top:3px; color:#e5e5e5;}
+.popup-module .map-box .top .map-tab a {font-size:12px; font-weight:bold; color:#4f4f4f;}
+.popup-module .map-box .top .map-tab a:hover {color:#4f4f4f;}
+.popup-module .map-box .top .map-tab a.on {color:#dd3334; text-decoration:underline;}
+.popup-module .map-box .top a.print {float:right;}	
+.popup-module .map-check {overflow: hidden; height: 22px; padding: 11px 16px 9px; background: url("http://openimage.interpark.com/tourpark/tour/airtel/bg_map_check.gif") no-repeat scroll 0 0 transparent;}
+.popup-module .map-check .choice {float: left; overflow: hidden; width: 328px;}
+.popup-module .map-check .choice li {float: left;overflow: hidden;width: 46px;font-size: 0; background: url("http://openimage.interpark.com/tourpark/tour/common/button/btn_map_off.gif") no-repeat scroll 0 0 transparent;}
+.popup-module .map-check .choice li a {display: block; overflow: hidden; height: 22px; font-size: 0;}
+.popup-module .map-check .choice li .on {overflow: hidden; font-size: 0; background: url("http://openimage.interpark.com/tourpark/tour/common/button/btn_map_on.gif") no-repeat scroll left top transparent;}
+.popup-module .map-check .choice .btn01 {background-position: 0 0;}
+.popup-module .map-check .choice .btn02 {background-position: -46px 0;}
+.popup-module .map-check .choice .btn03 {background-position: -92px 0;}
+.popup-module .map-check .choice .btn01 .on {background-position: 0 0;}
+.popup-module .map-check .choice .btn02 .on {background-position: -45px 0;}
+.popup-module .map-check .choice .btn03 .on {background-position: -91px 0;}
+.popup-module .map-check .check-area {float: right;}
+.popup-module .map-check .check-area:after {display: block; clear: both; content: "";}
+.popup-module .map-check .check-area img {float: left;padding-right: 5px;}
+.popup-module .map-check .check-area .check-list {overflow: hidden;float: right;margin-top: 5px;}
+.popup-module .map-check .check-area .check-list li {float: left; width: 44px; letter-spacing: -0.1em;padding-left: 10px;}
+.popup-module .map-check .check-area .check-list li a {display: block; width: 28px; height: 14px;padding: 0 0 0 15px;font-family: dotum;font-size: 11px;line-height: 14px;color: #636363;}
+.popup-module .map-check .check-area .check-list li.first {float: left;width: 49px; padding-left: 10px;}
+.popup-module .map-check .check-area .check-list li.first a {display: block;  width: 31px;height: 14px;padding: 0 0 0 15px;line-height: 14px;font-size: 11px;font-family: dotum;color: #636363;}
+.popup-module .map-check .check-area .check-list li a.check {display: block;background: url("http://openimage.interpark.com/tourpark/tour/common/button/btn_3D_check.gif") no-repeat scroll 0 0 transparent;}
+.popup-module .map-check .check-area .check-list li a.check-on { display: block; background: url("http://openimage.interpark.com/tourpark/tour/common/button/btn_3D_check.gif") no-repeat scroll 0 0 transparent;}
+.popup-module .map-check .check-area .check-list li.checkbox01 .check {background-position: 0 -21px;}
+.popup-module .map-check .check-area .check-list li.checkbox02 .check {background-position: 0 -63px;}
+.popup-module .map-check .check-area .check-list li.checkbox03 .check {background-position: 0 -105px;}
+.popup-module .map-check .check-area .check-list li.checkbox04 .check {background-position: 0 -147px;}
+.popup-module .map-check .check-area .check-list li.checkbox05 .check {background-position: 0 -189px;}
+.popup-module .map-check .check-area .check-list li.checkbox01 .check-on {background-position: 0 0;}
+.popup-module .map-check .check-area .check-list li.checkbox02 .check-on {background-position: 0 -42px;}
+.popup-module .map-check .check-area .check-list li.checkbox03 .check-on {background-position: 0 -84px;}
+.popup-module .map-check .check-area .check-list li.checkbox04 .check-on {background-position: 0 -126px;}
+.popup-module .map-check .check-area .check-list li.checkbox05 .check-on {background-position: 0 -168px;}
+.popup-module .map-cover {width:678px; margin-top:-1px; margin-bottom:10px; text-align:center; border:1px solid #cacac8; background:#f2f2f2;}
+
+/*호텔소개팝업 호텔소개 내부스타일*/
+.popup-module .info-tab .layer .data-table6 td {padding:8px 10px;}
+.popup-module .info-tab .layer .data-table6 textarea {height:124px; width:92%; font-size:11px; font-family:dotum; color:#777;}
+.popup-module .info-tab .layer .send-btn {display:block; width:52px; margin:12px auto 0;}
+/*호텔소개팝업 메일보내기 내부스타일*/
+.popup-module .gallery {overflow:hidden;}
+.popup-module .gallery .view-img {float:left; width:343px; height:244px; margin-right:14px; border:1px solid #333333;}
+.popup-module .gallery .img-list {float:left; width:172px; height:246px; overflow-y:auto;}
+.popup-module .gallery .img-list li {float:left; width:76px; clear:none; margin:0 0 6px 0;}
+.popup-module .gallery .img-list li a {display:block;}
+.popup-module .gallery .img-list img {display:inline; float:left; width:68px; height:49px; border:1px solid #d9d4d1;}
+
+/*달력 레이어 시작 (2013-01-28)*/
+.ui-calendar-module {position:relative; width:auto; border:4px solid #8a8a8a; background:#fff; zoom:1; width:466px; min-height:250px;}
+.ui-calendar-module .btn-close {position:absolute; top:20px; right:25px;}
+.ui-calendar-module h1 {display:none;}
+.ui-calendar-module .content {overflow:hidden; width:450px; margin:0 auto;}
+.ui-calendar-module .content .section {display:inline; position:relative; float:left; width:211px; margin:25px 7px 0 7px;}
+.ui-calendar-module .content .section.off {display:none; position:absolute;}
+.ui-calendar-module .h2-tit {display:inline; position:static; margin:0; padding:0; margin-right:10px; font-size:11px; text-align:center; color:#676767; letter-spacing:-0.1em; background:none; border:none;}
+.ui-calendar-module .data-spot {position:relative; text-align:center; zoom:1;}
+.ui-calendar-module .data-spot img {margin-top:-3px; vertical-align:middle;}
+.ui-calendar-module .data-spot strong a {margin:0 10px; padding-top:7px; font-size:12px; font-family:tahoma; color:#4d4d4d;}
+.ui-calendar-module .data-spot strong a img {vertical-align:middle;}
+.ui-calendar-module .data {overflow:hidden; position:absolute; z-index:1; top:17px; left:50%; margin-left:-40px; width:120px; height:138px; border:1px solid #b5b5b5; background:#646464;}
+.ui-calendar-module .data ul {overflow-y:scroll; float:left; width:100%; height:120px; background:#fff;}
+.ui-calendar-module .data li {zoom:1; padding:0; margin:0;}
+.ui-calendar-module .data ul li a {display:block; color:#6e6e6e; line-height:24px; font-size:11px;}
+.ui-calendar-module .data ul li a:hover {background:#f1f2f3; background:#ccc;}
+.ui-calendar-module .data .btn-close01 {position:absolute; float:left; bottom:5px; right:5px;}
+
+.ui-calendar-module .use-number {margin:0; padding:0; position:absolute; bottom:11px; left:16px; zoom:1;}
+.ui-calendar-module .use-number label {float:left; line-height:130%; margin:2px 5px 0 0; font-size:11px; color:#6a6a6a;}
+.ui-calendar-module .use-number select {font-size:11px; border:1px solid #ccc;} /* 항공+호텔 셀렉트 박스 테두리 */
+.ui-calendar-module .calendar01 {margin-top:7px; width:100%; background:#f1f1f1; border-collapse:collapse; empty-cells:show; border-spacing:0;}
+.ui-calendar-module .calendar01 caption {display:none;} 
+.ui-calendar-module .calendar01 thead th {padding:0; border:1px solid #6c6c6c; border-bottom:0; border-top:0; text-align:center; background:#686868;}
+.ui-calendar-module .calendar01 thead th img {vertical-align:top;}
+.ui-calendar-module .calendar01 tbody td {padding:0; height:22px; line-height:22px; font-size:11px; color:#b7b6b6; text-align:center;border:1px solid #e7e7e7; border-top:0;}
+.ui-calendar-module .calendar01 thead th.holiday {border-left:1px solid #f05f5a; background:#f05f5a;}
+.ui-calendar-module .calendar01 thead td.sat {border-right:1px solid #737373;}
+.ui-calendar-module .calendar01 tbody td a {display:block; height:22px; line-height:22px; font-size:11px; color:#6e6e6e; letter-spacing:0; background:#fff;}
+.ui-calendar-module .calendar01 tbody td.holiday,
+.ui-calendar-module .calendar01 tbody td.holiday a {color:#d64e4e;}
+.ui-calendar-module .calendar01 tbody td.sat,
+.ui-calendar-module .calendar01 tbody td.sat a {color:#1990E4;}
+.ui-calendar-module .calendar01 tbody td a:hover,
+.ui-calendar-module .calendar01 tbody td.on a {text-decoration:none; color:#fff; background:#929292;}
+.ui-calendar-module .btn-area01 {width:100%; padding:11px 0 0 0; font-size:0; line-height:0; text-align:center; margin:0;}
+
+/*달력팝업 3단*/
+.ui-calendar-module.add01 {position:relative; width:542px; min-height:100px; padding:18px 10px 15px 10px; border:4px solid #8a8a8a; background:#fff; zoom:1;}
+.ui-calendar-module.add01 .popClose {position:absolute; top:13px; right:15px;}
+.ui-calendar-module.add01 .contents {overflow:hidden; padding-top:10px;}
+.ui-calendar-module.add01 .contents .btn-area {float:left; margin:17px 5px; width:45px;}
+.ui-calendar-module.add01 .contents .btn-area img {padding-bottom:3px;}
+.ui-calendar-module.add01 .section {float:left; width:auto; margin:0 2px;}
+.ui-calendar-module.add01 .section .data {margin-top:10px; font-size:11px;}
+.ui-calendar-module.add01 .section .data strong {font-size:11px;}
+.ui-calendar-module.add01 .calendar {width:100%; width:140px; border-collapse:collapse; empty-cells:show; border-spacing:0;}
+.ui-calendar-module.add01 .calendar caption {padding-bottom:2px; font-size:14px; font-weight:bold; min-height:11px; font-family: Tahoma; color:#666;}
+.ui-calendar-module.add01 .calendar thead th {padding:4px 0; font-size:12px; font-weight:bold; color:#fff;  border:1px solid #666; border-top:0; border-bottom:0; text-align:center; background:#686868;}
+.ui-calendar-module.add01 .calendar tbody td {padding:0; height:17px; line-height:17px; font-size:11px;  text-align:center;border:1px solid #e7e7e7;}
+.ui-calendar-module.add01 .calendar tbody td:hover {font-weight:bold; letter-spacing:-1px;}
+.ui-calendar-module.add01 .calendar thead th.calCellSunday {border-left:1px solid #f05f5a; background:#f05f5a;}
+.ui-calendar-module.add01 .calendar thead td.calCellSaturday {border-right:1px solid #737373;}
+.ui-calendar-module.add01 .calendar tbody td.calCellSunday {color:#d64e4e;}
+.ui-calendar-module.add01 .calendar tbody td.calCellSaturday {color:#1990E4;}
+.ui-calendar-module.add01 .calendar tbody td.calCellLated:hover {font-weight:normal; letter-spacing:0;}
+
+/* 자동완성 */
+#AutoComplete {overflow:hidden; position:absolute; width:500px; min-height:327px; _height:327px; text-align:left; border:1px solid #848484; background:#fff;}
+#AutoComplete h1 {display:none;}
+#AutoComplete h2.tit {margin:0; padding:0; padding:13px 0 0 12px; color:#333; font-size:12px; line-height:16px; text-align:left; border-top:1px solid #d7d8d9;}
+#AutoComplete .list-module01 {float:left; width:323px; _width:320px; min-height:327px; _height:327px; border-right:1px solid #d7d8d9;}
+#AutoComplete .view-module02 {float:left; width:175px; min-height:327px; _height:327px; background:#f4f4f4;}
+
+#AutoComplete .data-list {margin:0; padding:0; margin-top:9px; padding-bottom:10px;}
+#AutoComplete .data-list li {position:relative; vertical-align:top;}
+#AutoComplete .data-list li a {display:inline-block; padding:4px 10px 0 14px; font-size:12px; color:#333; line-height:16px; letter-spacing:-0.02em;}
+#AutoComplete .data-list li a:hover {text-decoration:none;}
+#AutoComplete .data-list li strong {font-size:12px; color:#e05046; font-weight:normal;}
+#AutoComplete .data-list li .sub-tit {margin-right:3px; color:#333;}
+#AutoComplete .data-list li a em {font-size:12px; color:#333;}
+#AutoComplete .data-list li .more {display:none; position:absolute; top:7px; right:20px; color:#e05046;}
+#AutoComplete .data-list li.on {text-decoration:none; background:#fef9e6;}
+#AutoComplete .data-list li.on .more {display:block;}
+
+#AutoComplete .fun-off {position:absolute; bottom:1px; right:0;}
+#AutoComplete .fun-off label {margin:0; padding:0; padding:0 7px 0 4px; font-size:11px; line-height:20px; color:#666; letter-spacing:-0.04em; vertical-align:top;}
+#AutoComplete .fun-off input.input-check {margin:0; position:relative; top:4px; *top:-2px; padding:0 4px 0 0; width:13px; height:13px; vertical-align:top;}
+#AutoComplete .tool-tip {position:absolute; bottom:24px; right:0; display:none;}
+
+#AutoComplete .btn-area {display:block; position:absolute; bottom:37px; right:36px; font-size:0; line-height:0;}
+#AutoComplete .btn-area a {display:block; text-align:center; width:100%;}
+#AutoComplete .pro-list {overflow:visible; margin:25px 22px 0 22px; padding:0; width:auto; height:auto; background:none;}
+#AutoComplete .pro-list li {display:none; margin:0; padding:0; width:100%;}
+#AutoComplete .pro-list li.on {display:block;}
+#AutoComplete .pro-list li.on li {display:block;}
+#AutoComplete .pro-list li span {display:block;}
+#AutoComplete .pro-list li span span {display:inline; color:#353535;}
+#AutoComplete .pro-list li .tit02 {display:block; padding-bottom:3px; font-size:0; line-height:0;}
+#AutoComplete .pro-list li .photo img {display:block; width:130px; height:100px;}
+#AutoComplete .pro-list li .sub-tit {margin:9px 4px 0 3px; font-family:tahoma; color:#464646;}
+#AutoComplete .pro-list li .sub-tit a {font-family:tahoma; color:#464646; font-weight:bold; letter-spacing:0;}
+#gateway_wrap #AutoComplete .pro-list li .sub-tit a {letter-spacing:0;}
+
+#AutoComplete .pro-list li .sub-tit.add01 a {padding-top:2px; font-family:dotum;}
+#AutoComplete .pro-list ul {margin:15px 3px 0 3px;} 
+#AutoComplete .pro-list li li {padding: 0 0 4px 7px; font-size:11px; color:#787878; letter-spacing:-0.1em; background:url("http://openimage.interpark.com/tourpark/tour/common/bul/bul_list13.gif") no-repeat 0 3px; vertical-align:top;}
+#AutoComplete .pro-list li li img {margin:0 0 -2px 0; vertical-align:top;}
+#AutoComplete .pro-list li .won {display:inline-block; margin-top:-4px; color:#333; letter-spacing:-0.05em;}
+#AutoComplete .pro-list li .won strong {margin-right:3px; font-size:13px; font-family:tahoma; color:#0ea5d1; letter-spacing:-0.025em;}
+#AutoComplete .pro-list li .ipoint {margin:1px 0 0 24px; font-size:11px; color:#666; letter-spacing:-0.1em; text-align:left;}
+#AutoComplete .pro-list li .ipoint img {margin:3px 5px 0 0; vertical-align:top;}
+#AutoComplete .pro-list li .ipoint strong {font-size:12px; font-family:tahoma; color:#666; letter-spacing:0;}
+#AutoComplete .pro-list li .con {margin-top:120px; font-size:12px; color:#818181; letter-spacing:-0.06em; line-height:16px; text-align:center;}
+#AutoComplete .pro-list li .con a strong {color:#353535; letter-spacing:-0.04em;}
+#AutoComplete .pro-list li strong span {color:#353535; letter-spacing:-0.04em;}
+#AutoComplete .pro-list li .con a:hover strong {color:#353535;}
+#AutoComplete .pro-list li.on span.on strong {color:#353535;}
+
+#SearchWord {overflow:hidden; position:absolute; width:500px; width:490px; min-height:298px; _height:298px; text-align:left; border:1px solid #e25147; background:#fff;}
+#SearchWord h1 {display:none;}
+#SearchWord h2.tit {margin:0; padding:0; padding:10px 0 4px 16px; color:#212121; font-size:12px; line-height:16px; text-align:left;}
+#SearchWord .world-module01 {float:left; position:relative; width:323px; width:306px; _width:303px; min-height:298px; _height:298px; border-right:1px solid #d7d8d9;}
+#SearchWord .world-module01 h2.tit {background:#f5f5f5;}
+#SearchWord .world-module01 .info-words {position:absolute; top:52%; left:80px; font-size:12px; color:#767676;}
+#SearchWord .world-module02 {float:left; width:175px; width:183px; min-height:298px; _height:298px;}
+#SearchWord .world-module02 h2.tit {background:#ffefed;}
+#SearchWord .world-module01 .total-del {position:absolute; top:11px; right:13px; font-size:11px; color:#666; letter-spacing:-1px; letter-spacing:-0.05em;}
+#SearchWord .world-list1 {margin-top:13px; padding:0 15px; padding:0 9px 0 15px;}
+#SearchWord .world-list1 li {position:relative;}
+#SearchWord .world-list1 li a {display:inline-block; line-height:24px; letter-spacing:-0.2px; color:#5e5e5e; width:80%;}
+#SearchWord .world-list1 li .del {position:absolute; top:-4px; right:0; padding:8px 8px; width:8px; height:7px; font-size:0; line-height:0; background:url("http://openimage.interpark.com/tourpark/tour/common/button/btn_del.png") no-repeat 50% 50%;}
+#SearchWord .world-list2 {margin-top:17px; padding:0 18px;}
+#SearchWord .world-list2 li{padding-bottom:10px}
+#SearchWord .world-list2 li .num{display:block; float:left; min-width:13px; _width:13px; height:13px; margin-right:9px; border:1px solid #ff776e; color:#fff; font-weight:bold; text-align:center; line-height:13px; line-height:16px\0/; background:#ff8d85;}
+#SearchWord .world-list2 a {display:block;position:relative;height:14px;color:#000; line-height:12px; line-height:16px\0/; letter-spacing:-1px;}
+#SearchWord .world-list2 a:hover{text-decoration:none}
+#SearchWord .world-list2 a:hover .tit{text-decoration:underline}
+#SearchWord .world-list2 a:after{display:block;clear:both;content:''}
+#SearchWord .world-list2 li .num{font-size:11px; letter-spacing:0;}
+#SearchWord .world-list2 li.selected .tit{font-weight:bold; color:#e25147;}
+#SearchWord .world-list2 li .num {position:relative; top:-2px;}
+#SearchWord .world-list2 li.last-child .num {letter-spacing:-1px; text-align:left;}
+
+.gnbArea_center00 .search .box .triangleImg {margin:12px 0 0 42px;}
+
+ul.service_list1 .link4 {margin:12px 0 0 12px;}
+ul.service_list1 .link5 {margin:11px 0 0 12px;}
+
+/* .skip-nav, */ .invisible {position:absolute; top:-100px; left:-5000px; font-size:0; line-height:0;}
+
+/*요금규정*/
+.popup-module .box-style .tit {padding:11px 0 8px; border:1px solid #e1e1e1; background:#efefef;}
+.popup-module .box-style .tit strong {padding-left:27px; font-weight:bold; background:url("http://openimage.interpark.com/tourpark/tour/common/bul/bul_arrow_blue.gif") no-repeat scroll 16px 2px;}
+.popup-module .box-style.on .tit {background:#fff;}
+.popup-module .box-style.on .tit strong{background:url("http://openimage.interpark.com/tourpark/tour/common/bul/bul_arrow_gray.gif") no-repeat scroll 16px 2px;}
+.popup-module .box-style .doc {overflow:hidden; padding:13px 0 13px 27px; font-size:12px; line-height:1.3em;}
+.popup-module .box-style .doc .depth2 li,.popup-module .box-style .doc p {font-size:12px;}
+.popup-module .box-style .doc .depth1-li {clear:both;}
+.popup-module .box-style .doc .depth1-li .li-tit {float:left; width:100px; font-size:11px;}
+.popup-module .box-style .doc .depth2 {float:left; width:80%;}
+.popup-module .box-style .doc .depth2 li { color:#888888;  line-height:150%; margin-bottom:8px; padding-left:9px; font-size:12px; background:url("http://openimage.interpark.com/tourpark/tour/freeya/bul/bulDot02.gif") no-repeat scroll left 5px;}
+.popup-module .box-style .doc .depth2 li strong {font-size:12px;}
+.popup-module .box-style .doc .bul-list li {margin-bottom:8px; padding-left:9px; font-size:12px; background:url("http://openimage.interpark.com/tourpark/tour/freeya/bul/bulDot02.gif") no-repeat scroll left 5px;}
+.popup-module .box-style .doc .bul-list li strong {font-size:12px;}
+
+/*sms보내기*/
+.popup-module .send-list {margin-top:12px;}
+.popup-module .send-list li {margin-top:15px; padding-left:15px; letter-spacing:-0.08em; background:url('http://openimage.interpark.com/tourpark/tour/event/2013/130409_appdown/letterBg.gif') no-repeat left top;}
+.popup-module .send-list li div {margin:4px 0 0 0;}
+.popup-module .send-list .tit {vertical-align:3px; color:#828282;}
+.popup-module .send-list .input-text {height:15px;border:1px solid #ccc; margin:0; vertical-align:middle;}
+
+/* 그라데이션 박스 .gd-box02 클레스 네이밍 변경 */
+.popup-module .ui-data-box1 {margin:0 0 10px 0; padding:1px; border:1px solid #cecece; background:#fff; zoom:1;}
+.popup-module .ui-data-box1 .wrap {padding:10px 10px 8px 10px; min-height:35px; _height:35px; line-height:17px; background:#fafafa url("http://openimage.interpark.com/tourpark/tour/common/popup/ui_box01.gif") repeat-x 0 bottom;}
+.popup-module .ui-data-box1.space1 {margin-top:15px;} 
+.popup-module .ui-data-box1 {border:1px solid #cecece; background:#f3f3f3;}
+.popup-module .comment1 {display:block; margin-top:10px; font-size:11px; color:#4e9ed7; font-weight:bold; line-height:27px;}
+.popup-module .txt1 {font-size:0; text-align:center; line-height:0;}
+
+/*구팝업스타일 :: start - common에서 가져옴*/
+.popContainer02 .popContainerLT {width:100%; background:url("http://openimage.interpark.com/tourpark/tour/popup/bgContainerGLT.gif") top left no-repeat;}
+.popContainer02 .popContainerRT {width:100%; background:url("http://openimage.interpark.com/tourpark/tour/popup/bgContainerGRT.gif") top right no-repeat;}
+.popContainer02 .popContainerLB {width:100%; background:url("http://openimage.interpark.com/tourpark/tour/popup/bgContainerGLB.gif") bottom left no-repeat;}
+.popContainer02 .popContainerRB {width:100%; background:url("http://openimage.interpark.com/tourpark/tour/popup/bgContainerGRB.gif") bottom right no-repeat;}
+
+.popContainer02 {font-size:12px; color:#646464; font-family:돋움, dotum, san-serif; display:none; position:absolute; z-index:100;}
+.popContainer02 .popWrap {padding:17px 15px;}
+
+.popContainer02 .popContainer02LT {width:100%; background:url("http://openimage.interpark.com/tourpark/tour/popup/bgContainerNLT.gif") top left no-repeat;}
+.popContainer02 .popContainer02RT {width:100%; background:url("http://openimage.interpark.com/tourpark/tour/popup/bgContainerNRT.gif") top right no-repeat;}
+.popContainer02 .popContainer02LB {width:100%; background:url("http://openimage.interpark.com/tourpark/tour/popup/bgContainerNLB.gif") bottom left no-repeat;}
+.popContainer02 .popContainer02RB {width:100%; background:url("http://openimage.interpark.com/tourpark/tour/popup/bgContainerNRB.gif") bottom right no-repeat;}
+
+
+.popContainer02 .popWrap .header {width:100%; padding-bottom:3px; margin-bottom:10px; border-bottom:1px solid #d7d7d7; overflow:hidden;}
+.popContainer02 .popWrap .header2 {width:100%; padding-bottom:3px; margin-bottom:10px; border-bottom:1px solid #d7d7d7; overflow:hidden;}
+.popContainer02 .popWrap .contents02 {font-size:11px; line-height:16px;}
+.popContainer02 .popWrap .contents02 .conList li {padding-bottom:7px;}
+.popContainer02 .popWrap .contents02 .conList img {vertical-align:middle;}
+.popContainer02 .popWrap .contents02 .savingList dt{font-weight:bold; color:#2d7e00;}
+.popContainer02 .popWrap .contents02 .valuationList li{width:156px; padding:2px 0; overflow:hidden;}
+.popContainer02 .popWrap .contents02 .valuationList li img{margin:0 2px;}
+.popContainer02 .popWrap .contents02 .valuationList div{float:left; width:60px;}
+.popupContainer02 .scroll-cover {overflow:hidden; _float:left; padding-right:15px; }
+.popupContainer02 .scroll02{
+	overflow-y:scroll; overflow-x:hidden; margin-bottom:20px; padding-bottom:1px; zoom:1;
+	scrollbar-arrow-color:#6d6d6d;
+	scrollbar-face-color:#f3f3f3;
+	scrollbar-track-color:#f3f3f3;
+	scrollbar-3dlight-color:#e1e1e1;
+	scrollbar-highlight-color:#f3f3f3;
+	scrollbar-shadow-color:#c8c8c8;
+	scrollbar-darkshadow-color:#f3f3f3;
+	}
+
+.popContainer03 {display:block; position:relative;}
+.popContainer03 .popContainer03LT {width:100%; background:url("http://openimage.interpark.com/tourpark/tour/popup/bgContainer03LT.gif") top left no-repeat;}
+.popContainer03 .popContainer03RT {width:100%; background:url("http://openimage.interpark.com/tourpark/tour/popup/bgContainer03RT.gif") top right no-repeat;}
+.popContainer03 .popContainer03LB {width:100%; background:url("http://openimage.interpark.com/tourpark/tour/popup/bgContainer03LB.gif") bottom left no-repeat;}
+.popContainer03 .popContainer03RB {width:100%; background:url("http://openimage.interpark.com/tourpark/tour/popup/bgContainer03RB.gif") bottom right no-repeat;}
+.popContainer03 .popWrap {padding:10px 10px;}
+#apDiv3 {	position:absolute;	left:530px;	top:605px;	width:102px;	height:58px;	z-index:1;}
+
+
+/*레이어스타일 변경 ver100707*/
+.GrayTxtfs11{ color:#646464; font-size:11px; letter-spacing:-1px; line-height:15px}
+.GrayTxtfs11 span.pointTxt{ color:#ed5658; font-size:11px; letter-spacing:-1px; line-height:15px; }
+.popContainerN01 {font-size:12px; color:#646464; font-family:돋움, dotum, san-serif; }
+.popContainerN01 .popWrap {padding:12px 18px 17px 15px;}
+.popContainerN01 .popWrap .HeaderTxt{ color:#d03739; font-size:11px; font-weight:bold; padding:0px 0px 2px 0px; border-bottom:1px solid #E7E7E7; margin-bottom:7px; letter-spacing:-1px}
+.popContainerN01 .popWrap .RedTxtfs11{ color:#d03739; font-size:11px; font-weight:bold; padding:0px 0px 2px 0px; letter-spacing:-1px}
+.popContainerN01 .popWrap .conList li {color:#646464; font-size:11px; letter-spacing:-1px; line-height:15px; padding-bottom:2px;}
+.popContainerN01 .popContainerLT {width:100%; background:url("http://openimage.interpark.com/tourpark/tour/popup/bgContainerNLT.gif") top left no-repeat;}
+.popContainerN01 .popContainerRT {width:100%; background:url("http://openimage.interpark.com/tourpark/tour/popup/bgContainerNRT.gif") top right no-repeat;}
+.popContainerN01 .popContainerLB {width:100%; background:url("http://openimage.interpark.com/tourpark/tour/popup/bgContainerNLB.gif") bottom left no-repeat;}
+.popContainerN01 .popContainerRB {width:100%; background:url("http://openimage.interpark.com/tourpark/tour/popup/bgContainerNRB.gif") bottom right no-repeat;}
+
+
+/* 페이지마다 삽입해주는 사이즈 */
+.popContainer {font-size:12px; color:#646464; font-family:돋움, dotum, san-serif; position:absolute; display:none; z-index:150;}
+.popContainer .popWrap {padding:17px 15px;}
+.popWrap {padding:18px 20px;}
+
+/* 페이지마다 공통 들어가는 box*/
+.popupContainerLT {width:100%; background:url("http://openimage.interpark.com/tourpark/tour/popup/bgContainerGLT.gif") top left no-repeat;}
+.popupContainerRT {width:100%; background:url("http://openimage.interpark.com/tourpark/tour/popup/bgContainerGRT.gif") top right no-repeat;}
+.popupContainerLB {width:100%; background:url("http://openimage.interpark.com/tourpark/tour/popup/bgContainerGLB.gif") bottom left no-repeat;}
+.popupContainerRB {width:100%; background:url("http://openimage.interpark.com/tourpark/tour/popup/bgContainerGRB.gif") bottom right no-repeat;}
+
+.popContainerLT {width:100%; background:url("http://openimage.interpark.com/tourpark/tour/popup/bgContainerGLT.gif") top left no-repeat;}
+.popContainerRT {width:100%; background:url("http://openimage.interpark.com/tourpark/tour/popup/bgContainerGRT.gif") top right no-repeat;}
+.popContainerLB {width:100%; background:url("http://openimage.interpark.com/tourpark/tour/popup/bgContainerGLB.gif") bottom left no-repeat;}
+.popContainerRB {width:100%; background:url("http://openimage.interpark.com/tourpark/tour/popup/bgContainerGRB.gif") bottom right no-repeat;}
+
+/* header */
+/*.popWrap .header {width:100%; padding-bottom:10px; margin-bottom:2px; border-bottom:1px solid #b0d09e; background:url("http://openimage.interpark.com/tourpark/tour/popup/bulTit.gif") 0 1px no-repeat; overflow:hidden;}*/
+.popWrap .header {width:100%; padding-bottom:5px;margin-bottom:15px; border-bottom:1px solid #d7d7d7; background:url("http://openimage.interpark.com/tourpark/tour/popup/bulTit.gif") 0 1px no-repeat; overflow:hidden;}
+.popWrap .header img{ padding-left:20px;}
+.popWrap .header .titImg {float:left; margin:0 0px 0 0px; vertical-align:middle;}
+.popWrap .header .titTxt {float:left; margin:4px 0 0 0; vertical-align:middle;}
+.popWrap .header .titCmt {display:block; float:left; margin:5px 0 0 6px; padding-left:8px;  font-size:12px; color:#6e6e6e; font-weight:bold; background:url("http://openimage.interpark.com/tourpark/tour/popup/barTitCmt.gif") -1px left no-repeat;}
+.popWrap .header .popClose {float:right; vertical-align:middle; }	
+
+.popWrap .header2 {width:100%; padding-bottom:5px;margin-bottom:15px; border-bottom:1px solid #d7d7d7; overflow:hidden;}
+.popWrap .header3 {width:100%; padding-bottom:5px;margin-bottom:15px; border-bottom:1px solid #d7d7d7; background:url("http://openimage.interpark.com/tourpark/tour/popup/bulTit.gif") 0 1px no-repeat; overflow:hidden;}
+.popWrap .header3 .loginTimg{ padding-left:25px; padding-top:1px}
+.popWrap .header3 .popClose {float:right; vertical-align:middle; margin:3px;}
+
+.popWrap .contents .calBox {min-height:130px;}
+
+/* footer */
+.popWrap .footer {width:100%; padding-top:10px; margin-top:15px; color:#5fac40; font-size:11px; border-top:1px solid #d7d7d7; overflow:hidden; }
+.popWrap .footer .logo {float:right; vertical-align:middle;}
+.popWrap .loginfooter {width:100%; padding-top:10px;  color:#5fac40; font-size:11px; border-top:1px solid #b0d09e; overflow:hidden; }
+.popWrap .loginfooter .logo {float:right; vertical-align:middle;}
+
+/* 동영상보기 */
+.popWrap .playBox {width:240px; height:203px; padding:5px; margin:0 auto; background:url("http://openimage.interpark.com/tourpark/tour/popup/bgPlayer.gif") no-repeat;}
+.popWrap .playBox .play {width:240px; height:180px; margin-bottom:5px;}
+.popWrap .playBox .btns img{display:block; float:left; margin-right:2px;}
+
+/* 메일보내기 */
+.popWrap input.iName {width:95px;}
+.popWrap input.iMail {width:245px;}
+
+/* custom */
+.popWrap .tOrange11{color:#fb7119; font-size:11px;}
+.popWrap .tOrange{color:#fb7119;}
+.popWrap .tBlue11 {color:#169bd6; font-size:11px;}
+
+.popWrap .icPoint {vertical-align:middle;}
+.popWrap .icQuestion {margin-left:5px;}
+.popWrap .tBold {font-weight:bold;}
+.popWrap .btnGroup{width:100%; text-align:center; margin-top:10px;}
+
+.popWrap .housingSelList li {padding:2px 0;}
+.popWrap .housingSelList li select{color:#acabab; font-size:11px; vertical-align:middle; margin-right:2px;}
+
+.popWrap table.board {border-collapse:collapse;}
+.popWrap table.board th{padding:6px 11px 4px; text-align:left; background:#f0f0f0; font-weight:normal;}
+.popWrap table.board td{padding:6px 5px 4px 11px;}
+.popWrap table.board td img{vertical-align:middle;}
+.popWrap table.board ul.group li{float:left; padding:0 5px;  background:url("http://openimage.interpark.com/tourpark/tour/popup/barGroup.gif") -1px right no-repeat;}
+.popWrap table.board ul.group li.end{background:none;}
+
+.popWrap table.board1 {border-collapse:collapse;}
+.popWrap table.board1 th{padding:6px 11px 3px; text-align: center; background:#f0f0f0; font-weight:normal; font-size:12px}
+.popWrap table.board1 td{padding:5px 3px 4px 8px; font-size:12px}
+.popWrap table.board1 td select{ font-size:12px}
+.popWrap table.board1 td.Tcenter{padding:5px 3px 4px 3px; font-size:12px; text-align:center}
+.popWrap table.board1 td img{vertical-align:middle;}
+.popWrap table.board1 ul.group li{float:left; padding:0 5px;  background:url("http://openimage.interpark.com/tourpark/tour/popup/barGroup.gif") -1px right no-repeat;}
+.popWrap table.board1 ul.group li.end{background:none;}
+.popWrap table.board1 .Txt_1{font-size:11px ; letter-spacing:-1px; float:left; padding:6px 15px 0px 0px}
+
+/* plus0629 */
+.popWrap table.board2 {table-layout:fixed; margin-top:5px; width:100%; border-collapse:collapse; border:1px solid #c5c5c5;}
+.popWrap table.board2 th {padding:6px 11px 4px; text-align:left; border:1px solid #c5c5c5; background:#f0f0f0; font-weight:normal;}
+.popWrap table.board2 td {padding:7px 5px 7px 11px; border:1px solid #c5c5c5;}
+.popWrap table.board2 td img{vertical-align:top;}
+.popWrap table.board2 td img.btn {margin:3px 13px 0 0;}
+.popWrap table.board2 td img.btn-choice {margin:1px 0 0 10px}
+.popWrap table.board2 td label {font-size:11px;}
+.popWrap table.board2 td input.input-text {margin:-3px 0 -3px; padding:0 5px; height:18px; line-height:18px; font-size:11px; border:1px solid #c5c5c5;}
+.popWrap table.board2 td input.input-check {margin:0 6px 0 5px; *margin-top:-3px; vertical-align:middle;}
+.popWrap table.board2 td span.text {margin-left:6px; font-size:11px; line-height:15px;}
+.popWrap table.board2 td select {vertical-align:middle;}
+.popWrap table.board2 td div span {margin-right:25px}
+.popWrap table.board2 td div span.text {margin-left:-19px;}
+.popWrap table.board2 td textarea.content {width:360px; height:55px; border:1px solid #c5c5c5;}
+
+.popWrap table.board2 table {margin:-1px 0 0 1px; border:0;}
+.popWrap table.board2 table td {border:0; border-top:1px solid #c5c5c5; border-right:1px solid #c5c5c5;}
+
+.popWrap table.board3 {table-layout:fixed; margin-top:5px; width:100%; border-collapse:collapse; border:1px solid #dcdcdc; border-top-color:#5e5e5e;}
+.popWrap table.board3 th {padding:9px 0 7px; border:1px solid #dcdcdc; background:#f0f0f0; font-size:11px;}
+.popWrap table.board3 th.normal {font-weight:normal;}
+.popWrap table.board3 td {padding:6px 5px 6px 5px; border:1px solid #dcdcdc; font-size:11px; text-align:center;}
+.popWrap table.board3 .bg td {background:#eff6f9;} /*파란배경*/
+.popWrap table.board3 td.subject {text-align:left;}
+.popWrap table.board3 td.data {text-align:right;}
+
+.popWrap .popBox01LT {width:100%; background:url("http://openimage.interpark.com/tourpark/tour/popup/bgBox01LT.gif") top left no-repeat;}
+.popWrap .popBox01RT {width:100%; background:url("http://openimage.interpark.com/tourpark/tour/popup/bgBox01RT.gif") top right no-repeat;}
+.popWrap .popBox01LB {width:100%; background:url("http://openimage.interpark.com/tourpark/tour/popup/bgBox01LB.gif") bottom left no-repeat;}
+.popWrap .popBox01RB {width:100%; background:url("http://openimage.interpark.com/tourpark/tour/popup/bgBox01RB.gif") bottom right no-repeat;}
+
+.popWrap .searchL {width:100%; height:39px; background:url("http://openimage.interpark.com/tourpark/tour/popup/bgSearchL.gif") top left no-repeat;}
+.popWrap .searchR {width:100%; height:39px; background:url("http://openimage.interpark.com/tourpark/tour/popup/bgSearchR.gif") top right no-repeat;}
+.popWrap .search {padding:8px 0; text-align:center;}
+.popWrap .search .selectList{width:480px; font-size:11px;}
+.popWrap .search input, .search select, .search img{vertical-align:middle;}
+
+.popWrap .jejuML {width:100%; height:39px; background:url("http://openimage.interpark.com/tourpark/tour/popup/bgjejuML.gif") top left no-repeat;}
+.popWrap .jejuMR {width:100%; height:39px; background:url("http://openimage.interpark.com/tourpark/tour/popup/bgjejuMR.gif") top right no-repeat;}
+.popWrap .jejuM {padding:8px 0; text-align:center;}
+.popWrap .jejuM .jejuMList{width:480px; font-size:11px;}
+.popWrap .jejuM input, .jejuM select, .jejuM img{vertical-align:middle;}
+
+.popWrap .imgUpload { width:100%; background:url("http://openimage.interpark.com/tourpark/tour/honey/bg_dot.gif") repeat-x;}
+.popWrap .imgUpload li{float:left; padding:10px 15px 10px 20px;}
+.popWrap .imgUpload li input{vertical-align:top;}
+.popWrap .imgUpload li input.radio {width:12px; height:12px;}
+
+.popWrap .scheSelete {width:100%; margin:15px 0 5px; overflow:hidden;}
+.popWrap .scheTit {width:493px; padding:9px 11px 7px; margin:10px 0; border:1px solid #d7d7d7; font-size:14px; font-weight:bold; color:#000;}
+.popWrap .scheUl {width:100%; height:27px; background:url("http://openimage.interpark.com/tourpark/tour/popup/bgSche.gif") 0 0 no-repeat; overflow:hidden;}
+.popWrap .scheUl li{float:left; padding:8px 0 0 10px;}
+.popWrap .scheUl li.date {width:48px; padding:7px 10px 0 0; text-align:right; font-size:14px; color:#ff7200; font-weight:bold;}
+.popWrap .scheTable {border-collapse:collapse; margin-bottom:10px;}
+.popWrap .scheTable td {padding:6px 10px; vertical-align:top;}
+.popWrap .scheTable td.aCenter {text-align:center;}
+.popWrap .scheTable td.aRight {text-align:right;}
+
+/* 팝업 인터파크투어 :: 상세보기 */
+.popWrap .detailList	{padding:15px 7px 0 7px; border-bottom:1px solid #DBDBDB;}
+.popWrap .detailList dt	{background:url("http://openimage.interpark.com/tourpark/tour/honey/bul_02.gif") no-repeat 0 2px ; padding-left:10px; font-weight:bold; color:#616161;}
+.popWrap .detailList dd	{padding:8px 0 15px 0; margin-bottom:15px;  line-height:18px; color:#878787; background:url("http://openimage.interpark.com/tourpark/tour/honey/bg_dot.gif") repeat-x bottom;}
+.popWrap .detailList dd dl.dotDl dt{padding:0 0 0 10px; font-weight:bold; background:url("http://openimage.interpark.com/tourpark/tour/common/bul/bulDotOng01.gif") 2px 5px  no-repeat;}
+.popWrap .detailList dd dl.dotDl dd{padding:0 0 3px 10px; margin-bottom:5px;  background:none;}
+.popWrap .detailList dd dl.dotDl dt.home{background:none; font-weight:normal; color:#728dd0;}
+/*박스들*/
+.popWrap .grayBox01LT{width:100%; background:url("http://openimage.interpark.com/tourpark/tour/common/bodyArea/bgGrayBoxLT.gif") 0 0 no-repeat;}
+.popWrap .grayBox01RT{width:100%; background:url("http://openimage.interpark.com/tourpark/tour/common/bodyArea/bgGrayBoxRT.gif")  100% 0 no-repeat;}
+.popWrap .grayBox01LB{width:100%; background:url("http://openimage.interpark.com/tourpark/tour/common/bodyArea/bgGrayBoxLB.gif") bottom left no-repeat;}
+.popWrap .grayBox01RB{width:100%; background:url("http://openimage.interpark.com/tourpark/tour/common/bodyArea/bgGrayBoxRB.gif") bottom right no-repeat;}
+
+.popWrap .grayBox02LT{width:100%; margin-bottom:10px; background:url("http://openimage.interpark.com/tourpark/tour/popup/bgGrayBox02LT.gif") top left no-repeat;}
+.popWrap .grayBox02RT{width:100%; background:url("http://openimage.interpark.com/tourpark/tour/popup/bgGrayBox02RT.gif") top right no-repeat;}
+.popWrap .grayBox02LB{width:100%; background:url("http://openimage.interpark.com/tourpark/tour/popup/bgGrayBox02LB.gif") bottom left no-repeat;}
+.popWrap .grayBox02RB{width:100%; background:url("http://openimage.interpark.com/tourpark/tour/popup/bgGrayBox02RB.gif") bottom right no-repeat;}
+
+.popWrap .infoContainer {width:489px; padding:13px; overflow:hidden;}
+.popWrap .infoContainer h3{color:#5fac40; font-size:14px; text-decoration:underline; margin-bottom:5px;}
+.popWrap .infoContainer .location{font-size:11px; color:#919191;}
+.popWrap .infoContainer .location .this{color:#616161;}
+.popWrap .infoContainer .dInfo {float:right; padding-left:15px; font-size:11px; color:#15983d; background:url("http://openimage.interpark.com/tourpark/tour/common/icon/icDollar.gif") 0 2px  no-repeat;}
+.popWrap .infoContainer .infoListPic{float:left; width:122px; margin-right:10px;}
+.popWrap .infoContainer .infoListBox {float:left; width:358px;}		
+.popWrap .infoContainer .infoListBox .infoList {width:338px; padding:10px; background:#fff; border:1px solid #e6e6e6; overflow:hidden;}
+.popWrap .infoContainer .infoListBox .infoList dt{float:left; width:51px; padding:0 0 0 9px; height:17px; font-size:11px; font-weight:bold; background: url("http://openimage.interpark.com/tourpark/tour/common/bul/bulDotgr.gif") 5px left no-repeat;}
+.popWrap .infoContainer .infoListBox .infoList dd{float:left; width:268px;padding:0 5px 0; height:17px; font-size:11px; background:url("http://openimage.interpark.com/tourpark/tour/honey/bulColon.gif") 3px left no-repeat;}
+.popWrap .infoContainer .infoListBox .infoList dd img{vertical-align:middle;}
+.popWrap .infoContainer .infoListBox .infoList dd.con {width:px; padding-left:10px; background:none;}
+.popWrap .radioLi li{float:left; width:215px; padding-bottom:5px;}
+
+
+.popWrap .detailCheck {border-top:1px solid #dbdbdb; border-bottom:1px solid #dbdbdb; padding-top:10px; margin-bottom:15px;}
+.popWrap .detailCheck dt{border:0; padding:0 0 7px 10px;  background:url("http://openimage.interpark.com/tourpark/tour/honey/bul_02.gif") no-repeat 2px 7px ; font-weight:bold; color:#616161;}
+.popWrap .detailCheck dd{padding:0; margin-bottom:15px;  line-height:18px; color:#878787; }
+.popWrap .detailCheck .checkUl{border:0; margin-bottom:0; padding:0;}
+.popWrap .detailCheck .checkUl li{ width:160px;}
+
+.popWrap .checkUl {width:515px; overflow:hidden; padding:5px 0; margin-bottom:10px; border-top:1px solid #dbdbdb; border-bottom:1px solid #dbdbdb;}
+.popWrap .checkUl li {float:left; width:250px;}
+
+.popWrap .t_11{font-size:11px;}
+.popWrap .t_black{color:#000;}
+.popWrap a.bulPoint {margin-right:3px; padding-bottom:5px; margin:5px 0 0 5px; vertical-align:middle;}
+
+.popWrap .A_right	{float:left; width:363px; margin-left:11px}
+.popWrap .boxDetail	div, .popWrap .boxDetail span {font-size:11px;}
+.popWrap .boxDetail	tr td a.bulPoint {margin-right:3px; padding-bottom:5px; margin:5px 0 0 5px; vertical-align:middle;}
+.popWrap .boxDetail	.A_right	table	{border-top:1px solid #D9D9D9; width:100%}
+.popWrap .boxDetail	.A_right	th,
+.popWrap .boxDetail	.A_right	td	{padding:7px 0 5px 0; background:url("http://openimage.interpark.com/tourpark/tour/honey/lineTD.gif") repeat-x 0 bottom; text-align:left; color:#878787}
+.popWrap .boxDetail	.A_right	th	{padding:6px 0}
+.popWrap .boxDetail	.A_right	th	img	{margin-left:4px}
+.popWrap .boxDetail	.A_right	.t_org	{font-size:16px; font-weight:bold; padding-right:5px}
+.popWrap .boxDetail	.A_right	.btnA	{margin-top:15px;}
+*html .popWrap .boxDetail	.A_right	.btnA	{padding-left:1px}
+.popWrap .boxDetail	.A_right	.btnA	img	{margin-left:-1px;}
+.popWrap .boxDetail	.bgLine03 {padding-right:8px; margin-right:2px; font-size:11px; background:url("http://openimage.interpark.com/tourpark/tour/common/bul/bgDivisionLine03.gif") right 0 no-repeat;}
+.popWrap .boxDetail	ul li {padding-bottom:3px;}
+
+.popWrap .depth-list {overflow:hidden; _padding-bottom:80px; width:auto;}
+.popWrap .depth-list li {float:left; clear:both;width:100%;}
+.popWrap .depth-list li strong {display:block; float:left; line-height:130%; margin-right:5px;}
+.popWrap .depth-list li .depth2 {float:left; width:90%;}
+.popWrap .depth-list li .depth2 li {font-size:11px; letter-spacing:-0.05em; line-height:150%;}
+
+
+/*포토갤러리 */
+.popWrap .photoGallery{width:220px; border:1px solid #e1e1e1; background:#fff;}
+.popWrap .photoGallery ul{width:210px;  padding:8px 0 0 10px; height:364px; overflow-y:scroll;}
+.popWrap .photoGallery ul li {float:left; width:85px; height:64px; margin:0 5px 5px 0; border:1px solid #e1e1e1; background:url("http://openimage.interpark.com/tourpark/tour/popup/bgImgBox.gif") no-repeat;}
+.popWrap .photoGallery ul a {display:block;}
+.popWrap .photoGalleryName {clear:both; padding:10px; width:480px; text-align:center;}
+
+/*포토갤러리수정 */
+.popWrap .photoGallery00{width:180px; border:1px solid #e1e1e1; background:#fff;}
+.popWrap .photoGallery00 ul{width:170px;  padding:8px 0 0 10px; height:220px; overflow-y:scroll;}
+.popWrap .photoGallery00 ul li {float:left; width:70px; height:64px; margin:0 5px 5px 0; border:1px solid #e1e1e1; background:url("http://openimage.interpark.com/tourpark/tour/popup/bgImgBox.gif") no-repeat;}
+.popWrap .photoGallery00 ul a {display:block;}
+.popWrap .photoGalleryName {clear:both; padding:10px; width:480px; text-align:center;}
+
+/*호텔포토갤러리 */
+.popWrap .photoGallery01{width:180px; border:1px solid #e1e1e1; background:#fff;}
+.popWrap .photoGallery01 ul{width:170px;  padding:8px 0 0 10px; height:244px; overflow-y:scroll;}
+.popWrap .photoGallery01 ul li {float:left; width:65px; height:44px; margin:0 5px 5px 0; border:1px solid #e1e1e1; background:url("http://openimage.interpark.com/tourpark/tour/popup/bgImgBox00.gif") no-repeat;}
+.popWrap .photoGallery01 ul a {display:block;}
+.popWrap .photoGalleryName00 {clear:both; padding:10px; width:480px; text-align:center;}
+.popWrap .scheTit1 {width:525px ; padding:7px 11px 5px; margin:10px 0; border:1px solid #d7d7d7; font-size:14px; font-weight:bold; color:#000;overflow:hidden;}
+.popWrap .photoimgB{width:350px; margin-right:15px; float:left}
+.popWrap .photoinfo1{width:525px;  padding:0px 11px 0px 15px; overflow:hidden; font-size:12px; color:#666666; height:14px; 
+ clear:both;background:url("http://openimage.interpark.com/tourpark/tour/common/bul/bulDotOng01.gif") 8px 5px no-repeat;}
+
+.popWrap .photoGallery02 {width:180px; border:1px solid #e1e1e1; background:#fff;}
+.popWrap .photoGallery02 ul{width:170px; padding:8px 0 0 10px; height:220px; overflow-y:scroll;}
+.popWrap .photoGallery02 ul li {float:left; margin:0 5px 5px 0; border:1px solid #e1e1e1;}
+.popWrap .photoGallery02 ul a {display:block;}
+
+.popWrap .stateBox {width:432px; margin-bottom:15px; padding-top:15px; line-height:20px; text-align:center; background:url("http://openimage.interpark.com/tourpark/tour/popup/bgBox04T.gif") top no-repeat;}
+.popWrap .stateBox .state{margin-bottom:10px; text-align:center; letter-spacing:-1px;}
+.popWrap .stateBox .stateBoxB {width:432px; height:20px; background:url("http://openimage.interpark.com/tourpark/tour/popup/bgBox04B.gif") bottom no-repeat;}
+
+/*주소찾기*/
+.popWrap .grayBox04{width:378px; padding-top:10px; text-align:center; background:url("http://openimage.interpark.com/tourpark/tour/popup/bgGrayBoxAddT.gif") top left no-repeat;}
+.popWrap .grayBox04B {width:378px; height:9px; background:url("http://openimage.interpark.com/tourpark/tour/popup/bgGrayBoxAddB.gif") bottom left no-repeat;}
+.popWrap .grayBox04 a,
+.popWrap .grayBox04 img,
+.popWrap .grayBox04 input{vertical-align:middle;}
+.popWrap .grayBox04 input.text01 {font-size:11px; border:1px solid #b7b7b7;}
+
+.popWrap .grayBox08{width:612px; padding:15px 0px 0px 0px; line-height:15px; text-align:center; background:url("http://openimage.interpark.com/tourpark/tour/popup/bgBox08T.gif") top left no-repeat;}
+.popWrap .grayBox08B {width:612px; height:10px; background:url("http://openimage.interpark.com/tourpark/tour/popup/bgBox08B.gif") bottom left no-repeat;}
+
+.popWrap .grayBox05{width:434px; padding-top:15px; text-align:center; background:url("http://openimage.interpark.com/tourpark/tour/popup/bgBox04T.gif") top left no-repeat;}
+.popWrap .grayBox05B {width:434px; height:15px; background:url("http://openimage.interpark.com/tourpark/tour/popup/bgBox04B.gif") bottom left no-repeat;}
+.popWrap .grayBox05 a,
+.popWrap .grayBox05 img,
+.popWrap .grayBox05 input{vertical-align:middle;}
+.popWrap .grayBox05 input.text01 {height:20px; font-size:11px; border:1px solid #b7b7b7;}
+.popWrap .grayBox05 input.text02 {height:20px; font-size:11px; border:1px solid #b7b7b7;}
+
+.popWrap .grayBox09{width:434px; padding-top:10px; line-height:15px; text-align:center; background:url("http://openimage.interpark.com/tourpark/tour/popup/grayBox07.gif") top left no-repeat;}
+.popWrap .grayBox09B {width:434px; height:10px; background:url("http://openimage.interpark.com/tourpark/tour/popup/grayBox07B.gif") bottom left no-repeat;}
+
+.popWrap .orUl li{padding:2px 15px 8px; text-align:left; background:url("http://openimage.interpark.com/tourpark/tour/common/bul/bulDotOng01.gif") 8px 7px no-repeat; }
+
+/* calendar */
+table.calendar {table-layout:fixed;	border-collapse:collapse; empty-cells:show; caption-side:center; font-family:Arial;	font-size:10px;	color:#828282;}
+table.calendar caption {font-size:13px;	font-weight:bold; min-height:11px; font-family:Tahoma; color:#828282;}
+table.calendar thead th {font-size:8px; color:#fff; font-weight:normal; background-color:#bddbdb; /*background-color:#BDDBDB; */}
+table.calendar th,
+table.calendar td {padding:1px; width:14%; height:13px; font-weight:normal; color:#828282; font-size:11px; font-family: Tahoma; text-align:center; border:1px solid #bddbdb; /* border:1px solid #BDDBDB; */}
+table.calendar td.calCellSaturday,
+table.calendar td.calCellSunday {width:15%;}
+
+table.calendar td.calCellSunday {color:#FF7800;}
+table.calendar td.calCellSelected {color:gray; background-color:#D2F5ED;}
+table.calendar td.calCellLated {text-decoration:line-through; color:#828282;}
+
+/* 출발일별 검색 calendar */
+table.calendarStart {table-layout:fixed; border-collapse:collapse; empty-cells:show;caption-side:center;}
+
+table.calendarStart caption {font-size:11px; font-weight:bold; height:9px;}
+
+table.calendarStart thead th {font-size:8px; color:#fff; font-weight:normal;  background:#bddbdb; /* background:#BDDBDB; */}
+table.calendarStart th,
+table.calendarStart td {padding:0px; width:14%; height:9px; font-weight:normal; color:#828282; font-size:10px;  text-align:center; background-color:#bddbdb; /* border:1px solid #BDDBDB;*/}
+table.calendarStart td.calCellSaturday,
+table.calendarStart td.calCellSunday {width:15%;}
+table.calendarStart td.calCellSunday {color:#FF7800;}
+table.calendarStart td.calCellSelected {color: gray; background-color:#D2F5ED;}
+table.calendarStart td.calCellLated {text-decoration:line-through;}
+
+
+/* 출발일별 검색 작은calendar */
+table.calendarNew {table-layout:fixed; border-collapse:collapse; empty-cells:show;}
+table.calendarNew caption {color:#000; font-family:Arial; font-size:10px;}
+table.calendarNew th{color:#fff; font-family:Helvetica; font-size:8px; width:14%; text-align:center; border:1px solid #BDDBDB; background-color:#bddbdb; height:12px;}
+table.calendarNew td {color:#828282; font-family:Arial; font-size:10px; width:14%; text-align:center; border:1px solid #BDDBDB; padding:0 !important;}
+table.calendarNew td.calCellSaturday,
+table.calendarNew td.calCellSunday {width:15%;}
+table.calendarNew td.calCellSunday {color:#FF7800;}
+table.calendarNew td.calCellLated {text-decoration:line-through;}
+table.calendarNew td.calCellSelected {background-color:#D2F5ED;	color: gray;}
+
+/* 날짜검색 */
+.titMon {text-align:center;}
+.titMon strong {padding-right:94px; font-size:11px;}
+.conCalList {float:left; width:414px; margin:0 0 40px}
+.conCalList .Cal {float:left; width:134px; height:107px; margin-right:4px;}
+.btnMon {float:left; width:45px;}
+.btnMon a {display:block;}
+
+/* 구팝업스타일 :: END */ 
+
+/*셀렉트박스 스타일*/
+ul.bscOptionsN {display:none;  position:absolute !important; background:#fefefe !important; border:1px solid #c0c0c0 !important; padding:0 !important; font-size:1px !important; z-index:1 !important;
+    overflow:scroll !important; overflow-x: hidden !important;
+    scrollbar-arrow-color:#c0c0c0 !important;
+    scrollbar-face-color:#efefef !important;
+    scrollbar-track-color:#FFFFFF !important;
+    scrollbar-3dlight-color:#FFFFFF !important;
+    scrollbar-highlight-color:#efefef !important;
+    scrollbar-shadow-color:#FFFFFF !important;
+    scrollbar-darkshadow-color:#FFFFFF !important;}
+ul.bscOptionsN li{clear:both !important; height:auto !important; padding:0 !important; margin:0 !important; }
+ul.bscOptionsN a{display:block !important; padding:2px 2px 1px 3px !important; margin:0 !important; text-align:left !important; font-size:11px !important; line-height:1.1em !important; letter-spacing:-0.08em !important; background:#fff !important; font-weight:normal !important; text-decoration:none !important; color:#363636; font-family:dotum !important;}
+ul.bscOptionsN a:hover, ul.bscOptionsN a:focus{background:#f2f2f2 !important;}
+ul.bscOptionsN li.selected {background:#f7f7f7 !important;}
+
+/*type1*/
+span.bscSelectWrapN {display:inline-block !important; height:19px !important; vertical-align:top !important; text-align:left !important; zoom:1;}
+span.bscSelectsN {display:inline-block !important; *display:block !important; font-size:1px !important; text-align:left; vertical-align:top !important; white-space:nowrap !important; padding:0 17px 0 0 !important; margin:0 !important;background:url(http://openimage.interpark.com/tourpark/tour/common/bodyArea/basicSelectsBtn.gif) no-repeat right top !important; cursor:pointer !important;}
+span.bscSelectsN input {height:19px !important; margin:0 !important; padding:3px 0 0 4px !important; letter-spacing:-0.08em !important; color:#363636; font-size:11px !important; font-family:dotum !important; text-align: left !important; border:0 !important; cursor:pointer !important;background:url(http://openimage.interpark.com/tourpark/tour/common/bodyArea/basicSelectsBg.gif) no-repeat left top !important; }
+ul.bscOptionsAddN {margin:-2px 0 0 0 !important;}
+
+/*type2*/
+span.bsc1SelectWrapN,span.bsc4SelectWrapN {display:inline-block !important; height:18px !important; vertical-align:top !important; text-align:left; zoom:1;}
+span.bsc1SelectsN, span.bsc4SelectsN {display:inline-block !important; *display:block !important; font-size:1px !important; text-align:left; vertical-align:top !important; white-space:nowrap !important; padding:0 17px 0 0 !important; margin:0 !important; background:url(http://openimage.interpark.com/tourpark/tour/common/select/basicSelectsBtn.gif) no-repeat right top !important; cursor:pointer !important;}
+span.bsc1SelectsN input, span.bsc4SelectsN input {height:18px !important; margin:0 !important; padding:3px 0 0 4px !important; letter-spacing:-0.08em !important; color:#363636; font-size:11px !important; font-family:dotum !important; text-align: left !important; border:0 !important; cursor:pointer !important; background:url(http://openimage.interpark.com/tourpark/tour/common/select/basicSelectsBg.gif) no-repeat left top !important;}
+ul.bsc1OptionsAddN, ul.bsc4OptionsAddN {margin:-1px 0 0 0 !important;}
+
+/*type3*/
+span.bsc2SelectWrapN {display:inline-block !important; height:25px !important; vertical-align:top !important; text-align:left !important; zoom:1;}
+span.bsc2SelectsN {display:inline-block !important; *display:block !important; font-size:1px !important; text-align:left; vertical-align:top !important; white-space:nowrap !important; padding:0 17px 0 0 !important; margin:0  !important; background:url(http://openimage.interpark.com/tourpark/tour/common/select/basicSelectsBtn02.gif) no-repeat right top !important; cursor:pointer !important;}
+span.bsc2SelectsN input {height:25px !important; margin:0 !important; padding:3px 0 0 4px !important; letter-spacing:-0.08em !important; color:#363636; font-size:11px !important; font-family:dotum !important; text-align: left !important; border:0 !important; cursor:pointer !important; background:url(http://openimage.interpark.com/tourpark/tour/common/select/basicSelectsBg02.gif) no-repeat left top !important;}
+ul.bsc2OptionsAddN {margin:-1px 0 0 0 !important;}
+
+/*type4*/
+span.bsc3SelectWrapN {display:inline-block !important; height:20px !important; vertical-align:top !important; text-align:left !important; zoom:1;}
+span.bsc3SelectsN {display:inline-block !important; *display:block !important; text-align:left; vertical-align:top !important; white-space:nowrap !important; padding:0 17px 0 0 !important; margin:0  !important; background:url(http://openimage.interpark.com/tourpark/tour/common/select/basicSelectsBtn03.gif) no-repeat right top !important; cursor:pointer !important;}
+span.bsc3SelectsN input {height:20px !important; margin:0 !important; padding:3px 0 0 4px !important; letter-spacing:-0.08em !important; color:#363636; font-size:11px !important; font-family:dotum !important; text-align: left !important; border:0 !important; cursor:pointer !important; background:url(http://openimage.interpark.com/tourpark/tour/common/select/basicSelectsBg03.gif) no-repeat left top !important;}
+ul.bsc3OptionsAddN {margin:-1px 0 0 0 !important;}
+
+/*type5*/
+span.bsc01SelectWrapN {display:inline-block !important; height:27px !important; vertical-align:top !important; text-align:left !important; zoom:1;}
+span.bsc01SelectsN {display:inline-block !important; *display:block !important; font-size:1px !important; text-align:left; vertical-align:top !important; white-space:nowrap !important; padding:0 17px 0 0 !important; margin:0 !important; background:url(http://openimage.interpark.com/tourpark/tour/common/select/btn_selects01.gif) no-repeat right top !important; cursor:pointer !important;}
+span.bsc01SelectsN input {height:27px !important; margin:0 !important; padding:3px 0 0 5px !important; letter-spacing:-0.06em !important; color:#686868; font-size:12px !important; font-family:dotum !important; text-align: left !important; border:0 !important; cursor:pointer !important;background:url(http://openimage.interpark.com/tourpark/tour/common/select/bg_selects01.gif) no-repeat left top !important;}
+ul.bsc01OptionsAddN {margin:-1px 0 0 0 !important;}
+ul.bsc01OptionsAddN a {padding-left:4px !important; font-size:12px !important; color:#686868 !important; letter-spacing:-0.06em !important;}
+
+/*type6*/
+span.bsc02SelectWrapN {display:inline-block !important; height:22px !important; vertical-align:top !important; text-align:left !important; zoom:1;}
+span.bsc02SelectsN {display:inline-block !important; *display:block !important;  font-size:1px !important; text-align:left; vertical-align:top !important; white-space:nowrap !important; padding:0 17px 0 0 !important; margin:0 !important; background:url(http://openimage.interpark.com/tourpark/tour/common/select/btn_selects02.gif) no-repeat right top !important; cursor:pointer !important; vertical-align:top !important;}
+span.bsc02SelectsN input {height:22px !important; margin:0 !important; padding:3px 0 0 4px !important; letter-spacing:-0.08em !important; color:#686868; font-size:11px !important; font-family:dotum !important; text-align: left !important; border:0 !important; cursor:pointer !important; background:url(http://openimage.interpark.com/tourpark/tour/common/select/bg_selects02.gif) no-repeat left top !important; }
+ul.bsc02OptionsAddN {margin:-1px 0 0 !important;}
+ul.bsc02OptionsAddN a {color:#686868 !important;}
+
+/*//셀렉트박스 스타일*/
+
+
+.th-none {display:none;}/*th히든처리*/
+.caption-none {display:none;}/*caption히든처리*/
+
+/*editor view*/
+.editor-view {line-height:1.5; word-break:break-all;}
+.editor-view * {line-height:1.5;}
+.editor-view p {margin:0; padding:0;}
+.editor-view em {font-style:italic;}
+.editor-view table.__se_tbl {border-collapse:separate;}
+.editor-view table.__se_tbl tbody td, .editor-view table.__se_tbl tbody th {padding:0;}
+.editor-view ul, .editor-view ol {padding-left:30px;}
+.editor-view ol li, .editor-view ul li {margin-left:15px;}
+.editor-view ul li {list-style:disc;}
+.editor-view ul li li {list-style:circle;}
+.editor-view ul li li li  {list-style:square;}
+.editor-view ol li {list-style-type:decimal;}
+
+
+/* air 향후 빠질 부분 */
+.popup-module.goods-write .tit-h2 {font-size:12px;}
+.popup-module.goods-write .data-box1 {padding:20px; border:1px solid #ccc; border-radius:10px;}
+.popup-module.goods-write .data-table6 {margin-top:4px;}
+.popup-module.goods-write .data-table6 tbody th {color:#646464;}
+.popup-module.goods-write .data-table6 tbody td {padding-top:8px; padding-bottom:8px;}
+.popup-module.goods-write .data-table6 tbody td img {vertical-align:middle;}
+.popup-module.goods-write .ir-moduel {font-size:0; line-height:0;}
+.popup-module.goods-write .btn-area {display:block; font-size:0; line-height:0; text-align:center;}
+.popup-module.goods-write .btn-area.btn-type1 {display:block; margin:20px; 0}
+.popup-module.goods-write .btn-area.btn-type1 a {display:inline-block; padding:8px 20px; font-size:12px; color:#00275c; text-align:center; font-weight:bold; border:1px solid #d0d0d0; border-right:1px solid #a6a6a6; border-radius:3px; 
+	background: #ffffff; /* Old browsers */
+	background: -moz-linear-gradient(top,  #ffffff 0%, #f1f1f1 50%, #e1e1e1 51%, #f6f6f6 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(50%,#f1f1f1), color-stop(51%,#e1e1e1), color-stop(100%,#f6f6f6)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #ffffff 0%,#f1f1f1 50%,#e1e1e1 51%,#f6f6f6 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #ffffff 0%,#f1f1f1 50%,#e1e1e1 51%,#f6f6f6 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #ffffff 0%,#f1f1f1 50%,#e1e1e1 51%,#f6f6f6 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #ffffff 0%,#f1f1f1 50%,#e1e1e1 51%,#f6f6f6 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f6f6f6',GradientType=0 ); /* IE6-9 */
+	}
+.popup-module.goods-write .footer {margin-top:10px; padding-top:10px; text-align:right; border-top:1px solid #dcdcdc;}
+.popup-module.goods-write .foot-banner {padding:10px 10px 0 10px; text-align:center; border:1px solid #d6d6d6; border-radius:8px;}
+.popup-module.goods-write .foot-banner img {vertical-align:bottom;}
+
+/* 상단 */
+.top-section .hot-list {float:left; width:130px;}
+.top-section .hot-list li {margin: 0 5px 0 15px;}
+.top-section .hot-list li a {font-size:11px; line-height:31px;color:#606060; letter-spacing:-0.1em;}
+.top-section .hot-list li a:hover {font-weight:bold; color:#606060;}
+.top-section .hot-list li.on a {font-weight:bold; color:#606060;}
+.top-section .hot-banner {float:right; display:inline; margin:3px 0 0 5px; width:145px;}
+.top-section .hot-banner h3 {font-size:0; line-height:0;}
+.top-section .hot-banner p {margin:0; padding:0; font-size:0; line-height:0;}
+.top-section .hot-banner p img {width:144px; height:211px;}
+
+/* 하단영역 버전 up */
+.foot-module {position:relative; padding:0; margin:0; margin-top:27px; width:700px;}
+.foot-module h3 {height:31px; background:#fff;}
+.foot-module h3 img {margin:10px 0 0 21px;}
+.foot-module .review-area {position:relative; padding-bottom:15px; width:385px; border:1px solid #92d9e1; background:#edfdff url("http://openimage.interpark.com/tourpark/tour/condo/bg_review.gif") repeat-x 0 31px;}
+.foot-module .review-area h3 { border-bottom:1px solid #7ed2dc;}
+.foot-module .review-area ul {padding:16px 22px; _zoom:1;}
+.foot-module .review-area ul li {padding:4px 0 4px 11px; font-size:12px; line-height:16px; color:#616161; border-top:1px solid #b9f4f8; background:url("http://openimage.interpark.com/tourpark/tour/common/bul/bul_list02.gif") no-repeat 0 10px;}
+.foot-module .review-area ul li a, .review-area ul li strong {font-size:12px; line-height:16px; color:#616161;}
+.foot-module .review-area ul li a:hover,.review-area ul li a:hover strong {color:#616161; text-decoration:underline;}
+.foot-module .gift-event {position:relative; margin:0; padding:0; text-align:center;} 
+.foot-module .gift-event img {border:1px solid #a1e4ec;}
+.foot-module .gift-event img.go {position:absolute; top:19px; right:37px; border:none;}
+.foot-module .best-coment {overflow:hidden; margin:0 10px 0 20px; padding-top:16px; _zoom:1;}
+.foot-module .best-coment p {float:left; display:inline; padding:0; margin:0;}
+.foot-module .best-coment p a:hover {text-decoration:underline;}
+.foot-module .best-coment .view-img {position:relative; left:2px; width:120px;}
+.foot-module .best-coment .view-img .img {width:109px; height:79px;}
+.foot-module .best-coment .view-img .best {position:absolute; top:0; left:0;}
+.foot-module .best-coment .tit {width:220px;}
+.foot-module .best-coment .tit a, .foot-module .best-coment .tit a strong {font-weight:bold; color:#1f6b8c; font-size:14px; letter-spacing:-0.1em; line-height:18px;}
+.foot-module .best-coment .data {margin-top:8px; width:220px; font-size:11px; line-height:16px; color:#797979;}
+.foot-module .best-coment .data a {font-size:12px; line-height:16px; color:#797979;}
+
+.foot-module .data-area {position:absolute; top:0; right:0; margin-left:4px; padding-bottom:15px; width:306px; border:1px solid #c9c9c9; background:#f5f5f5 url("http://openimage.interpark.com/tourpark/tour/condo/bg_qa.gif") repeat-x 0 31px;}
+.foot-module .data-area h3 {border-bottom:1px solid #c9c9c9;}
+.foot-module .data-area h4 {margin:25px 0 0 14px;}
+
+.foot-module .con-list {margin:18px 20px; _zoom:1;}
+.foot-module .con-list li {padding-left:18px; font-size:12px; line-height:21px; letter-spacing:-0.1em; background:url("http://openimage.interpark.com/tourpark/tour/common/bul/bul_q.gif") no-repeat 0 4px;}
+.foot-module .con-list li a {line-height:21px;}
+.foot-module .con-list li a:hover {color:#cb4242;}
+.foot-module .data-list {overflow:hidden; margin:0 14px 0 14px; border:1px solid #d6d6d6; _zoom:1;}
+.foot-module .data-list li {float:left; display:inline; margin:-1px; border-top:1px solid #d6d6d6; border-left:1px solid #d6d6d6; _zoom:1;}  
+
+.foot-module .review-area .view, .foot-module .data-area .view 
+{position:absolute; top:12px; right:7px; padding:0 10px 0 3px; font-size:11px; color:#939393; letter-spacing:-0.05em; background:url("http://openimage.interpark.com/tourpark/tour/common/bul/bu_arrow2.gif") no-repeat 38px 3px;}
+
+.skip-nav, .invisible,.guide-service {position:absolute; top:-100px; left:-5000px; font-size:0; line-height:0;}

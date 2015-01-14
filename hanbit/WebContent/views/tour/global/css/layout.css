@@ -1,0 +1,853 @@
+@charset "utf-8";
+
+/* Global Selector :: START */
+
+html, body {margin:0; padding:0; height:100%;} 
+html body {height:100%;}
+
+hr {display:none;}
+
+/* label, button {cursor:pointer;} */
+em, i {font-style:normal;}
+address {font-style:normal;}
+legend {display:none; position:absolute; top:-1000px; left:-1000px; font-size:0; line-height:0;}
+
+.invisible {position:absolute; font-size:0; line-height:0;}
+/* .point03 {color:#eb5151 !important;} */
+
+
+/* C U S T O M Selector :: START*/
+div.shadowDiv	{position:absolute; z-index:100; background:gray; left:0px; top:0px; width:100%; height:100%; filter:alpha(opacity=50); opacity: 0.5; -moz-opacity: 0.5;}
+
+/* //C U S T O M Selector :: E N D */
+
+/* B O D Y A R E A ::  START */
+body #bodyArea {/* min-height:600px; */}
+
+#bodyLeft, #bodyRight, .docu-wrap{margin-top:10px;}
+#BodyCover {*position:relative; padding-bottom:70px;}
+/*#customer #bodyRight,
+#cate #bodyRight,
+#free #bodyRight {margin-top:0;}*/
+
+/*
+#event_zone #bodyLeft, 
+#event_zone #bodyRight {display:none;}
+*/
+
+#bodyLeft {float:left; width:190px;}
+#bodyRight {float:left; width:700px; /* min-height:600px; */}
+#bodyRight:after {content:''; display:block; clear:both;}
+#bodyBtm {overflow:hidden; width:890px; clear:both;}
+
+
+#bodyLeft .bannerArea li {padding-top:5px;}
+
+
+/* 고객센터 */
+#bodyLeft .serviceCenter {padding:10px 0 7px; width:180px; border:1px solid #c3c3c3; /* background:url('http://openimage.interpark.com/tourpark/tour/common/bodyArea/bgLeftBox01M_1.gif') repeat-y; */}
+#bodyLeft .serviceCenter div img {display:none;}
+#bodyLeft .serviceCenter .service {padding:0 6px;}
+#bodyLeft .serviceCenter .service img {display:block;}
+#bodyLeft .serviceCenter .service dl {}
+#bodyLeft .serviceCenter .service dt{padding-left:7px;}
+#bodyLeft .serviceCenter .service dd {margin-top:3px; font-size:0; line-height:0; vertical-align:top;}
+
+#bodyLeft .serviceCenter00 {width:180px; background:url('http://openimage.interpark.com/tourpark/tour/common/bodyArea/bgLeftBox01M00.gif') repeat-y;}
+#bodyLeft .serviceCenter00 .service {padding:0 7px; }
+#bodyLeft .serviceCenter00 .service dt{padding-left:7px;}
+
+#bodyRight .textArea {height:25px; padding:15px 0 0 29px; display:none;}
+body.subMain #bodyRight .textArea {height:25px; padding:15px 0 0 29px; display:block;}
+
+#bodyRight .locationArea {
+	width:696px; height:24px; padding:16px 2px 0;
+}
+#bodyRight #location {float:left; padding-left:15px; background:url("http://openimage.interpark.com/tourpark/tour/common/common/home.gif") 0 45% no-repeat;}
+#bodyRight #location a{font-size:11px; letter-spacing:-1px; color:#919191;}
+#bodyRight #location span {font-weight:bold; font-size:11px; letter-spacing:-1px; color:#d64e4e;}
+#bodyRight #location span a {color:#d64e4e;}/*하위뎁스에 링크걸렸을때*/
+
+/*해외호텔현재위치*/
+#bodyRight .locationAreaH {
+	width:696px; height:24px; padding:10px 2px 6px 0;
+}
+#bodyRight #locationH {float:left; padding-left:15px; background:url("http://openimage.interpark.com/tourpark/tour/common/common/home.gif") 0 6px no-repeat;}
+#bodyRight #locationH .home00 {font-weight:bold;  font-size:11px; letter-spacing:-1px; color:#d64e4e;}
+
+#bodyRight #locationH .fm4400 {float:left; margin:4px 4px 0px 0px}
+#bodyRight #locationH .fm6404 {float:left; margin:6px 4px 0px 4px}
+#bodyRight #locationH .fm4000 {float:left; margin:4px 0px 0px 0px}
+#bodyRight #locationH .m0232 {margin:0px 2px 3px 2px}
+
+#bodyRight #locationH span.basicSelects a img {vertical-align:middle;} /* 셀렉트박스 있을때 */
+
+body.subMain #bodyRight .locationArea {
+	width:680px; height:19px; padding:6px 0 6px;
+	background:url("http://openimage.interpark.com/tourpark/tour/common/bodyArea/bgLocation.gif") no-repeat;
+}
+body.subMain #bodyRight .locationAreaNOBG {
+	width:690px; height:19px; padding : 3px 0 8px;
+}
+body.subMain #bodyRight #location {float:left; padding:3px 0 0 15px; background:url("http://openimage.interpark.com/tourpark/tour/common/common/home.gif") 0 5px no-repeat;}
+body.subMain #bodyRight #location a{font-size:11px; letter-spacing:-1px; color:#919191;}
+body.subMain #bodyRight #location span {font-weight:bold; font-size:11px; letter-spacing:-1px; color:#d64e4e;}
+
+/* #bodyRight #contents {width:700px; background:url("http://openimage.interpark.com/tourpark/tour/common/bodyArea/bgContents.gif") repeat-x;} */ /* sub_add1 */
+body.subMain #bodyRight #contents {background:none;}
+
+#leftBody {width:705px; height:100%; float:left; overflow:hidden;}
+#leftBody #contents {width:698px;}
+#rightBody {width:185px; height:100%; float:left; font-size:11px;}
+
+/* 카테고리별 메인 */
+#dBody {width:700px; float:left;}
+#dBody .location {position:relative; margin:0; padding:6px 0; width:60%; height:18px; font-size:0; line-height:0; z-index:1;}
+#dBody .location img {position:absolute; right:0; vertical-align:middle;}
+#dBody .location a.home {padding-left:15px; font-size:11px; letter-spacing:-1px; color:#919191; background:url("http://openimage.interpark.com/tourpark/tour/detail/home.gif") no-repeat 0 45%;}
+#dBody .location span {margin-left:3px; padding-left:7px; display:inline-block; font-weight:bold; font-size:11px; letter-spacing:-1px; color:#d64e4e; background:url("http://openimage.interpark.com/tourpark/tour/common/bul/bul_arrow01.gif") 0 45% no-repeat;}
+
+div#detail {width:665px;}
+/* //B O D Y A R E A ::  E N D */
+
+#GNBRightBanner {position:absolute; top:22px; width:80px; margin-left:900px; z-index:1;}
+#SubMenuMypage {position:absolute;top:65px;margin-left:180px;z-index:2;}
+#SubMenuCustomer {position:absolute;top:65px;margin-left:270px;z-index:2;}
+#SubMenuCustomer {position:absolute;top:-48px;margin-left:270px;z-index:2;}
+
+/* Banner Area ::  E N D */
+
+
+/* 숙박제휴_G마켓*/
+#bodyAreaG{width:820px; margin:0px auto; overflow:hidden; margin-bottom:50px}
+#bodyAreaG.event {position:relative; padding-left:145px;}
+#bodyAreaG.event iframe {position:absolute; top:0; left:0;}
+#bodyRightG {width:630px; float:left; overflow:hidden;}
+#bodyRightG #contents {width:630px; }
+#bodyBtmG {width:820px; clear:both; overflow:hidden;}
+#rightBodyG {width:115px; height:100%; float:left; font-size:11px;}
+
+/* gnb변경 ver090601/main.css 같이변경*/
+#wrapBody_sp {height:125px; background:url(http://openimage.interpark.com/tourpark/tour/common/headArea/bg_gnbnew.gif) repeat-x center 95px; text-align: center; }
+#wrapBody_sp .topLinArea{background-color:#ededed; height:16px; padding-top:4px}
+#topnav_new	 {text-align:left;width:980px;margin:0 auto ;position:relative; }
+#topnav_new	 .ciarea00{position:absolute; top:13px; z-index:1}
+
+/* GNB link Start */
+.gnb_link	{width:980px;margin:0 auto;z-index:1000; text-align: center;}
+.gnb_link	li.first { padding-left:0px}
+.gnb_link	li	 {float:left;padding: 0 8px 0 6px;font:normal 11px 돋움; letter-spacing:-1px; color:#898989; background:url(http://openimage.interpark.com/tourpark/tour/common/headArea/gnb_line00.gif) no-repeat right top}
+.gnb_link	li.last	 {background:none;padding-right:0px;}
+.gnb_link	li.first { padding-left:0px}
+.gnb_link	li a {font-size:11px;color:#898989}
+.gnb_link	li a:hover {color:#bd4141}
+.gnb_link	li.mypg {position:relative;padding:0px 18px 0 5px;background:url(http://openimage.interpark.com/tourpark/tour/common/headArea/gnb_openM00.gif) no-repeat right 0px;z-index:1000}
+.gnb_link	li.mypg a	 {color:#898989}
+.gnb_link	li.mypg a:hover {color:#bd4141;}
+.gnb_link	.mypgsub {position:absolute;left:0px; top:0px;margin:13px 0px 0px -14px;width:90px;height:65px; z-index:1000}
+.gnb_link	.mypgsub   .top     {width:90px;height:5px;background:url('http://openimage.interpark.com/tourpark/tour/common/headArea/bg_layer_top.png') no-repeat left top;_background-image:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale', src='http://openimage.interpark.com/tourpark/tour/common/headArea/bg_layer_top.png');font-size:0px;line-height:0px;}
+.gnb_link	.mypgsub	.mid	 {width:75px;background:url('http://openimage.interpark.com/tourpark/tour/common/headArea/bg_layer_mid.png') repeat-y left top;_background-image:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale', src='http://openimage.interpark.com/tourpark/tour/common/headArea/bg_layer_mid.png');font-size:0px;line-height:0px;padding:0px 7px 0px 8px;}
+.gnb_link	.mypgsub	.btm	 {width:90px;height:5px;background:url('http://openimage.interpark.com/tourpark/tour/common/headArea/bg_layer_btm.png') no-repeat left top;_background-image:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale', src='http://openimage.interpark.com/tourpark/tour/common/headArea/bg_layer_btm.png');font-size:0px;line-height:0px;}
+.gnb_link	.mypgsub	.mid a:hover {color:#bd4141}
+.gnb_link	.mypgsub dl	{position:relative;}
+.gnb_link	.mypgsub dd { text-align:left;padding:3px 0 0 5px;width:70px;height:14px;background:url(http://openimage.interpark.com/tourpark/tour/common/headArea/bl_square_dot.gif) no-repeat left 8px;}
+.gnb_link	.mypgsub dd a {font:11px dotum;color:#7F7F7F}
+.gnb_link	.mypgsub dd a:hover {font:11px dotum;color:#009938}
+.gnb_link 	.gnlink00{ float:right;margin-right:92px;}
+*html .gnb_link 	.gnlink00{ position:absolute;margin-right:92px}
+.gnb_link 	.gnlink00 li{letter-spacing:0px}
+
+
+
+/* Left 큰메뉴 영역 Start */
+.gnbArea_Left	 ul.category_link	{position:absolute;top:77px; left:38px }
+.gnbArea_Left	 ul.category_link	li{float:left;height:28px;}
+.gnbArea_Left	 ul.category_link	li.line{float:left;margin-top:7px; margin-left:4px;width:9px;height:12px;background:url(http://openimage.interpark.com/tourpark/tour/common/headArea/corner_link_line.png) no-repeat left top;_background-image:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale', src='http://openimage.interpark.com/tourpark/tour/common/headArea/corner_link_line.png');font-size:0px;line-height:0px;}
+
+.gnbArea_Left00	 ul.category_link	{position:absolute;top:77px; left:20px }
+.gnbArea_Left00	 ul.category_link	li{float:left;height:28px;}
+.gnbArea_Left00	 ul.category_link	li.line{float:left;margin-top:7px; margin-left:4px;width:9px;height:12px;background:url(http://openimage.interpark.com/tourpark/tour/common/headArea/corner_link_line.png) no-repeat left top;_background-image:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale', src='http://openimage.interpark.com/tourpark/tour/common/headArea/corner_link_line.png');font-size:0px;line-height:0px;}
+.gnbArea_Left00	 ul.category_link	li.line00{float:left;background:url(http://openimage.interpark.com/tourpark/tour/common/headArea/gnbLine00.gif) no-repeat left top; width:14px}
+
+.gnbArea_Left	 ul.category_link	li.menu1	{padding-left:0px;}
+.gnbArea_Left	 ul.category_link	li.menu2	{padding-left:0px;}
+.gnbArea_Left	 ul.category_link	li.menu3	{padding-left:0px;background:none;}
+
+
+/* Center 검색영역 Start */
+.gnbArea_center	#schbar {position:absolute;top:13px;left:270px;height:29px;width:335px;background:url(http://openimage.interpark.com/tourpark/tour/common/headArea/bg_gnb02a.gif) no-repeat 0 top;z-index:2000 }
+.gnbArea_center	#scslt {position:absolute;width:66px;height:15px;margin:7px 0 0 14px;background:url(http://openimage.interpark.com/tourpark/tour/common/headArea/bg_schselect09.gif) no-repeat right 0;cursor:hand;z-index:2000}
+.gnbArea_center	#scslt .str {position:absolute;margin:2px 0 0 0;color:#787878;word-break: keep-all;}
+.gnbArea_center	#scslt .str a {text-decoration:none}
+.gnbArea_center	#schwrap {position:absolute;width:76px;margin:26px 0 0 3px;z-index:2000;}
+.gnbArea_center	#schly_top {width:76px;height:9px;font-size:1px;background:url(http://openimage.interpark.com/tourpark/tour/common/headArea/bg_sltbox_top09.png) no-repeat;_background-image:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale', src='http://openimage.interpark.com/tourpark/tour/common/headArea/bg_sltbox_top09.png')}
+.gnbArea_center	#schly_bot {width:76px;height:8px;font-size:1px;background:url(http://openimage.interpark.com/tourpark/tour/common/headArea/bg_sltbox_bot09.png) no-repeat;_background-image:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale', src='http://openimage.interpark.com/tourpark/tour/common/headArea/bg_sltbox_bot09.png')}
+.gnbArea_center	#schly {width:76px;background:url(http://openimage.interpark.com/tourpark/tour/common/headArea/bg_sltbox09.gif) no-repeat top;z-index:2000;height:110px}
+.gnbArea_center	#schly li {float:left;display:inline;width:66px;margin-bottom:1px;padding:3px 0 0 6px;margin-left:4px;cursor:hand}
+.gnbArea_center	#schly li.over{ background: url(http://openimage.interpark.com/tourpark/tour/common/headArea/bg_sltthis09.gif) no-repeat}
+*html .gnbArea_center	#schly li {w\idth:66px}
+.gnbArea_center	#schly li a:hover {color:#666;text-decoration:none}
+.gnbArea_center	.suggestAr {position:absolute;width:247px;margin:26px 0 0 78px;z-index:4500}
+.gnbArea_center	#sugt_top {width:247px;height:8px;font-size:1px;background:url(http://openimage.interpark.com/tourpark/tour/common/headArea/bg_schbox_top.png) no-repeat;_background-image:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale', src='http://openimage.interpark.com/tourpark/tour/common/headArea/bg_schbox_top.png')}
+.gnbArea_center	#sugt_bot {width:247px;height:11px;font-size:1px;background:url(http://openimage.interpark.com/tourpark/tour/common/headArea/bg_schbox_bot.png) no-repeat;_background-image:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale', src='http://openimage.interpark.com/tourpark/tour/common/headArea/bg_schbox_bot.png')}
+.gnbArea_center	#sugt {width:247px;background:url(http://openimage.interpark.com/tourpark/tour/common/headArea/bg_schbox.gif) repeat-y top;z-index:1}
+.gnbArea_center	#sugt .tit {display:block;margin:0 6px;padding-left:4px;height:21px;background:url(http://openimage.interpark.com/tourpark/tour/common/headArea/bg_tbsugst.gif) no-repeat left 16px;background-color:#FFFFFF}
+.gnbArea_center	#sugt .btn {position:absolute;margin-top:-22px;width:236px;text-align:right}
+.gnbArea_center	#sugt .btn img {margin-left:3px;cursor:hand}
+.gnbArea_center	#sugt .liSugst {margin:1px 0 0 13px;width:221px}
+.gnbArea_center	#sugt .liSugst li {padding:3px 0 0 4px;height:17px;cursor:hand}
+*html .gnbArea_center	#sugt .liSugst li {he\ight:20px}
+.gnbArea_center	#sugt .liSugst li strong {color:#C55F80;font-weight:normal}
+.gnbArea_center	#sugt .liSugst li.on {background:url(http://openimage.interpark.com/tourpark/tour/common/headArea/bg_sugst_on.gif) no-repeat left top}
+.gnbArea_center	#scip {position:absolute;top:6px;left:86px;width:247px;height:18px;}
+.gnbArea_center	#scip input.scinp {position:absolute;width:230px;height:17px;padding:3px 0 0 5px;border:0;background-color:#FFFFFF;color:#666666;font-weight:bold; letter-spacing:-1px}
+.gnbArea_center	#scbt {position:absolute;top:0px;left:338px;width:41px;height:18px;}
+.gnbArea_center	.addMenu{width:675px;position:absolute; z-index:1500; top:49px}
+.gnbArea_center	.addMenu div{right:0px; position:absolute}
+.gnbArea_center	.addMenu00{width:66px;position:absolute; z-index:1; top:67px}
+.gnbArea_center	.addMenu00 div{right:0px; position:absolute}
+.gnbArea_center	.addMenu00 #iconNew {width:32px;height:17px;font-size:1px;background:url(http://openimage.interpark.com/tourpark/tour/common/headArea/newicon.png) no-repeat;_background-image:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale', src='http://openimage.interpark.com/tourpark/tour/common/headArea/newicon.png')}
+
+
+.gnbArea_center .gnb_menu	{position:absolute;top:55px;left:195px;width:441px;height:50px;z-index:50;}
+	:root .gnbArea_center	.gnb_menu	{position:absolute;top:55px;left:195px;width:441px;height:50px;z-index:0;}
+	
+.gnbArea_center .gnb_menu00	{position:absolute;top:55px;left:140px;width:594px;height:50px;z-index:50;}
+	:root .gnbArea_center	.gnb_menu00	{position:absolute;top:55px;left:140px;width:594px;height:50px;z-index:0;}
+/*핫클릭 100205 */	
+.gnbArea_center	.hotTxT{position:absolute; z-index:1800; top:48px;left:290px; width:600px}
+.gnbArea_center	.hotTxT ul li{background:url(http://openimage.interpark.com/tourpark/tour/common/headArea/gnb_bar.gif) no-repeat right; float:left; padding:0px 10px 0px 4px }
+.gnbArea_center	.hotTxT ul li a{ font-size:11px;letter-spacing:-1px; color:#4f4f4f; float:left; }
+.gnbArea_center	.hotTxT ul li a:hover{text-decoration:underline }
+.gnbArea_center	.hotTxT ul li.end{ background:none; float:left }
+
+/*우측 코너링크영역 Start */
+
+.gnbArea_right .helloBn00{position:absolute;top:7px;right:0px; margin-right:92px; z-index:1000; width:150px}
+.gnbArea_right .helloBn00 .Btn00{position:absolute;right:0px;top:3px; margin-right:0px;z-index:2000}
+.gnbArea_right .helloBn00 .Btn01{position:absolute;right:0px;top:28px;margin-right:0px;z-index:2000}
+.gnbArea_right	 ul.service_link	{position:absolute;top:77px;right:0px; margin-right:92px}
+.gnbArea_right	 ul.service_link	li{float:left;height:28px;}
+.gnbArea_right	 ul.service_link	li.line{float:left;margin-top:7px;width:8px;height:12px;background:url(http://openimage.interpark.com/tourpark/tour/common/headArea/corner_link_line.png) no-repeat left top;_background-image:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale', src='http://openimage.interpark.com/tourpark/tour/common/headArea/corner_link_line.png');font-size:0px;line-height:0px;}
+.gnbArea_right	 ul.service_link	li.line00{float:left;background:url(http://openimage.interpark.com/tourpark/tour/common/headArea/gnbLine00.gif) no-repeat left top; width:14px}
+.gnbArea_right	 ul.service_link	li.menu1	{padding-left:0px;}
+.gnbArea_right	 ul.service_link	li.menu2	{padding-left:0px;}
+.gnbArea_right	 ul.service_link	li.menu3	{padding-left:0px;background:none;}
+.gnbArea_right .rightBn00{ top:1px;right:0px; position:absolute}
+
+
+/* 롤오버 */
+a.rollover img			{display:inline;}
+a.rollover img.over	{display:none;}
+/*a.on img				{display:none}
+a.on img.over			{display:inline}*/
+a.rollover img.on		{display:none;}
+a.rollover:hover		{border:0 none; cursor:pointer}
+a.rollover:hover img	{display:none}
+a.rollover:hover img.over	{display:inline}
+a.rollover:hover img.on		{display:none;}
+
+
+
+
+
+
+/***********GNB v100525 ***********/
+a.rollover img	{display:inline}
+a.rollover img.over	{display:none}
+a.rollover img.on	{display:none}
+a.rollover:hover	{border:0 none;cursor:pointer}
+a.rollover:hover img	{display:none}
+a.rollover:hover img.over	{display:inline}
+a.rollover:hover img.on	{display:none}
+
+/* GNB S */
+
+#wrapBody_sp00	 img	{ vertical-align: top; }
+#wrapBody_sp00	 { text-align: center; }
+#wrapBody_wel	{ height: 108px;}
+
+#topnav_new00	 {text-align:left;width:980px;margin:0 auto;position:relative;/*z-index:1*/}
+#topnav_new00Btm	 {text-align:left;width:980px;margin:0 auto;position:relative;z-index:10}
+#topnav_new00 .gnbArea_left	{ float:left;width:475px;margin-top:0;text-align:left;vertical-align:top}
+#topnav_new00 .gnbArea_left li a:link, #topnav_new00 .gnbArea_left li a:visited, #topnav_new00 .gnbArea_left li a:active { text-decoration:none;font-size:11px;color:#7F7F7F;padding-right:0;}
+#topnav_new00 .gnbArea_left li a:hover { text-decoration:underline;font-size:11px;color:#7F7F7F;}
+:root #topnav_new00 .gnbArea_left li a:link, #topnav_new00 .gnbArea_left li a:visited, #topnav_new00 .gnbArea_left li a:active { text-decoration:none;font-size:11px;color:#7F7F7F;padding-right:0;}
+#topnav_new00 .gnbArea_left li a:hover { text-decoration:underline;font-size:11px;color:#7F7F7F;}
+:root #topnav_new00 .gnbArea_left li a:hover { text-decoration:underline;font-size:11px;color:#7F7F7F;}
+#topnav_new00 .gnbArea_left .first {margin-left:0;}
+#topnav_new00 .gnbArea_left .last {background:none;}
+#topnav_new00 .gnbArea_left img { margin:3px 8px 0 2px}
+#topnav_new00 .gnbArea_left li{color:#ccc; float:left;margin-top: 5px; margin-left: 6px;padding-right:10px;background: url("http://openimage.interpark.com/_nip/bl/bl_gray.gif") no-repeat right 1px;letter-spacing: -2px !important}
+.gnbArea_center00	{clear:both; padding-top:5px;}
+#topnav_new00 .gnbArea_right00	{ float:right;width:490px;text-align:right; }
+.gnbArea_right00	.banner_line {position:absolute;background:url(http://openimage.interpark.com/_nip/banner_line.gif) no-repeat 0 11px; width: 2px;height:40px;top: 32px;left:865px;}
+/*우측 코너링크영역 Start */
+.gnbArea_right00	.topBanner	 { position: absolute; top: 5px; right: 0px; width: 268px; height: 56px;}
+.gnbArea_right00	.topBanner .helloBn00{position:absolute;top:5px;right:0px; margin-right:105px;  width:150px}
+.gnbArea_right00	.topBanner .helloBn00 .Btn00{position:absolute;right:0px;top:3px; margin-right:0px;}
+.gnbArea_right00	.topBanner .helloBn00 .Btn01{position:absolute;right:0px;top:28px;margin-right:0px;}
+.gnbArea_right00	.topBanner .rightBn00{ top:1px;right:0px; position:absolute}
+
+#gnbArea_link ul { float: right;}
+#gnbArea_link li { float:left;margin-top: 5px; margin-left: 6px;padding-right: 6px;background: url("http://openimage.interpark.com/_nip/bl/bl_gray.gif") no-repeat right 1px;font:11px Dotum normal;color:#696969;letter-spacing:-1}
+#gnbArea_link li.last { background:none;padding-right: 0px}
+#gnbArea_link li.last_btn { background:none;margin-top: 0px;padding-right: 0px; position: relative; z-index: 11;letter-spacing:-1px; }
+#gnbArea_link li a:link, #gnbArea_link li a:visited, #gnbArea_link li a:active { text-decoration:none;font:11px Dotum normal;color:#696969;letter-spacing:-1px;}
+:root #gnbArea_link li a:link,:root #gnbArea_link li a:visited,:root #gnbArea_link li a:active { text-decoration:none;font-size:11px;color:#696969;letter-spacing:-1px;}
+#gnbArea_link li a:hover { text-decoration:underline;font:11px Dotum normal;color:#696969;letter-spacing:-1px;}
+:root #gnbArea_link li a:hover { text-decoration:underline;font-size:11px;color:#696969;letter-spacing:-1px;}
+#gnbArea_link li.mypg { position:relative;padding:0px 20px 0 0px;background: url("http://openimage.interpark.com/_nip/bl/bl_mypage.gif") no-repeat right top;color:#696969;cursor: pointer;z-index:100}
+#gnbArea_link li.mypg a	 {color:#696969}
+#gnbArea_link li.mypg a:hover {color:#696969;text-decoration:none}
+#gnbArea_link .mypgsub {position:absolute;top:0px;left:0px;margin:11px 0 0 -18px}
+*html #gnbArea_link .mypgsub {w\idth:99px;he\ight:63px}
+#gnbArea_link .mypgsub	.top	 {width:99px;height:5px;background:url("http://openimage.interpark.com/tourpark/tour/common/headArea/bg_wel_layerRed_top1.gif") no-repeat left top;font-size:0px;line-height:0px}
+#gnbArea_link .mypgsub	.mid	 {width:99px;background:url("http://openimage.interpark.com/tourpark/tour/common/headArea/bg_wel_layerRed_mid1.gif") repeat-y left top;_background-image:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale', src='http://openimage.interpark.com/tourpark/tour/common/headArea/bg_wel_layerRed_mid1.gif');font-size:0px;line-height:0px;}
+:root #gnbArea_link .mypgsub	.mid	 {width:99px;background:url("http://openimage.interpark.com/tourpark/tour/common/headArea/bg_wel_layerRed_mid1.gif") repeat-y left top;_background-image:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale', src='http://openimage.interpark.com/tourpark/tour/common/headArea/bg_wel_layerRed_mid1.gif');font-size:0px;line-height:0px;padding-left:6px;}
+#gnbArea_link .mypgsub	.btm	 {width:99px;height:7px;background:url("http://openimage.interpark.com/tourpark/tour/common/headArea/bg_wel_layerRed_btm1.gif") no-repeat left top;_background-image:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale', src='http://openimage.interpark.com/tourpark/tour/common/headArea/bg_wel_layerRed_btm1.gif');font-size:0px;line-height:0px}
+#gnbArea_link .mypgsub	.mid a:hover {color:#BD4141;text-decoration:underline}
+#gnbArea_link .mypgsub dl	{position:relative;z-index:100}
+#gnbArea_link .mypgsub dd {padding:3px 0 0 10px;width:99px;height:14px;background:url(http://openimage.interpark.com/_cip/bl/bl_square_dot.gif) no-repeat 5px 7px;text-align:left;letter-spacing:-1}
+#gnbArea_link .mypgsub dd a:link, #gnbArea_link .mypgsub dd a:visited, #gnbArea_link .mypgsub dd a:active {font:11px dotum;color:#7F7F7F;letter-spacing:-1px;}
+#gnbArea_link .mypgsub dd a:hover {font:11px dotum;color:#BD4141;letter-spacing:-1px;}
+
+#gnbArea_link li.customer { position:relative;padding:0px 15px 0 0px;background: url("http://openimage.interpark.com/tourpark/tour/common/headArea/bl_customer.gif") no-repeat right top;color:#696969;cursor: pointer;z-index:100}
+#gnbArea_link li.customer a	 {color:#696969}
+#gnbArea_link li.customer a:hover {color:#696969;text-decoration:none}
+#gnbArea_link .customersub {position:absolute;top:0px;left:0px;margin:13px 0 0 -18px}
+*html #gnbArea_link .mypgsub {w\idth:90px;he\ight:63px}
+#gnbArea_link .customersub	.top	 {width:90px;height:5px;background:url(http://openimage.interpark.com/_nip/bg_wel_layerRed_top.png) no-repeat left top;_background-image:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale', src='http://openimage.interpark.com/_nip/bg_wel_layerRed_top.png');font-size:0px;line-height:0px}
+#gnbArea_link .customersub	.mid	 {width:90px;background:url(http://openimage.interpark.com/_nip/bg_wel_layerRed_mid.png) repeat-y left top;_background-image:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale', src='http://openimage.interpark.com/_nip/bg_wel_layerRed_mid.png');font-size:0px;line-height:0px;padding:0 7px 0 6px}
+#gnbArea_link .customersub	.btm	 {width:90px;height:7px;background:url(http://openimage.interpark.com/_nip/bg_wel_layerRed_btm.png) no-repeat left top;_background-image:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale', src='http://openimage.interpark.com/_nip/bg_wel_layerRed_btm.png');font-size:0px;line-height:0px}
+#gnbArea_link .customersub	.mid a:hover {color:#BD4141;text-decoration:underline}
+#gnbArea_link .customersub dl	{position:relative;z-index:100}
+#gnbArea_link .customersub dd {padding:3px 0 0 5px;width:76px;height:14px;background:url(http://openimage.interpark.com/_cip/bl/bl_square_dot.gif) no-repeat left 7px;text-align:left;letter-spacing:-1}
+#gnbArea_link .customersub dd a:link, #gnbArea_link .mypgsub dd a:visited, #gnbArea_link .mypgsub dd a:active {font:11px dotum;color:#7F7F7F}
+#gnbArea_link .customersub dd a:hover {font:11px dotum;color:#BD4141}
+
+.gnbArea_center00 h1 { float:left;width:255px;margin:21px 0 0 0}
+.gnbArea_center00 .search { position:relative;float:left;margin-top:6px}
+.gnbArea_center00 .search .box { float:left;width:350px;height:28px;background:#FEF9E6;border:2px solid #C10100} :root .gnbArea_center00 .search .box { width:346px; height:28px}
+.gnbArea_center00 .search .box input {width:275px; *width:273px; margin:7px 2px 0 5px;color:#b74545;font: bold 12px 돋움;letter-spacing: 0;border:0px;background:#FEF9E6}
+.gnbArea_center00 .search .box div { float:left;width:27px;height:24px;margin:2px 0 0 0px}
+.gnbArea_center00 .search .box img { position:absolute;margin:10px 0 0 10px}
+.gnbArea_center00 .search .btn { float:left;margin-left:6px}
+.gnbArea_center00 .search .searchList { position:absolute;left:0px;margin:31px 0 0 1px;background:#FFFFFF;border-left:1px solid #989898;border-right:1px solid #989898;border-bottom:1px solid #989898}
+.gnbArea_center00 .search .searchList .srchBox { width:319px} :root .gnbArea_center00 .search .searchList .srchBox { width:321px}
+.gnbArea_center00 .search .searchList .srchBoxNone { margin:14px 0 12px 12px}
+.gnbArea_center00 .search .searchList ul { width:319px;margin:3px 0 0 1px;overflow-x:hidden}
+.gnbArea_center00 .search .searchList li { width:100%;margin-right:1px;padding:5px 0 2px 10px;text-align:left;}
+.gnbArea_center00 .search .searchList li.on { background:#F6F6F6}
+.gnbArea_center00 .search .searchList li span { color:#B74545}
+.gnbArea_center00 .search .searchList a li { text-decoration:none;cursor: pointer}
+.gnbArea_center00 .search .searchList .actWord { clear:both; width:321px; height:23px;margin-top:3px;border-top:1px solid #E2E2E2;background:#F3F3F3}
+.gnbArea_center00 .search .searchList .actWord span { color:#858586;font-size:11px}
+.gnbArea_center00 .search .searchList .actWord span.first { float:left;display:inline;margin:6px 0 0 11px}
+.gnbArea_center00 .search .searchList .actWord span.last { float:right;display:inline;margin:6px 10px 0 0; position:relative }	
+.gnbArea_center00 .search .searchList .actWord span.last	.help_layer { position:absolute; top: -24px; left: -160px; display: none; }	
+
+.srchScroll{scrollbar-3dlight-color: E0E0E0;scrollbar-arrow-color: 7A7A7A;scrollbar-base-color: E0E0E0;scrollbar-darkshadow-color: FFFFFF;scrollbar-face-color: FFFFFF;scrollbar-highlight-color: FFFF;scrollbar-shadow-color: E0E0E0}
+.gnbArea_center00 .search .searchList ul.srchScroll_End	{ border-top: 1px solid #E2E2E2; padding-top: 2px; }
+.gnbArea_center00	#scslt {position:absolute;width:35px;height:15px;margin:7px 0 0 10px;background:url(http://openimage.interpark.com/tourpark/tour/common/headArea/bg_schselect10.gif) no-repeat right 5px;cursor:hand;z-index:2000}
+.gnbArea_center00	#scslt .str {position:absolute;margin:2px 0 0 0;color:#787878;word-break: keep-all;letter-spacing:-1px;}
+.gnbArea_center00	#scslt .str a {text-decoration:none}
+
+
+
+/*핫클릭 100205 */	
+/* mod */
+.gnbArea_center00	.hotTxT{position:absolute; top:53px; left:255px; width:600px;}
+.gnbArea_center00	.hotTxT .hotClick{padding-right:5px;}
+.gnbArea_center00	.hotTxT h2 {float:left; position:relative; top:-1px; padding-right:6px;}
+.gnbArea_center00	.hotTxT ul {float:left; margin-left:-5px; margin-top:1px;}
+.gnbArea_center00	.hotTxT ul li {float:left; padding:0 10px; font-size:0; background:url("http://openimage.interpark.com/tourpark/tour/common/headArea/bar.gif") no-repeat right 0;}
+.gnbArea_center00	.hotTxT ul li.end {background:none;}
+
+#wrapCategory	{ height:38px; background:url(http://openimage.interpark.com/tourpark/tour/common/headArea/bg_newGnb10N.jpg) repeat-x center bottom}
+#wrapCategory1	{ height:38px; background:url(http://openimage.interpark.com/tourpark/tour/common/headArea/bg_newGnbN1.jpg) repeat-x center bottom}
+#wrapCategory1 .topnav_wrap {float:left; width:100%; background:url("http://openimage.interpark.com/tourpark/tour/common/headArea/bg_newGnbN1_1_130911.jpg") no-repeat left top;}
+	
+
+dl.categorySub.left	{ position: relative; z-index:100; margin: 0px 0 0 0px; float:left }	:root	dl.categorySub	{ margin: 0px; padding: 1px 0 0 0px; }
+dl.categorySub.right	{ position: relative; z-index:100; margin: 0px 0 0 0px; float:right }
+
+dl.categorySub	dd	 { width: 160px; height: 19px; padding:3px 0 0 19px; color: #da6464; cursor: pointer; background: url('http://openimage.interpark.com/_nip_ui/gnb10/bl/bl_cate.gif') no-repeat 13px 6px; letter-spacing: 0; }
+
+:root	dl.categorySub	dd	 { background: url('http://openimage.interpark.com/2008/search/bl/bl_cate.gif') no-repeat 13px 8px; }
+dl.categorySub	dd	a:link, dl.categorySub	dd	a:active, dl.categorySub	 	dd	 a:visited { font: normal 12px 돋움; color: #da6464;text-decoration: none; }
+dl.categorySub	dd	a:hover {font: normal 12px 돋움; color: #da6464;text-decoration: underline}
+dl.categorySub	dd.plan	a:link, dl.categorySub	dd.plan	a:active, dl.categorySub	 	dd.plan	 a:visited { font: normal 12px 돋움; color: #C70000;text-decoration: none; }
+dl.categorySub	dd.plan	a:hover {font: normal 12px 돋움; color: #C70000;text-decoration: underline}
+dl.categorySub	dd.etc	a:link, dl.categorySub	dd.fam	a:active, dl.categorySub	 	dd.fam	 a:visited { font: normal 12px 돋움; color: #747474;text-decoration: none; }
+dl.categorySub	dd.etc	a:hover {font: normal 12px 돋움; color: #da6464;text-decoration: underline}
+
+
+/* 주요 카테고리 mod */
+#wrapCategory1 .cat_list_box {float:left; position:absolute; width:784px; height:38px;}
+ul.cat_list	li {float:left; display:inline;}
+
+
+/* 서비스 더보기 S */
+.service_box	{ float: right; width: 430px; height: 38px; }
+ul.service_list	{ float: right; overflow: auto; overflow: hidden; }
+ul.service_list	li	{ float: left; display: inline; }
+ul.service_list	.link1	 { margin:12px 12px 0px 0px; }
+ul.service_list	.link2	 { margin:12px 30px 0px 0px; }
+ul.service_list	.link3	{ margin:7px 4px 0px 0px; }
+/* 서비스 더보기 E */
+
+/* 서비스 더보기 S 2013.10.14 수정*/
+.service_box1 {float: right; width:250px; height:38px;}
+/*#wrapCategory1 .service_box1 {float: right; height: 38px;}*/
+ul.service_list1 {float:right; overflow:auto; overflow:hidden; margin-right:3px;}
+ul.service_list1 li	{float:left; display:inline;}
+ul.service_list1 .link1 {margin:12px 12px 0 0;}
+ul.service_list1 .link2 {margin:12px 5px 0 0;}
+ul.service_list1 .link3	{margin:12px 0 0 10px;}
+/* 서비스 더보기 E */
+
+.cat_layerNew	{position:absolute; margin:-8px 0 0 -45px; width: 325px;z-index:100 }
+
+.cat_layerNew	.top	 {width: 325px;height: 53px;background:url(http://openimage.interpark.com/tourpark/tour/common/headArea/box_corner_top.png) no-repeat left top;_background-image:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale', src='http://openimage.interpark.com/tourpark/tour/common/headArea/box_corner_top.png');font-size:0px;line-height:0px; }
+.cat_layerNew	.mid	 {width: 325px; background:url(http://openimage.interpark.com/tourpark/tour/common/headArea/box_corner_mid.png) repeat-y left top;_background-image:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale', src='http://openimage.interpark.com/tourpark/tour/common/headArea/box_corner_mid.png');font-size:0px;line-height:0px; padding-bottom: 7px; }
+.cat_layerNew	.btm	 {width: 325px;height:3px; background:url(http://openimage.interpark.com/tourpark/tour/common/headArea/box_corner_btm.png) no-repeat left top;_background-image:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale', src='http://openimage.interpark.com/tourpark/tour/common/headArea/box_corner_btm.png');font-size:0px;line-height:0px} 
+
+
+
+.cat_listNew		{overflow:hidden; width: 325px; font-size:0px;line-height:0px;}
+.cat_listNew		ul.listNew { float:left; width:146px; margin:0 0 0 13px; display:inline; }
+.cat_listNew		ul.listNew li { clear:both; width:140px; padding-left:6px; margin-bottom:0px; background: url('http://openimage.interpark.com/_nip_ui/gnb10/bl/bl_cate.gif') no-repeat 0 6px; height:18px }
+.cat_listNew		ul.listNew li.main a{ text-decoration:none; font:normal 12px Dotum; color:#DA6464; padding: 0px; margin: 0px; height:18px }
+.cat_listNew		ul.listNew li.main a:link, .cat_listNew		ul.listNew li a:visted, .cat_listNew		ul.listNew li a:active { text-decoration:none; font:normal 12px Dotum; color:#DA6464; padding: 0px; margin: 0px; height:18px  }
+.cat_listNew		ul.listNew li.main a:hover { text-decoration:underline; font:normal 12px Dotum; color:#C70000;  height:18px }
+.cat_listNew		ul.listNew li.etc a{ text-decoration:none; font:normal 12px Dotum; color:#747474; padding: 0px; margin: 0px; height:18px }
+.cat_listNew		ul.listNew li.etc a:link, .cat_listNew		ul.listNew li.st a:visted, .cat_listNew		ul.listNew li.st a:active { text-decoration:none; font:normal 12px Dotum; color:#747474; height:18px}
+.cat_listNew		ul.listNew li.etc a:link, .cat_listNew		ul.listNew li.st a:visted, .cat_listNew		ul.listNew li.st a:active { text-decoration:none; font:normal 12px Dotum; color:#747474; height:18px}
+.cat_listNew		ul.listNew li.etc a:hover { text-decoration:underline; font:12px Dotum; color:#DA6464; height:18px}
+
+.layTit { position:relative;top:15px;left:10px;}
+
+
+/* 좌측 메뉴 배너 리스트*/
+
+.banner-list {margin-top:4px;}
+.banner-list ul li {margin-top:3px; width:179px; height:72px; border:1px solid #e2e2e2;}
+.banner-list ul li img {margin:9px 0 0 9px;}
+.banner-list ul li.style {margin:0; width:auto; height:auto; border:0;}
+.banner-list ul li.style img {margin:2px 0 0 0;}
+
+/***************************************GNB 변경. 시작. 2012.11.28 *********************************************/
+#gateway_wrap {position:relative; z-index:200; width:100%; height:27px; background:#f3f3f3; border-bottom:1px solid #d7d7d7; }
+	#gateway_wrap a {font:11px dotum; color:#666666; letter-spacing:-1px;}
+	#gateway_con {width:980px; margin:0 auto;}
+	.gnbArea_top {position:relative; float:left; width:100%;}
+	.gnbArea_left {float:left; width:368px;}
+	.gnbArea_left li {float:left; padding:0 6px; margin-top:8px;letter-spacing:-1px; background:url("http://openimage.interpark.com/tourpark/tour/common/bul/bar02.gif") no-repeat left 1px; }
+	.gnbArea_left li.logo {background:none; background:none; padding-right:0; margin:8px 7px 0 0;}
+	.gnbArea_left li.first {background:none;}
+	.gnbArea_morningCoffee {float:left;}
+	.gnbArea_right {float:right;}
+	.gnbArea_right li {float:left; padding:0 6px; margin-top:8px;letter-spacing:-1px; background:url("http://openimage.interpark.com/tourpark/tour/common/bul/bar02.gif") no-repeat left 1px;}
+	.gnbArea_right li.first {background:none;}
+	.gnbArea_right li.mypg a.bul {padding-right:13px;background:url("http://openimage.interpark.com/tourpark/tour/common/icon/icon_arrow05.gif") no-repeat right top;}
+
+
+
+.gnbArea_right .mypgsub {position:absolute;*top:-3px;top:1px; left:760px; width:99px;height:63px;margin:20px 0 0 -18px;line-height:1.2em;}
+.gnbArea_right .mypgsub	.top {width:99px;height:5px;background:url("http://openimage.interpark.com/tourpark/tour/common/headArea/bg_wel_layerRed_top1.gif") no-repeat left top;font-size:0px;line-height:0px}
+.gnbArea_right .mypgsub	.mid {width:99px;background:url("http://openimage.interpark.com/tourpark/tour/common/headArea/bg_wel_layerRed_mid1.gif") repeat-y left top;_background-image:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale', src='http://openimage.interpark.com/tourpark/tour/common/headArea/bg_wel_layerRed_mid1.gif');font-size:0px;line-height:0px;}
+:root .gnbArea_right .mypgsub .mid {width:99px;background:url("http://openimage.interpark.com/tourpark/tour/common/headArea/bg_wel_layerRed_mid1.gif") repeat-y left top;_background-image:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale', src='http://openimage.interpark.com/tourpark/tour/common/headArea/bg_wel_layerRed_mid1.gif');font-size:0px;line-height:0px;padding-left:6px;}
+.gnbArea_right .mypgsub	.btm {width:99px;height:7px;background:url("http://openimage.interpark.com/tourpark/tour/common/headArea/bg_wel_layerRed_btm1.gif") no-repeat left top;_background-image:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale', src='http://openimage.interpark.com/tourpark/tour/common/headArea/bg_wel_layerRed_btm1.gif');font-size:0px;line-height:0px}
+.gnbArea_right .mypgsub	.mid a:hover {color:#BD4141;text-decoration:underline}
+.gnbArea_right .mypgsub dl {position:relative;z-index:100}
+.gnbArea_right .mypgsub dd {padding :3px 0 0 10px;width:99px;height:14px;background:url(http://openimage.interpark.com/_cip/bl/bl_square_dot.gif) no-repeat 5px 7px;text-align:left;letter-spacing:-1}
+.gnbArea_right .mypgsub dd a:link, .gnbArea_right .mypgsub dd a:visited, .gnbArea_right .mypgsub dd a:active {font:11px dotum;color:#7F7F7F;letter-spacing:-1px;}
+.gnbArea_right .mypgsub dd a:hover {font:11px dotum;color:#BD4141;letter-spacing:-1px;}
+
+.gnbArea_right .customersub {position:absolute;*top:-3px;top:1px;left:840px; width:99px;height:63px;margin:20px 0 0 -18px;}
+.gnbArea_right .customersub	.top {width:99px;height:5px;background:url("http://openimage.interpark.com/tourpark/tour/common/headArea/bg_wel_layerRed_top1.gif") no-repeat left top;font-size:0px;line-height:0px}
+.gnbArea_right .customersub	.mid {
+    width:99px;
+    background:url("http://openimage.interpark.com/tourpark/tour/common/headArea/bg_wel_layerRed_mid1.gif") repeat-y left top;
+    _background-image:none;
+    _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale', src='http://openimage.interpark.com/tourpark/tour/common/headArea/bg_wel_layerRed_mid1.gif');
+    font-size:0px;
+    line-height:0px;}
+:root .gnbArea_right .customersub .mid {
+    width:99px;
+    background:url("http://openimage.interpark.com/tourpark/tour/common/headArea/bg_wel_layerRed_mid1.gif") repeat-y left top;
+    _background-image:none;
+    _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale', src='http://openimage.interpark.com/tourpark/tour/common/headArea/bg_wel_layerRed_mid1.gif');
+    font-size:0px;
+    line-height:0px;}
+.gnbArea_right .customersub	.btm {width:99px;height:7px;background:url("http://openimage.interpark.com/tourpark/tour/common/headArea/bg_wel_layerRed_btm1.gif") no-repeat left top;_background-image:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale', src='http://openimage.interpark.com/tourpark/tour/common/headArea/bg_wel_layerRed_btm1.gif');font-size:0px;line-height:0px}
+.gnbArea_right .customersub	.mid a:hover {color:#BD4141;text-decoration:underline}
+.gnbArea_right .customersub dl {position:relative;z-index:100}
+.gnbArea_right .customersub dd {padding :3px 0 0 10px;width:99px;height:14px;background:url(http://openimage.interpark.com/_cip/bl/bl_square_dot.gif) no-repeat 5px 7px;text-align:left;letter-spacing:-1}
+.gnbArea_right .customersub dd a:link, .gnbArea_right .customersub dd a:visited, .gnbArea_right .customersub dd a:active {font:11px dotum;color:#7F7F7F;letter-spacing:-1px;}
+.gnbArea_right .customersub dd a:hover {font:11px dotum;color:#BD4141;letter-spacing:-1px;}
+
+
+/***************************************GNB 변경. 끝. 2012.11.28 ***********************************************/
+
+/*********************************자동로그인 GNB 변경. 시작. 2013.04.29 ****************************************/
+
+.gnbArea_right {float:right;}
+.gnbArea_right li {float:left; padding:0 6px; margin-top:8px;letter-spacing:-1px; background:url("http://openimage.interpark.com/tourpark/tour/common/bul/bar02.gif") no-repeat left 1px;}
+.gnbArea_right li.first {background:none;}
+.gnbArea_right li.bul a {padding-right:13px;background:url("http://openimage.interpark.com/tourpark/tour/common/icon/icon_arrow05.gif") no-repeat right top;}
+.gnbArea_right .logon a strong {color:#f12c2c; padding-right:13px;background:url("http://openimage.interpark.com/tourpark/tour/common/icon/icon_arrow05.gif") no-repeat right 1px;}
+.gnbArea_right .logon a:hover strong {color:#f12c2c !important;}
+.gnbArea_right .logon-on a strong {color:#f86f00; padding-right:13px;background:url("http://openimage.interpark.com/tourpark/tour/common/icon/icon_arrow05.gif") no-repeat right 1px;}
+.gnbArea_right .logon-on a:hover strong {color:#f86f00 !important;}
+
+/*.sub-box {float:left; padding:8px 10px; border:2px solid #e38989; background:#fff;}*/
+.sub-box {position:absolute; top:1px;left:640px; margin:20px 0 0 -18px; padding:8px 10px; border:2px solid #e38989; background:#fff; text-align:left;}
+.sub-box p {margin:5px 0; font-size:11px; color:#999999;}
+.sub-box strong.point {color:#e05046; font-size:11px;padding:0; background:0;}
+.sub-box .btn {text-align:right; margin:0;}
+.sub-box .btn a {display:inline-block; height:14px; padding:4px 4px 0; background:#f7f7f7; border:1px solid #b7b7b7; text-align:center;}
+.sub-box .btn a:hover {text-decoration:none;}
+.sub-box .btn a strong {color:#666666; padding:0; background:0; font-size:11px;}
+.sub-box .close {position:absolute; top:5px; right:8px;}
+
+/*********************************자동로그인 GNB 변경. 끝. 2013.04.29 ****************************************/
+/* new */
+.column.add4 {margin-top:30px; margin-top:80px; margin-left:0; /* margin-top:48px; */ width:100%; border-top:1px solid #e7eaec; border-bottom:1px solid #e7eaec; background:#fff;}
+
+/* 공통 
+.skip-nav {margin:0; padding:0; position:absolute; top:35px; left:50%; margin:0; padding:0; margin-left:-484px; font-size:12px; letter-spacing:-1px; z-index:1000;}
+.skip-nav:before {margin:0; padding:0; content:''; display:block; position:absolute; top:2px; right:-12px; border:4px solid transparent; border-left-color:#666;}
+.skip-nav a {margin:0; padding:0;}
+*/
+.ui-sash-banner {overflow:hidden; position:relative; width:100%; /* height:90px; */ font-size:0; line-height:0; text-align:center; /* background:url("http://openimage.interpark.com/tourpark/tour/main/@banner_bg1.gif") repeat-x 0 top; */}
+.ui-sash-banner span {display:block; width:982px; margin:0 auto;}
+.ui-sash-banner .close {display:block; position:absolute; top:72px; left:50%; margin-left:472px; width:17px; height:17px; font-size:0; line-height:0; background:#386490; }
+.ui-sash-banner .close img {margin:4px 0 0 1px; vertical-align:top;}
+
+.aside-banner {width:80px;}
+.aside-banner.add1 {position:absolute; top:73px; left:-88px;}
+.aside-banner.add2 {position:absolute; top:262px; top:232px; left:50%; margin-left:410px;}
+.aside-banner .ear-banner img {width:80px;}
+.aside-banner .ui-banner-list {margin-bottom:8px; border:1px solid #e5e5e5; border-bottom:0;}
+.aside-banner .ui-banner-list li {padding-bottom:1px; font-size:0; line-height:0; background:#e5e5e5;}
+.aside-banner .ui-banner-list img {display:block; width:78px; /* height:85px; */}
+.aside-banner .ui-banner-list01 li {display:none; font-size:0; line-height:0;}
+.aside-banner .ui-banner-list01 li img {display:block;}
+.aside-banner .ui-banner-list01 li.on {display:block;}
+.aside-banner .ui-banner-list01 img {width:80px;}
+.aside-banner .ui-rolling {/* margin-top:-15px; */ margin-top:4px; padding-bottom:8px;}
+
+.asdie-fixed {position:fixed; top:0; right:0; width:31px; height:100%; border-left:1px solid #ddd; background:#f8fafc; z-index:200;}
+.asdie-fixed.on {width:109px;}
+.asdie-fixed.on h2 {padding-top:15px; font-size:0; line-height:0; border-top:1px solid #e6e6e6;}
+.asdie-fixed h2 img {display:block; margin-left:13px;}
+.asdie-fixed .rolling-banner01 {display:block; padding:10px 0; text-align:center; border-bottom:1px solid #fff;}
+.asdie-fixed .rolling-banner01 img {display:inline-block; width:88px; height:90px;}
+
+.asdie-fixed .quick-list li {display:block; font-size:0; line-height:0; vertical-align:top;}
+.asdie-fixed .quick-list li img {display:block;}
+.asdie-fixed .sale-list {position:relative; left:-3px; margin-top:9px;} 
+.asdie-fixed .sale-list li {margin-bottom:16px; text-align:center; zoom:1;} 
+.asdie-fixed .sale-list li a img {display:block;}
+.asdie-fixed .sale-list li span {display:block; position:relative; margin:0 auto;}
+.asdie-fixed .sale-list li .photo {width:88px; height:66px; width:82px; height:60px;}
+.asdie-fixed .sale-list li .photo img {width:88px; height:66px;}
+.asdie-fixed .sale-list li .tit {margin:15px 0 0 7px; color:#333;}
+.asdie-fixed .sale-list li .tit strong {display:block; color:#333;}
+.asdie-fixed .sale-list li .data {margin-left:7px; font-weight:bold; font-family:dotum; color:#333; letter-spacing:0;}
+.asdie-fixed .sale-list li a:hover {color:#333; text-decoration:underline;}
+
+.asdie-fixed .sale-list li.on .photo img, 
+.asdie-fixed .sale-list li a:hover img {display:inline-block; position:absolute; top:0; left:0; margin-top:-3px; margin-left:-3px; border:3px solid #e25147;}
+.asdie-fixed .sale-list li ul {display:none;}
+.asdie-fixed .sale-list li.on ul {display:block; z-index:10;}
+.asdie-fixed .sale-list li.on ul li {display:block;}
+.asdie-fixed .sale-list li ul {position:absolute; top:-2px; left:-313px; margin:0; padding:10px; width:294px; min-height:373px; border:1px solid #e25147; background:#fff;}
+.asdie-fixed .sale-list li ul:before {content:''; position:absolute; top:0; right:-15px; border:7px solid transparent; border-left-color:#e25147; z-index:10;}
+.asdie-fixed .sale-list li ul:after {content:''; position:absolute; top:0; right:-15px; margin-right:1px; border:7px solid transparent; border-left-color:#fff; z-index:10;}
+.asdie-fixed .sale-list li ul li {margin-top:0; text-align:left; vertical-align:top;}
+.asdie-fixed .sale-list li ul li .flag {position:absolute;}
+.asdie-fixed .sale-list li ul li .photo {width:294px; height:221px; border:0;}
+.asdie-fixed .sale-list li ul li .photo img {width:294px; height:221px; border:0;}
+.asdie-fixed .sale-list li ul li .tit {margin:38px 0 0 7px; color:#333;}
+.asdie-fixed .sale-list li ul li .con {margin-left:7px; font-size:16px; color:#333; font-weight:bold; line-height:28px;}
+.asdie-fixed .sale-list li ul li .data {margin-left:7px; font-size:14px; font-weight:bold; line-height:18px; color:#e25147;}
+.asdie-fixed .sale-list li.on li .photo img, 
+.asdie-fixed .sale-list li li a:hover img {display:inline; position:relative; top:0; left:0; margin:0; border:0;}
+.asdie-fixed .sale-list li.cell-1 ul:before {top:25px;}
+.asdie-fixed .sale-list li.cell-1 ul:after {top:25px;}
+.asdie-fixed .sale-list li.cell-2 ul:before {top:130px;}
+.asdie-fixed .sale-list li.cell-2 ul:after {top:130px;}
+.asdie-fixed .sale-list li.cell-3 ul:before {top:250px;}
+.asdie-fixed .sale-list li.cell-3 ul:after {top:250px;}
+
+.asdie-fixed .open {position:absolute; top:141px; left:-14px; width:13px; height:38px; font-family:dotum; line-height:38px; text-align:center; font-weight:bold; color:#333; border:1px solid #e0e0e0; border-right:0; border-radius:3px 0 0 3px; background:#f8fafc; z-index:100;}
+.asdie-fixed .open:hover {text-decoration:none;}
+.asdie-fixed .top {display:block; margin:5px auto; width:25px; height:17px; text-align:center; border-radius:2px; background:#666;}
+.asdie-fixed .top img {margin-top:5px; vertical-align:top;}
+.asdie-fixed.on .top {margin:0 auto; width:49px; border-radius:3px; background:#333;}
+.asdie-fixed.on .top img {display:inline-block; margin-top:4px;}
+.asdie-fixed .choice {display:block; margin-top:13px; text-align:center;}
+.asdie-fixed .choice a {display:inline-block; width:42px; height:18px; text-align:center; background:#c5c5c5;}
+.asdie-fixed .choice a:hover {background:#333;}
+.asdie-fixed .choice a img {display:inline-block; margin-top:6px; vertical-align:top;}
+.asdie-fixed.on .rolling-banner01, .asdie-fixed.on h2, .asdie-fixed.on .choice, .asdie-fixed.on .sale-list {display:block;}
+.asdie-fixed .rolling-banner01, /* .asdie-fixed h2, */ .asdie-fixed .choice, .asdie-fixed .sale-list {display:none;}
+
+.asdie-fixed h2 a {display:block; height:41px; border-bottom:1px solid #e6e6e6; background:url("http://openimage.interpark.com/tourpark/tour/main/on_special.gif") no-repeat 1px 2px;}
+.asdie-fixed h2 img {display:none;}
+.asdie-fixed.on h2 a {height:auto; border:0; background:none;}
+.asdie-fixed.on h2 img {display:block;}
+
+/* 모듈 공통 */
+.ui-rolling {position:relative; top:0; left:0; margin:0; padding:0; font-size:0; line-height:0; margin:0 auto; width:100%; text-align:center; vertical-align:top;}
+.ui-rolling span {margin:0; padding:0; font-size:0; line-height:0;}
+.ui-rolling a {display:inline-block; padding:0 2px; font-size:0; line-height:0; text-align:center; text-decoration:none; vertical-align:top;}
+.ui-rolling a:hover {margin:0; padding:0; padding:0 2px; text-decoration:none; vertical-align:top;}
+.ui-rolling img {vertical-align:top;}
+
+/*
+.ui-rolling {position:relative; top:0; left:0; margin:0 auto; width:100%; text-align:center;}
+.ui-rolling a {display:inline-block; width:4px; height:4px; margin:0 2px; font-size:0; line-height:0; text-align:center; border:3px solid #d8d8d8; border-radius:50%; text-decoration:none; vertical-align:middle;}
+.ui-rolling a:hover {text-decoration:none;}
+.ui-rolling a.on {margin:0 1px; border:3px solid #444;} 
+.ui-rolling a.prev, .ui-rolling a.play, .ui-rolling a.stop {width:auto; height:auto; font-size:11px; font-weight:bold; color:#fff; color:#444; border:0; border-radius:0;}
+.ui-rolling a.stop {display:inline-block; width:9px; position:relative; top:0; left:0; color:#444; text-shadow:0 1px 0 #444; font-family:verdana; font-family:Dotum; font-weight:bold;} 
+.ui-rolling a.play {display:inline-block; width:9px; position:relative; top:0;}
+.ui-rolling a.play:after {top:-7px;}
+*/
+
+/* layout */
+#Index {background:#ededed;}
+/* #dvHeadArea, #dHead { background:#fff;} */
+#Index #bodyArea {overflow:visible; position:relative; margin:0 auto; padding-right:0; width:980px; zoom:1;}
+#bodyArea:after {content:''; display:block; clear:both;}
+#dFoot {width:100%; margin:0 auto; text-align:center; text-align:left; background:#fff;}
+#bodyArea, .footWrap {/* overflow:hidden; */ width:980px; margin:0 auto; zoom:1;}
+
+#bodyArea:after {content:''; display:block; clear:both;}
+
+/* head */
+#dvHeadArea, #dHead, #headArea {position:relative; min-height:179px; min-height:181px; background:#fff url("http://openimage.interpark.com/tourpark/tour/main/bg_top.gif") no-repeat 0 114px; *z-index:1;}
+.head-cover {position:relative; top:0; left:0; margin:0 auto;  width:980px;}
+.head-cover .sub-cover {overflow:hidden; min-height:84px; min-height:86px; text-align:left;}
+.head-cover .sub-cover fieldset {display:inline; padding:0; margin:0; width:auto; height:auto;}
+.head-cover h1 {position:absolute; top:29px; left:0; font-size:0; line-height:0;}
+.head-cover h1 img {vertical-align:top;}
+ 
+.aside-gnb {overflow:hidden; position:absolute; top:22px; *top:23px; right:259px; width:122px; font-size:0; line-height:0;}
+.aside-gnb a {float:left;}
+
+.ui-module-search {margin:0; padding:0; margin-left:245px; position:relative; top:22px; left:-72px; left:0;}
+.ui-module-search * {vertical-align:top;}
+.ui-module-search span {margin:0; padding:0; display:inline-block; position:relative; padding:0 10px; width:284px; height:38px; font-weight:bold; color:#e25147; line-height:38px; border:1px solid #e25147; vertical-align:top;}
+.ui-module-search span input {margin:0; padding:0; width:260px; margin:10px 5px 0 5px; height:18px; line-height:18px; font-size:12px; font-weight:bold; color:#e25147; font-family:"dotum"; vertical-align:top !important; border:0;} /* sub_add1 검색 인풋박스 수정 */
+.ui-module-search .btn-search {margin:0; padding:0; display:inline; position:relative; top:0; left:-4px; *left:0; width:41px; height:40px; border:0; background:#e25147 url("http://openimage.interpark.com/tourpark/tour/index_ui/btn_search.gif") no-repeat 0 top; vertical-align:top;}
+.ui-module-search .btn-search span {margin:0; padding:0; display:none; position:absolute; top:-100px; left:-100px; font-size:0; line-height:0;}
+.ui-module-search .triangleImg {margin:0; padding:0; position:absolute; top:18px; right:10px;}
+
+.hello-banner {position:absolute; top:3px; right:0;}
+.hello-banner .ui-banner-list {position:absolute; top:0; right:0; width:223px; height:80px; background:#ccc;}
+.hello-banner .ui-banner-list li {display:none; position:absolute; top:0; right:0;} 
+.hello-banner .ui-banner-list li img {width:233px; height:80px;}
+.hello-banner .ui-banner-list li.on {display:block;}
+.hello-banner .ui-rolling {position:absolute; top:10px; left:-223px; width:223px; text-align:left;}
+.hello-banner .ui-rolling a.play {margin-left:6px;}  
+.hello-banner .ui-rolling a.stop {margin-left:4px;}
+/*
+.hello-banner .ui-rolling a.on {border-color:#e25147;}
+.hello-banner .ui-rolling a.play {position:relative; top:-1px; color:#e25147; text-shadow:0 1px 0 #c3392f;} 
+.hello-banner .ui-rolling a.stop {position:relative; top:-1px; color:#e25147; text-shadow:0 0 0 #c3392f;}
+*/
+
+/* gnb */
+.gnb-section {position:relative; text-align:left; background:url("http://openimage.interpark.com/tourpark/tour/main/bg_gn01.gif") no-repeat 0 0; zoom:1;}
+.gnb-section:after {content:''; display:block; clear:both;}
+.gnb-section .gnb-module {float:left; position:relative; width:490px;}
+.gnb-section .gnb-module h2 {float:left; font-size:0; line-height:0; vertical-align:top;}
+.gnb-section .gnb-module h3 {float:left; position:relative; margin:0 !important; padding:0 !important; height:auto; background:none; border:0 !important;}
+
+.gnb-section .gnb-module h3 a {display:block; margin:0; padding:0; min-height:67px;}
+.gnb-section .gnb-module h3 a img {display:block; position:relative; top:27px; margin:0; padding:0; vertical-align:top;}
+
+.gnb-section .gnb-module h3 .new {position:absolute; top:7px; left:50%; margin-left:-15px; width:30px; height:15px; text-align:center; border-radius:2px; background:#343434;}
+.gnb-section .gnb-module h3 .new:before {content:''; position:absolute; top:15px; left:50%; margin-left:-3px; border:3px solid transparent; border-top-color:#343434; z-index:10;}
+.gnb-section .gnb-module h3 .new img {margin-top:5px; vertical-align:top;}
+.gnb-section .gnb-module h3.on:before {content:''; position:absolute; top:53px; left:50%; margin-left:-7px; border:7px solid transparent; border-bottom-color:#fff; z-index:10;}
+.gnb-section .gnb-module h3.none:before {display:none;}
+
+.gnb-section .gnb-module.add1 h2 {margin-left:5px; padding-right:0;}
+.gnb-section .gnb-module.add2 h2 {padding-right:5px;}
+.gnb-section .gnb-module.add2 h3 .new {background:#e25147;}
+.gnb-section .gnb-module.add2 h3 .new:before {border-top-color:#e25147;}
+.gnb-section .gnb-module.add1 h3 a img {padding:0 13px;}
+.gnb-section .gnb-module.add2 h3 a img {padding:0 18px;}
+
+.gnb-section .gnb-spot {display:none; overflow:hidden; position:absolute; top:67px; left:0; padding:56px 0 21px; background-color:#fff; zoom:1; z-index:100;}
+.gnb-section .gnb-spot.on {display:block;}
+.gnb-section .gnb-spot ul {float:left; margin-top:-18px; padding-left:20px; width:162px;}
+.gnb-section .gnb-spot ul.add1 {background:url("http://openimage.interpark.com/tourpark/tour/common/docu_head/line_dotted01.gif") repeat-y right 0;}
+.gnb-section .gnb-spot ul.add2 {margin-left:-1px; padding-bottom:80px; background:url("http://openimage.interpark.com/tourpark/tour/common/docu_head/line_dotted01.gif") repeat-y left 0;}
+.gnb-section .gnb-spot ul li {margin-top:18px; margin-top:17px;}
+.gnb-section .gnb-spot ul ul {float:left; margin:3px 0 13px 0; padding:0;}
+.gnb-section .gnb-spot ul li .icon {margin:4px 0 0 5px; vertical-align:top;}
+.gnb-section .gnb-spot ul li li {margin:0; line-height:21px;}
+.gnb-section .gnb-spot ul li, .gnb-section .gnb-spot ul li a {font-family:dotum; color:#e25147; font-weight:bold; letter-spacing:-1px;}
+.gnb-section .gnb-spot ul li li a {font-weight:normal; color:#666; letter-spacing:0;}
+.gnb-section .gnb-spot ul li li a:hover {color:#333;}
+.gnb-section .gnb-spot ul li.ad-banner {position:absolute; bottom:20px; margin:0; padding:0; margin-left:-4px; width:150px; height:84px; font-size:0; line-height:0;}
+
+.gnb-module.add1 .gnb-spot {border:1px solid #e25147; border-top:0;}
+.gnb-module.add1 .gnb-spot.add1 {margin-left:50px; width:365px; background:#fff url("http://openimage.interpark.com/tourpark/tour/common/docu_head/bg1_tit01.gif") no-repeat 20px 20px;}
+.gnb-module.add1 .gnb-spot.add2 {margin-left:102px; width:365px; background:#fff url("http://openimage.interpark.com/tourpark/tour/common/docu_head/bg1_tit02.gif") no-repeat 20px 20px;}
+.gnb-module.add1 .gnb-spot.add3 {margin-left:123px; width:365px; background:#fff url("http://openimage.interpark.com/tourpark/tour/common/docu_head/bg1_tit03.gif") no-repeat 20px 20px;}
+.gnb-module.add1 .gnb-spot.add4 {margin-left:123px; width:365px; background:#fff url("http://openimage.interpark.com/tourpark/tour/common/docu_head/bg1_tit04.gif") no-repeat 20px 20px;}
+
+
+.gnb-module.add2 .gnb-spot {border:1px solid #444; border-top:0;}
+.gnb-module.add2 .gnb-spot.add1 {margin-left:50px; width:365px; background:#fff url("http://openimage.interpark.com/tourpark/tour/common/docu_head/bg2_tit01.gif") no-repeat 20px 20px;}
+.gnb-module.add2 .gnb-spot.add2 {margin-left:110px; margin-left:123px; width:365px; background:#fff url("http://openimage.interpark.com/tourpark/tour/common/docu_head/bg2_tit02.gif") no-repeat 20px 20px;}
+.gnb-module.add2 .gnb-spot.add3 {margin-left:45px; width:365px; background:#fff url("http://openimage.interpark.com/tourpark/tour/common/docu_head/bg2_tit03_resort.gif") no-repeat 20px 20px;}
+.gnb-module.add2 .gnb-spot.add4 {margin-left:107px; margin-left:123px; width:365px; background:#fff url("http://openimage.interpark.com/tourpark/tour/common/docu_head/bg2_tit04.gif") no-repeat 20px 20px;}
+.gnb-module.add2 .gnb-spot.add5 {margin-left:123px; width:365px; background:#fff url("http://openimage.interpark.com/tourpark/tour/common/docu_head/bg2_tit05.gif") no-repeat 20px 20px;}
+.gnb-module.add2 .gnb-spot.add6 {margin-left:174px; margin-left:123px; width:365px; background:#fff url("http://openimage.interpark.com/tourpark/tour/common/docu_head/bg2_tit06.gif") no-repeat 20px 20px;}
+
+
+.ui-gate-section {position:relative; min-height:40px; border:1px solid #cacaca; border-top:0; border-left:0; background:#fff;}
+.ui-gate-section img {vertical-align:top;}
+.ui-gate-section h2 {display:block;}
+.sitemap-module {position:absolute; *position:static; top:40px; *top:41px; left:0; border:1px solid #e25147; border-top:0; background:#fff; z-index:20;}
+.sitemap-cover .btn-close {display:none;}
+.sitemap-cover.on .btn-close {display:block;}
+.sitemap-cover.on .btn-close {display:block;}
+.sitemap-cover .btn-close {display:none;}
+.sitemap-cover .btn-close,.sitemap-cover .btn-open {position:absolute; top:8px; right:19px; margin:0; padding:0; z-index:101;}
+
+.sitemap-cover {overflow:hidden; position:relative; width:978px; background:#fff url("http://openimage.interpark.com/tourpark/tour/common/docu_head/line_dotted02.gif") repeat left 0;}
+.sitemap-cover h3 {position:relative; margin:0; padding:11px 20px; height:auto; font-size:0; line-height:0; border-top:1px solid #e7eaec; background:#fff;}
+.sitemap-cover h3 a {display:inline-block; width:100%;}
+.sitemap-cover h3.first-child {top:-1px; *top:0; background:#fff url("http://openimage.interpark.com/tourpark/tour/main/top_bg1.gif") no-repeat 0 top; }
+.sitemap-cover h3 img {display:inline-block; margin:0; padding:0; height:auto; background:#fff;}
+.sitemap-cover.on h3:before {content:''; position:absolute; top:40px; left:35px; margin-left:-7px; border:7px solid transparent; border-top-color:#c9392f; z-index:10;}
+.sitemap-cover.on h3:after {content:''; position:absolute; top:38px; left:35px; margin-left:-7px; border:7px solid transparent; border-top-color:#fff; z-index:10;}
+.sitemap-cover.on h3 {border-bottom:2px solid #e25147;}
+.sitemap-cover .spot {display:none;}
+.sitemap-cover.on .spot {display:block;}
+.sitemap-cover .spot {float:left; width:196px; padding-bottom:30px;}
+.sitemap-cover .spot.first-child {width:194px;}
+.sitemap-cover .spot h4 {margin-left:20px; height:auto; color:#e25147; line-height:48px; font-size:12px;}
+.sitemap-cover .spot h4 a {font-size:12px; line-height:48px; color:#e25147;}
+.sitemap-cover .spot h4.add1 {color:#fff;}
+.sitemap-cover .spot ul {margin:-12px 20px 0 20px; *margin-top:0;}
+.sitemap-cover .spot ul li a {font-size:12px; color:#666; line-height:21px;}
+
+.mall-module {overflow:hidden; position:absolute; top:0; left:98px; background:#fff;}
+.mall-module h2 {float:left;}
+.mall-module .mall-list {float:left; margin:0 0 0 -6px; padding-right:33px; font-size:0; line-height:0; background:#fff;}
+.mall-module .mall-list li {float:left;}
+.mall-module .mall-list li a {display:block; padding:10px 0 10px 20px;}
+
+.news-line {margin-left:209px; margin-top:-26px; font-weight:bold; color:#666; background:#fff;} /* sub_add1 전문몰 쪽 hot 위치 수정 */
+.news-line img {margin-right:6px; margin-top:-3px;}
+.news-line a {color:#646464;}
+.news-line a:hover {color:#646464;}
+
+.txt-banner {display:block; margin:-28px 20px 0 0; /*position:absolute; top:14px; right:20px; width:24%; padding:1px 0 0 23px; font-weight:bold; 
+ background:url("http://openimage.interpark.com/tourpark/tour/common/docu_head/txt_banner01.gif") no-repeat right top; */}
+.txt-banner a {display:block; height:14px; font-size:0; line-height:0; text-align:right;} /* sub_add1 브랜드 카피 배너 정렬 수정 */
+.txt-banner a span {font-size:0; line-height:0;}
+
+.ui-location {margin:0; padding:0; float:left; margin:-32px 0 0 0; padding:0; margin-left:209px; padding:6px 0; width:60%; height:18px; font-size:0; line-height:0;}
+.ui-location .home {margin:0; padding:0; padding:1px 0 0 20px; font-size:11px; font-weight:normal; letter-spacing:-1px; color:#919191; color:#767676; background:url("http://openimage.interpark.com/tourpark/tour/common/docu_head/icon_home.gif") no-repeat 0 1px;}
+.ui-location .home a {margin:0; padding:0; display:inline; font-weight:normal; color:#767676; background:none;}
+.ui-location span {margin:0; padding:0; display:inline-block; line-height:1.2; font-size:11px; padding:1px 0 0 17px; font-size:11px; font-weight:bold; letter-spacing:-0.25px; color:#767676; background:url("http://openimage.interpark.com/tourpark/tour/common/bul/bul_arrow01.gif") no-repeat 6px 5px; vertical-align:top;}
+.ui-location span.point1 a {margin:0; padding:0; font-weight:bold;}
+.ui-location a {margin:0; padding:0; display:inline-block; font-weight:normal; font-size:11px; letter-spacing:-0.25px; color:#767676;}
+.ui-location a:hover {margin:0; padding:0; color:#767676;}
+
+.ui-location select {margin:-5px 0 0 0;
+	position:relative; padding:0 5px; padding:0 0 0 5px; width:87px; height:22px; font-size:12px; font-family:dotum; color:#686868; line-height:25px;  border-radius:2px; border:1px solid #d8d8d8; vertical-align:top;
+	background-image:url("http://openimage.interpark.com/tourpark/tour/main/icon_01.gif") no-repeat 0 0;
+	background: #ffffff; /* Old browsers */
+	background: -moz-linear-gradient(top,  #ffffff 0%, #f2f2f2 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#f2f2f2)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #ffffff 0%,#f2f2f2 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #ffffff 0%,#f2f2f2 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #ffffff 0%,#f2f2f2 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #ffffff 0%,#f2f2f2 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f2f2f2',GradientType=0 ); /* IE6-9 */
+	}
+.ui-location span.add1 {margin-top:-1px; background-position:6px 4px;}
+.ui-location span span {margin:-5px 0 0 -18px; vertical-align:top; background:none;}
+
+/* input {border:0;} */
+
+#etc_ssl #bodyLeft {display:none;}
+#etc_ssl #bodyRight {display:none;}
+
+/* dFoot */
+/* #dFoot {padding-bottom:35px;} */
+.ui-foot-banner {display:block; width:100%; font-size:0; line-height:0; text-align:center; background:url("http://openimage.interpark.com/tourpark/tour/main/@banner_bg2.gif") repeat-x 0 top;}
+.common-spot {margin:30px auto 0; width:980px; color:#666; line-height:18px;}
+.common-spot * {color:#666; line-height:18px;}
+.common-spot .block {display:block;}
+.common-spot .point01 {font-weight:normal;}
+.common-spot address {display:inline;}
+
+.common {min-height:38px; text-align:center; background:#444;}
+.common ul {overflow:hidden; margin:0 auto; padding-top:14px; width:980px;}
+.common ul li {float:left; padding-left:21px; color:#c1c1c1; background:url("http://openimage.interpark.com/tourpark/tour/main/bar_01.gif") no-repeat 10px 50%;}
+.common ul li a {color:#f8fafc;}
+.common ul li.first-child {padding-left:0; background:none;}
+.common ul li.first-child a {color:#fff;}
+
+#footArea {padding-bottom:35px; background:#fff;} /* add1 */
+#air #footArea {padding-bottom:6px;} /* add1 */
+#footArea a:hover {text-decoration:none;}
+#footArea .common-spot {position:relative; font-size:11px; margin:30px auto 15px; width:980px; color:#666; line-height:18px;}
+#footArea .common-spot strong.name {display:inline-block; margin-bottom:3px; vertical-align:-1px; margin-right:5px;}
+#footArea .common-spot * {font-size:12px; color:#666; line-height:18px;}
+#footArea .common-spot .block {display:block;}
+#footArea .common-spot .point01 {font-weight:normal; color:#e25147;}
+#footArea .common-spot address {display:inline;}
+#footArea .common-spot .qrcode {position:absolute; top:50px; /* right:37px; */  margin-left:855px;}
+
+#footArea .i-tour {float:left;}
+#footArea .i-int {float:left; border-left:1px solid #e6eaed; margin-left:30px; padding-left:30px;}
+#footArea .common-spot .comment {clear:both; padding-top:22px;}
+#footArea .common {min-height:38px; text-align:center; background:#444;}
+#footArea .common ul {overflow:hidden; margin:0 auto; padding-top:14px; width:980px;}
+#footArea .common ul li {float:left; padding-left:21px; color:#c1c1c1; background:url("http://openimage.interpark.com/tourpark/tour/main/bar_01.gif") no-repeat 10px 50%;}
+#footArea .common ul li a {font-size:12px; color:#c1c1c1; color:#fff;}
+#footArea .common ul li.first-child {padding-left:0; background:none;}
+#footArea .common ul li.first-child a {color:#fff;}
+
+#footArea .selc {position:absolute; top:0; /* right:0; */ margin-left:780px; width:190px;}
+#footArea .selc .tit {display:inline-block; width:143px; height:19px; padding-left:5px; padding-top:4px; color:#636363; border:1px solid #ddd; background:#fff url("http://openimage.interpark.com/tourpark/tour/common/footArea/selectArrow2.png") no-repeat right 9px;}
+#footArea .selc .tit:hover {color:#000;}
+#footArea .selc.on .tit {background-position:right -9px;}
+#footArea .selc.on ul {display:block;}
+#footArea .selc ul {display:none; position:absolute;width:144px; height:141px; overflow-y:scroll; top:-146px; left:0; padding:2px; border:1px solid #ddd; background:#fff;}
+#footArea .selc ul li {margin-bottom:2px;}
+#footArea .selc ul li a {display:block;font-size:12px; padding:3px; color:#999; line-height:100%;}
+#footArea .selc ul li a:hover {color:#777; background:#f4f4f4;}
+#footArea .selc .btn {display:inline-block; width:33px; height:17px; text-align:center; line-height:100%; padding-top:6px; background:#f7f7f7; font-weight:bold; font-size:11px; vertical-align:top; border:1px solid #dcdcdc;}
+#footArea .view-mobile {margin:10px auto; width:960px; padding:0 10px;}
+#footArea .view-mobile a {display:block; border:1px solid #DFDFDF; padding:50px 10px; font-size:45px; color:585858; text-align:center; border:1px solid #dfdfdf; border-radius:4px;
+	background: #f7f7f7; /* Old browsers */
+	background: -moz-linear-gradient(top,  #f7f7f7 0%, #EAEAEA 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f7f7f7), color-stop(100%,#EAEAEA)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #f7f7f7 0%,#EAEAEA 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #f7f7f7 0%,#EAEAEA 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #f7f7f7 0%,#EAEAEA 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #f7f7f7 0%,#EAEAEA 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7f7f7', endColorstr='#EAEAEA',GradientType=0 ); /* IE6-9 */
+}
+
+.charge-notice {position:fixed; bottom:0; padding:9px 0; width:100%; font-size:12px; color:#494848; text-align:left; border-top:1px solid #c5c5c5; border-bottom:1px solid #929091; background:#fcfcfc; z-index:10;}
+.charge-notice span {display:block; margin:0 auto; width:980px;}
+.charge-notice img {position:relative; top:3px; margin-right:5px; vertical-align:baseline;}
+
+.skip-nav, .guide-service {position:absolute; top:-100px; left:-5000px; font-size:0; line-height:0;}
