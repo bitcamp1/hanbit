@@ -1,7 +1,11 @@
 @CHARSET "UTF-8";
 @import url(robin.css);
-#guest_wrap{width:100%;height:100%}
-#guest_tbl_wrap{width:480px;height:400px;}
-#guest_tbl input,b{ font-size:16pt; font-weight:bold; }
-#guest_tbl tr td {margin-top: 10px;border: 1px solid gray;}
-#guest_tbl {border-collapse: collapse;}
+
+table{width:480px;height:400px;}
+table input,b{ font-size:16pt; font-weight:bold; }
+table tr td {margin-top: 10px;border: 1px solid gray;}
+
+
+.guest_wrap{width:1000px;border:1px solid blue;}
+.divCenter{width:700px; margin:0 auto;}
+table {border-collapse: collapse;}

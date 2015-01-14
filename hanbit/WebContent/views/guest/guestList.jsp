@@ -13,23 +13,8 @@
 	private int g_sabun, tot, g_pay, pageNum, pageSize, start, end, pageCnt, startPage;
 	private String g_name, g_ttl,  sVal, sKey;
 %>
-<!doctype html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8" />
-	<title>guestList.jsp</title>
-	<style type="text/css">
-		table { background:white; text-align:center; width: 800px;border-collapse:collapse;class='center'}
-		th{background-color: yellow;border:1px solid black;}
-		tr td{border:1px solid black}
-	    .bg_yellow{background:yellow;}
-		a{text-decoration: none; font-weight: bold; color: black;}
-		a:hover{text-decoration: underline;color: blue;}
-		.center{margin: 0 auto;width:1000px;}
+<jsp:include page="../common/header.jsp"></jsp:include>
 
-	</style>
-
-</head>
 <%
 	try{
 		Class.forName("oracle.jdbc.driver.OracleDriver");
@@ -72,7 +57,9 @@
 	}
 	
 %>
-<table id='guest_list_tbl' >
+<!-- .tbl tr td {margin-top: 10px;border: 1px solid gray;} -->
+
+<table id='guest_list_tbl'>
 	<tr align="right">
 		<td colspan="6"> <font size="6"> 레코드 갯수 : <%=tot %></font>&nbsp;&nbsp;&nbsp;&nbsp;</td>
 	</tr>

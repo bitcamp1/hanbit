@@ -8,6 +8,12 @@
 	<style type="text/css">
 		td,tr{font-size: 20pt; font-weight: bold;}
 	</style>
+	<script src="../../resources/js/initialize.js"></script>
+	<script>
+		window.onload = (function (){
+			init.browserCheck
+		})();
+	</script>
 </head>
 <body>
 	<font size="7" color="blue"><b>[book.jsp]</b></font><p>
@@ -49,5 +55,8 @@
 			&lt;img src="img/bar.gir" width=900 &gt;
 		</b>
 	</font>
+	<script>
+		init();
+	</script>
 </body>
 </html>
