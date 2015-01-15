@@ -9,9 +9,10 @@
 	
 </head>
 <body>
-	<div id='ch' style='background-color: blue; width:200px;height:200px;'>
-		CSS is Simple!!
-	</div>
+
+	<script>
+		samwi.init();
+	</script>
 </body>
 
 </html>
