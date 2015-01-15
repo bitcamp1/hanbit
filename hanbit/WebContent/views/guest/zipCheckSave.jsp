@@ -24,16 +24,7 @@
 	 a :HOVER{font-size: 14pt;font-weight: bold;text-decoration: underline;}
 	</style>
 	<script>
-		function sendAddress(zipc,si,gu,dong){
-			var addr = si+" "+gu+" "+dong;
-			opener.myform.zipcode.value=zipc;
-			opener.myform.address.value=addr;
-			self.close();
-		}
-		function send(){
-			subform.dong.focus();
-			
-		}
+		
 	</script>
 </head>
 <body bgcolor="pink" onload='send()'>

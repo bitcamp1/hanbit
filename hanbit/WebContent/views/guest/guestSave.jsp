@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <%@ page import="java.util.*"   %>
 <%@ page import="java.sql.*"   %>
 <%!
@@ -11,16 +11,6 @@
 	private int g_sabun, tot, g_pay;
 	private String g_name, g_ttl;
 %>
-<!doctype html>
-<html lang="ko">
-<head>
-	<meta charset="UTF-8" />
-	<title>[guestSave.jsp] </title>
-		<style type="text/css">
-	   input,b{ font-size:20pt; font-weight:bold; }
-	</style>
-	
-</head>
 <%
 	try{
 		Class.forName("oracle.jdbc.driver.OracleDriver");
@@ -30,8 +20,6 @@
 		e.printStackTrace();
 	}
 %>
-<body>
- <font size=7 color=blue>[guestSave.jsp-´Üµ¶½ÇÇàX] </font><p>
  <%
 		 g_name = request.getParameter("name");
 		 g_ttl = request.getParameter("title");
@@ -48,7 +36,7 @@
 		 if(tot>0){
 		%>
 			 <script>
-			 	alert("<%=g_sabun%>»ç¹øÀÌ ÀÌ¹Ì µî·ÏµÇ¾ú½À´Ï´Ù.");
+			 	alert("<%=g_sabun%>ì‚¬ë²ˆì´ ì´ë¯¸ ë“±ë¡ë˜ì—ˆìŠµë‹ˆë‹¤.");
 			 	location.href =" guest.jsp";
 			 	
 			 </script>
@@ -58,7 +46,7 @@
 		 %>
 		 
 		  <script>
-			 	alert("<%=g_sabun%>Àº µî·ÏÀÌ °¡´ÉÇÕ´Ï´Ù.");
+			 	alert("<%=g_sabun%>ì€ ë“±ë¡ì´ ê°€ëŠ¥í•©ë‹ˆë‹¤.");
 			 	
 			 	
 			 </script>
@@ -78,7 +66,7 @@
 			response.sendRedirect("guestList.jsp");
 		 
 		}catch(Exception e){
-			System.out.println("ÀúÀå½ÇÆĞ: "+e.toString());
+			System.out.println("ì €ì¥ì‹¤íŒ¨: "+e.toString());
 			response.sendRedirect("guest.jsp");
 		}finally{
 			try{
@@ -90,15 +78,6 @@
 		}
 		 }// else end
  %>
-	 <h1>
-	 	<a href="guest.jsp">[ÀÔ·Â]</a> &nbsp;
-	 	<a href="guestDelete.jsp">[»èÁ¦]</a> &nbsp;
-	 	<a href="guestList.jsp">[¸ñ·Ï]</a> 
-	 </h1>
-	 <p><br><br><br><br>
-	 <p><br><br><br><br>
-	</body>
-</html>
 
 
 

@@ -7,6 +7,11 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+	<div>
+  <input type="text" name="name1" value="" size="3" readOnly> -
+  <input type="text" name="name2" value="" size="3" readOnly>
+  <input type="text" name="name3" value="">
+  <img src="../../resources/img/x.gif" onClick="">
+</div>
 </body>
 </html>

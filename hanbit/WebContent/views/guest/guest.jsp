@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <jsp:include page="../common/header.jsp"></jsp:include>
-<body > 
+
 <div id='guest_wrap'>
 	<div id='guest_tbl_wrap' class=" top center aqua_b">
 		 
@@ -70,5 +70,4 @@
 		 <p><br><br><br><br>
 	</div> 
 </div>
-</body>
-</html>
+

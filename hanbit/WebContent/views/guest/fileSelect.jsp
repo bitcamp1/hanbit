@@ -1,3 +1,4 @@
+<%@page import="com.oreilly.servlet.MultipartRequest"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <jsp:include page="../common/header.jsp"></jsp:include>
@@ -8,7 +9,7 @@
 <body>
 	<div class='guest_wrap'>
 	<div class='divCenter'>
-		<form action="fileUpload.jsp" method="post">
+		<form action="fileUpload.jsp" method="post" >
 		<b>사번 :</b> <input type="text" name="sabun" value="2234" /><br />
 		<b>이름 :</b> <input type="text" name="name" value="LEE" /><br />
 		<b>파일 :</b> <input type="file"  name="file_good" /><br />
@@ -18,5 +19,8 @@
 	</form>
 	</div>
 	</div>
+	<%
+		
+	%>
 </body>
 </html>

@@ -3,22 +3,6 @@
     <%!
 	    private String g_sabun, g_name, g_ttl, g_pay;
     %>
-<!doctype html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8" />
-	<title> [guestEdit.jsp] </title> 
-	<style type="text/css">
-	   input,b{ font-size:16pt; font-weight:bold; }
-	</style>
-	
-	<script type="text/javascript">
-	   function move(){
-		   myform.submit();
-	   }
-	</script>
-</head>
-<body>
 	<%
 		g_sabun = request.getParameter("sabun");
 		g_name = request.getParameter("name");
@@ -36,10 +20,11 @@
 		<input type="reset"  value="Ãë¼Ò">
 	</form>
  <p>
- 
- <p><br><br><br><br>
-</body>
-</html>
+	<script type="text/javascript">
+	   function move(){
+		   myform.submit();
+	   }
+	</script>
 
 
 

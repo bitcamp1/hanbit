@@ -1,5 +1,7 @@
 package net.hb.beans;
 
+import com.oreilly.servlet.MultipartRequest;
+
 public class MemberBean {
 	private String name;
 	private String userId;
@@ -44,5 +46,9 @@ public class MemberBean {
 		this.phone = phone;
 	}
 	
+	public void test(){
+		
+		// MultipartRequest multi = new MultipartRequest();
+	}
 	
 }

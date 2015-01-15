@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <%@ page import="java.util.*"   %>
 <%@ page import="java.sql.*"   %>
 <%!
@@ -11,7 +11,6 @@
 	int g_sabun, tot=27, g_pay;
 	String g_name, g_ttl;
 %>
-
 	<%
 		try{
 			Class.forName("oracle.jdbc.driver.OracleDriver");
@@ -29,7 +28,7 @@
 			st.executeUpdate(sql);
 			response.sendRedirect("template.jsp?guestList");
 		}catch(Exception e){
-			System.out.println("»èÁ¦½ÇÆÐ: "+e.toString());
+			System.out.println("ì‚­ì œì‹¤íŒ¨: "+e.toString());
 			response.sendRedirect("template.jsp?guestList");
 		}finally{
 			try{

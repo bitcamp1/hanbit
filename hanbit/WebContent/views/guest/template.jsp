@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 
 <html>
 <head> <title> [template.jsp] </title> 
@@ -9,6 +9,7 @@
 		a{font-size:16pt; color:black;  font-weight:bold; text-decoration:none;}
 		a:hover{font-size:20pt;  color:red; font-weight:bold; text-decoration:underline;}  
 	</style>
+	<script src="../../resources/js/guest.js"></script>
 </head>
 	<%
 		String pageFile = request.getParameter("page");

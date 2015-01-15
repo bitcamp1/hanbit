@@ -11,16 +11,6 @@
 	private int g_sabun, tot=27, g_pay;
 	private String g_name, g_ttl;
 %>
-<!doctype html>
-<html lang="ko">
-<head>
-	<meta charset="UTF-8" />
-	<title>[guestSave.jsp] </title>
-	<style type="text/css">
-	   input,b{ font-size:20pt; font-weight:bold; }
-	</style>
-	
-</head>
 <%
 	try{
 		Class.forName("oracle.jdbc.driver.OracleDriver");
@@ -30,8 +20,6 @@
 		e.printStackTrace();
 	}
 %>
-<body>
- <font size=7 color=blue>수정실행</font><p>
  <%
  		 
 		 g_name = request.getParameter("name");
@@ -62,8 +50,6 @@
 			}
 		}
  %>
-	</body>
-</html>
 
 
 

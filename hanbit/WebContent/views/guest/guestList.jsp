@@ -1,20 +1,17 @@
-<%@page import="com.sun.xml.internal.txw2.Document"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     <%@ page import = "java.util.*" %>
     <%@ page import = "java.sql.* "%>
  <%!
 	private Connection cn ;
-	private Statement st; 
+	private Statement st,st_2, st_3; 
 	private PreparedStatement pst;
 	private CallableStatement cst;
-	private ResultSet rs;
-	private String sql;
-	private int g_sabun, tot, g_pay, pageNum, pageSize, start, end, pageCnt, startPage;
-	private String g_name, g_ttl,  sVal, sKey;
+	private ResultSet rs,rs_2, rs_3;
+	private String sql,sql_2, sql_3;
+	private int g_sabun, tot, g_pay, pageNum, pageSize, start, end, pageCnt, startPage, r_tot;
+	private String g_name, g_ttl,  sVal, sKey, r_writer, r_title;
 %>
-<jsp:include page="../common/header.jsp"></jsp:include>
-
 <%
 	try{
 		Class.forName("oracle.jdbc.driver.OracleDriver");
@@ -24,7 +21,7 @@
 		e.printStackTrace();
 	}
 %>
-<body>
+
 <div >
 
  	<a href="template.jsp?page=guest">[등록]</a> 
@@ -57,13 +54,12 @@
 	}
 	
 %>
-<!-- .tbl tr td {margin-top: 10px;border: 1px solid gray;} -->
 
-<table id='guest_list_tbl'>
+<table id='guest_list_tbl'style=' width:100%;border-collapse: collapse;'>
 	<tr align="right">
 		<td colspan="6"> <font size="6"> 레코드 갯수 : <%=tot %></font>&nbsp;&nbsp;&nbsp;&nbsp;</td>
 	</tr>
-	<tr bgcolor="yellow" height="50" align="center">
+	<tr bgcolor="yellow"  align="center">
 		<th>글번호</th>
 		<th>사번</th>
 		<th>이름</th>
@@ -92,13 +88,13 @@
 			
 			if(sVal==""||sVal==null){
 				sql=" select seq, sabun, name, title, nalja, pay from ";
-				sql+= "(select rownum as seq, g.* from guest g order by seq asc)";
-				sql+= "where seq between '"+start+"' and '" +end+"' "; 
+				sql+= "(select rownum as seq, g.* from guest g )"; // order by sabun desc
+				sql+= "where seq between '"+start+"' and '" +end+"' order by sabun desc"; 
 			}else{
 				sql=" select * from ";
 				sql+= "(select rownum as seq, g.* from guest g ";
 				sql+= " where "+sKey.trim()+" like '%"+sVal+"%'";
-				sql+=" order by seq desc) ";
+				sql+=" order by sabun desc) ";
 				sql+= "where seq between '"+start+"' and '" +end+"' "; 
 			}
 			
@@ -119,6 +115,13 @@
 				g_name = rs.getString("name");
 				g_ttl = rs.getString("title");
 				g_pay = rs.getInt("pay"); 
+				
+				sql_3 = "select count(*) as cnt from guestReply where sabun="+g_sabun;
+				st_3 = cn.createStatement();
+				rs_3 = st_3.executeQuery(sql_3);
+				if(rs_3.next()==true){
+					r_tot = rs_3.getInt("cnt");
+				}
 	%>
 			<tr
 				onmousemove="this.style.backgroundColor='#00FFFF' "
@@ -128,7 +131,17 @@
 				 <td><%= rs.getInt("seq") %></td>
 				 <td><%= g_sabun %></td>
 				 <td><%= g_name %></td>
-				 <td><a href="template.jsp?page=guestDetail&idx=<%=g_sabun %>"><%= g_ttl %></a></td>
+				 <td><a href="template.jsp?page=guestDetail&idx=<%=g_sabun %>"><%= g_ttl %></a>
+				 	<%
+				 		if(r_tot>0){
+				 			%>
+				 				<font color="red"><b>[<%=r_tot %>]</b></font>
+				 			<%
+				 		}
+				 	%>
+				 
+				 
+				 </td>
 				 <td><%= rs.getDate("nalja") %></td>
 				 <td><%= g_pay%></td>
 				 
@@ -181,5 +194,3 @@
  <p><br><br><br><br>
  <p>
  </div>
-</body>
-</html>
