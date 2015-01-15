@@ -1,23 +1,20 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
-    <%!
-	    private String g_sabun, g_name, g_ttl, g_pay;
-    %>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 	<%
-		g_sabun = request.getParameter("sabun");
-		g_name = request.getParameter("name");
-		g_ttl = request.getParameter("title");
-		g_pay = request.getParameter("pay");
+		String sabun = request.getParameter("sabun");
+		String name = request.getParameter("name");
+		String ttl = request.getParameter("title");
+		String pay = request.getParameter("pay");
 	
 	%>
 	<form name="myform"  method="get" action="guestEditSave.jsp">
-		<b>»ç¹ø:</b> 
-		<input type=text name="sabun" onFocus="message()" value=<%=g_sabun %> readonly="readonly"> <br>
-		<b>¼öÁ¤ÀÌ¸§:</b> <input type=text name="name" value=<%=g_name %>> <br>
-		<b>¼öÁ¤Á¦¸ñ:</b> <input type=text name="title" value=<%=g_ttl %>> <br>   
-		<b>¼öÁ¤±Þ¿©:</b> <input type=text name="pay" value=<%=g_pay %>> <p>
-		<input type="button" value="¼öÁ¤" onclick="move()"> &nbsp;
-		<input type="reset"  value="Ãë¼Ò">
+		<b>ì‚¬ë²ˆ:</b> 
+		<input type=text name="sabun" onFocus="message()" value=<%=sabun %> readonly="readonly"> <br>
+		<b>ìˆ˜ì •ì´ë¦„:</b> <input type=text name="name" value=<%=name %>> <br>
+		<b>ìˆ˜ì •ì œëª©:</b> <input type=text name="title" value=<%=ttl %>> <br>   
+		<b>ìˆ˜ì •ê¸‰ì—¬:</b> <input type=text name="pay" value=<%=pay %>> <p>
+		<input type="button" value="ìˆ˜ì •" onclick="move()"> &nbsp;
+		<input type="reset"  value="ì·¨ì†Œ">
 	</form>
  <p>
 	<script type="text/javascript">

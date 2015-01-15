@@ -21,7 +21,7 @@
 		e.printStackTrace();
 	}
 %>
-		<table  cellpadding="0" cellspacing="1">
+		<table >
 		<%
 			try{
 				
