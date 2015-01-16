@@ -1,7 +1,7 @@
-<%@page import="javax.naming.InitialContext"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    <%@ page import = "java.util.*,java.sql.*,javax.sql.*,javax.naming.*" %>
+    <%@ page import = "java.util.*" %>
+    <%@ page import = "java.sql.* "%>
  <%!
 	private Connection cn ;
 	private Statement st,st_2, st_3; 
@@ -14,11 +14,9 @@
 %>
 <%
 	try{
-		Context ctx = new InitialContext();
-		Context eCtx = (Context)ctx.lookup("java:comp/env");
-		DataSource ds = (DataSource)eCtx.lookup("jdbc/myOracle");
-		cn = ds.getConnection();
-		
+		Class.forName("oracle.jdbc.driver.OracleDriver");
+		String url = "jdbc:oracle:thin:@127.0.0.1:1521:XE";
+		cn = DriverManager.getConnection(url,"system","oracle");
 	}catch(Exception e){
 		e.printStackTrace();
 	}

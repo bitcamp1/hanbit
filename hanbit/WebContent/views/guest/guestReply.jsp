@@ -58,6 +58,9 @@
 			}
 		 %>
 		 </table>
+		 
+		 
+		 
 		 <table>
 		 	<tr>
 				<td >
@@ -69,5 +72,6 @@
 						<input type="reset" value="취소"/>
 					</form>
 				</td>
+				</tr>
 		 </table>
 	

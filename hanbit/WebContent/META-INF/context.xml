@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context>
+	<ResourceLink
+		global="jdbc/myOracle"
+		name="jdbc/myOracle"
+		type="oracle.jdbc.pool.OracleDataSource"
+	
+	/>
+</Context>
