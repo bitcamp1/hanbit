@@ -1,9 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<jsp:include page="../common/header.jsp"></jsp:include>
 
-<div id='guest_wrap'>
-	<div id='guest_tbl_wrap' class=" top center aqua_b">
+<div>
+	<div class=" top center aqua_b">
 		 
 			<form name="myform" action="guestSave.jsp">
 			<table id='guest_tbl'>

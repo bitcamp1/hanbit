@@ -6,11 +6,7 @@
     <%@ page import="com.oreilly.servlet.multipart.DefaultFileRenamePolicy" %>
 	<%
 		ServletContext ctx = config.getServletContext();
-		System.out.println("컨텍스트 :"+ctx);
-		String appRoot = "/";
-		appRoot = application.getRealPath(appRoot);
-		System.out.println("앱루트 :"+appRoot);
-		String filePath = ctx.getRealPath("/filesave");
+		String filePath = ctx.getRealPath("filesave");
 		System.out.println("파일패스 : "+filePath);
 		int size = 5*1024*1024;
 		DefaultFileRenamePolicy dp = new DefaultFileRenamePolicy(); 

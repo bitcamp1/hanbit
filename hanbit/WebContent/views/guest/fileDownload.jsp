@@ -6,12 +6,7 @@
     <%@ page import="com.oreilly.servlet.multipart.DefaultFileRenamePolicy" %>
 	<%
 		ServletContext ctx = config.getServletContext();
-		System.out.println("컨텍스트 :"+ctx);
-		String appRoot = "/";
-		appRoot = application.getRealPath(appRoot);
-		System.out.println("앱루트 :"+appRoot);
-		String filePath = ctx.getRealPath("/filesave");
-		System.out.println("파일패스 : "+filePath);
+		String filePath = ctx.getRealPath("files");
 		int size = 5*1024*1024;
 		DefaultFileRenamePolicy dp = new DefaultFileRenamePolicy(); 
 		String encType="UTF-8";
@@ -38,7 +33,7 @@
 			넘어온 색인 : <%=idx %><br />
 			경로 : <%=filePath %>
 		</b>
-		 	<img src="<%= request.getContextPath()%>/filesave/<%=data%>"  width=500 height=300><br>
+		 	<img src="<%= request.getContextPath()%>/filesave/<%=data%>"  width=500 height=300 border='0'><br>
 		<h1>
 			<a href="fileSelect.jsp">[파일 업로드 문서]</a>
 		</h1>

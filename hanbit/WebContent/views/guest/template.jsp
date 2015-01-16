@@ -16,17 +16,17 @@
 		if(pageFile==""||pageFile==null){
 			pageFile="main.jsp";
 		}else if(pageFile.equals("guest")){
-			pageFile = "guest.jsp";
+			pageFile = "../guest/guest.jsp";
 		}else if(pageFile.equals("guestList")){
-			pageFile="guestList.jsp";
+			pageFile="../guest/guestList.jsp";
 		}else if(pageFile.equals("guestDelete")){
-			pageFile="guestDelete.jsp";
+			pageFile="../guest/guestDelete.jsp";
 		}else if(pageFile.equals("main")){
-			pageFile="main.jsp";
+			pageFile="../guest/main.jsp";
 		}else if(pageFile.equals("guestDetail")){
-			pageFile="guestDetail.jsp";
+			pageFile="../guest/guestDetail.jsp";
 		}else if(pageFile.equals("guestEdit")){
-			pageFile="guestEdit.jsp";
+			pageFile="../guest/guestEdit.jsp";
 		}else{
 			pageFile = "template.jsp";
 		}
